@@ -1,12 +1,16 @@
 {
-  "manifest_version": 3,
-  "name": "My First Extension",
-  "description": "The first extension that I made.",
-  "version": "1.0.0",
-  "content_scripts": [
-    {
-      "matches": ["https://fap.fpt.edu.vn/*"],
-      "js": ["content.js"]
-    }
-  ]
+    "manifest_version": 3,
+    "name":"my_extension",
+    "description":"my first extension",
+    "version":"1.0",
+    "content_scripts":[
+        {
+            "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
+            "js":["backend/content.js"]
+        },
+        {
+            "matches": ["https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx"],
+            "js":["backend/extractData.js"]
+        }
+    ]
 }
