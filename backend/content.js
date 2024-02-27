@@ -1,22 +1,18 @@
-const express = require('express');
-const app = express();
-const {data}  = require('./extractData.js');
+const request = require('request');
 
+request.get('https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx', (error, response, body) => {
+    if (error) {
+        console.error('Error:', error);
+        return;
+    }
 
-// Endpoint to serve schedule data
-app.get('https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx', (req, res) => {
-    // Fetch schedule data from database, file, or external API
-    const scheduleData = data; 
-    displayData(scheduleData);
-    // Send the schedule data as the response
-    res.json(scheduleData);
+    // Print response headers
+    console.log('Response Headers:', response.headers);
+
+    // Print request headers
+    console.log('Request Headers:', response.request.headers);
+
+    // // Print response body
+    // console.log('Response Body:', body);
 });
 
-console.log(data);
-
-function displayData(data){
-    const jsonData = JSON.stringify(data, null, 2);
-    
-    // Display the JSON string in the console
-    console.log(jsonData);
-}
