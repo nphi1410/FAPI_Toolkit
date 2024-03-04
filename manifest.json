@@ -3,10 +3,21 @@
     "name":"my_extension",
     "description":"my first extension",
     "version":"1.0",
+    "action": {
+      "default_icon": "icon.png"
+    },
+    "permissions": ["scripting", "activeTab"],
+    "icons": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
     "content_scripts":[
         {
             "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
-            "js":["backend/content.js"]
+            "js":["backend/content.js", "script/content.js"],
+            "css": ["MyStyle/myStyle.css", "MyStyle/main.css"]
         },
         {
             "matches": ["https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx"],
