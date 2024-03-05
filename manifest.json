@@ -17,7 +17,7 @@
         {
             "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
             "js":["backend/content.js", "front_end/script/content.js"],
-            "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css", "front_end/script/myScript.js"]
+            "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css", "front_end/script/main.js"]
         },
         {
             "matches": ["https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx"],
