@@ -16,7 +16,7 @@
     "content_scripts":[
         {
             "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
-            "js":["backend/content.js", "front_end/script/content.js"],
+            "js":["backend/content.js", "front_end/script/content.js", "front_end/script/myScript.js"],
             "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
         },
         {
