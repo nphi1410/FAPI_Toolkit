@@ -4,20 +4,20 @@
     "description":"Beauty FAP Interface",
     "version":"1.0.0",
     "action": {
-      "default_icon": "icon.png"
+      "default_icon": "front_end/icon.png"
     },
     "permissions": ["scripting", "activeTab"],
     "icons": {
-      "16": "icon.png",
-      "32": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
+      "16": "front_end/icon.png",
+      "32": "front_end/icon.png",
+      "48": "front_end/icon.png",
+      "128": "front_end/icon.png"
     },
     "content_scripts":[
         {
             "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
-            "js":["backend/content.js", "front_end/script/content.js", "front_end/script/myScript.js"],
-            "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
+            "js":["backend/content.js", "front_end/script/content.js"],
+            "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css", "front_end/script/myScript.js"]
         },
         {
             "matches": ["https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx"],

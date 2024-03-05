@@ -1,5 +1,4 @@
 
-
 var box1 = document.querySelectorAll('.box')[0];
 var box2 = document.querySelectorAll('.box')[1];
 var list1 = box1.querySelectorAll('.listBoxWrapper tr');
