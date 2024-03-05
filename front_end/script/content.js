@@ -123,6 +123,19 @@ header.innerHTML = `
       <button class='header-search-btn'>
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
+      <div class='header-search-bar_dropdown'>
+        <ul class='header-search-bar_list'>
+          <li class='header-search-bar_item'><a href="${listInfoLink[0]}">Information</a></li>
+          <li class='header-search-bar_item'><a href="${listRegisLink[0]}">Registration</a></li>
+          <li class='header-search-bar_item'><a href="${listReportLink[0]}">Report</a></li>
+          <li class='header-search-bar_item'><a href="${listCouseraLink[0]}">Coursera</a></li>
+          <li class='header-search-bar_item'><a href="${listRegularLink[0]}">Regulation</a></li>
+          <li class='header-search-bar_item'><a href="${listOtherLink[0]}">Other</a></li>
+          <li class='header-search-bar_item'><a href="${listFeedbackLink}">Feedback</a></li>
+          <li class='header-search-bar_item'><a href="${listKTXLink}">KTX</a></li>
+          
+        </ul>
+      </div>
     </form>
   </div>
 
