@@ -1,90 +1,74 @@
+const cheerio = require('cheerio');
 
-extractValues();
-var data = [];
-
-function extractValues() {
-    var tdElements = document.querySelectorAll('td');
-    var isWriting = false; // Flag to track whether to write into the array
-    
-    var count = 0,slot; // Counter for '-'
+async function extractSchedule(html) {
+    const $ = cheerio.load(html);
+    const tdElements = $('td');
+    let isWriting = false; // Flag to track whether to write into the array
+    let count = 0;
+    let slot; // Counter for '-'
 
     // Initialize an array to store JSON objects
-    var schedule = [];
+    const schedule = [];
 
     // Loop through each 'td' element
-    tdElements.forEach(function(tdElement) {
+    tdElements.each(function(index, tdElement) {
         // Extracting values from tdElement
-        var aElements = tdElement.querySelectorAll('a');
-        var otherValue = tdElement.textContent.trim();
-        
+        const aElements = $(tdElement).find('a');
+        let otherValue = $(tdElement).text().trim();
 
         // Create an array to store the text content of 'a' elements
-        var aTextContentArray = [];
-        var savelinks = [];
+        const aTextContentArray = [];
+        const savelinks = [];
 
         // Loop through each 'a' element and store its text content
-        aElements.forEach(function(aElement) {
-            var text = aElement.textContent.trim();
-            var href = aElement.getAttribute('href');
-            
-            if (href){
-                // console.log("Href:", href);
-                // console.log("Text:", text);
-                savelinks.push({ href: href, text: text });
+        aElements.each(function(index, aElement) {
+            const text = $(aElement).text().trim();
+            const href = $(aElement).attr('href');
+
+            if (href) {
+                savelinks.push({ href, text });
                 aTextContentArray.push(text);
             }
-            
         });
 
         // Remove the text content of 'a' elements from 'td' element
-       
         aTextContentArray.forEach(function(text) {
             otherValue = otherValue.replace(text, '').trim();
         });
 
         // Extract the desired remaining text (modify this as needed)
-        var remainingValue = otherValue; // For now, we just keep the remaining text
-        
-        
-        // console.log("Remaining Value:", remainingValue);
+        const remainingValue = otherValue; // For now, we just keep the remaining text
 
-        if(otherValue === 'Slot 0'){
+        if (otherValue === 'Slot 0') {
             isWriting = true;
             slot = 0;
-        } 
+        }
 
-        if(slot >= 12){
+        if (slot > 12) {
             isWriting = false;
         }
 
-        if(isWriting) {
-            var singleSlot = {
-                slot: slot,
+        if (isWriting) {
+            const singleSlot = {
+                slot,
                 links: savelinks,
                 remaining: remainingValue
             };
             schedule.push(singleSlot);
         }
+
         if (isWriting) {
             count++;
-            if (count == 8){
+            if (count === 8) {
                 count = 0;
                 slot++;
-                
             }
         }
-
     });
 
-    data = schedule;
-    displayData(data);
+    return schedule;
 }
 
-module.exports = data;
-
-function displayData(data){
-    const jsonData = JSON.stringify(data, null, 2);
-    
-    // Display the JSON string in the console
-    console.log(jsonData);
-}
+module.exports = {
+    extractSchedule
+};

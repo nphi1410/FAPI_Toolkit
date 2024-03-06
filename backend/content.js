@@ -1,18 +1,37 @@
-const request = require('request');
+const express = require('express');
+const axios = require('axios');
+const cors = require('cors'); // Import the cors middleware
+const { extractSchedule } = require('./extractData');
 
-request.get('https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx', (error, response, body) => {
-    if (error) {
-        console.error('Error:', error);
-        return;
-    }
+const app = express();
 
-    // Print response headers
-    console.log('Response Headers:', response.headers);
+// Enable CORS for all routes
+app.use(cors());
 
-    // Print request headers
-    console.log('Request Headers:', response.request.headers);
-
-    // // Print response body
-    // console.log('Response Body:', body);
+app.get('/', (req, res) => {
+    res.send('Hello World');
 });
 
+app.post("/schedule", async (req, res) => {
+    const cookie = req.headers.cookie;
+
+    try {
+        const response = await axios.get('https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx', {
+            headers: {
+                cookie
+            }
+        });
+
+        const data = await extractSchedule(response.data);
+        res.send(data); 
+        console.log("data: ", data);// Send data as JSON response
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ error: 'An error occurred' }); // Send error as JSON response
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
