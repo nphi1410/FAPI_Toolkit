@@ -53,18 +53,14 @@ console.log(listRegularLink);
 //Other
 var listOther = other.querySelectorAll('ul li a');
 var listOtherLink = new Array(listOther.length);
+var listFeedbackLink = feedback.querySelector('ul li a').getAttribute('href');
+var listKTXLink = ktx.querySelector('a').getAttribute('href');
 for(var i = 0; i < listOther.length; i++) {
   listOtherLink[i] = listOther[i].getAttribute('href');
 }
+listOtherLink.push(listFeedbackLink, listKTXLink);
 console.log(listOtherLink);
 
-//Feedback
-var listFeedbackLink = feedback.querySelector('ul li a').getAttribute('href');
-console.log(listFeedbackLink);
-
-//ktx
-var listKTXLink = ktx.querySelector('a').getAttribute('href');
-console.log(listKTXLink);
 
 
 var head = document.querySelector('head');
@@ -104,6 +100,99 @@ var breadcumb = document.querySelector('.breadcrumb');
 infoAccount.style.display = 'none';
 breadcumb.style.display = 'none';
 
+var listRegisText = [
+  'Suspend to repeat course',
+  'Cancel suspend to repeat course',
+  'Suspend',
+  'Cancel suspend one semester',
+  'Move out class',
+  'Register extra courses',
+  'Register to improve mark',
+  'Register to repeat a course',
+  'Cancel registration',
+  'Register Free Elective Courses',
+  'Send Application',
+  'View Application',
+  'Student Confirmation',
+  'Choose paid items',
+  'View',
+  'Change Classes',
+  'Attendance By Code',
+  'Wishlist Course',
+  'Register Wishlist',
+  'Start-up Funding Support',
+  'View',
+  'Register Over-term',
+  'Register Tutoring'
+];
+var listInfoText = [
+  'University TimeTable',
+  'Tuition',
+  'Weekly Timetable',
+  'BLOC Schedules',
+  'Exam Schedule',
+  'Syllabuses',
+  'EduNext',
+  'Help',
+  'Documents'
+];
+var listReportText = [
+  'Attendance Report',
+  'Mark Report',
+  'Academic Transript',
+  'Curriculum',
+  'Student Fee',
+  'Transaction History'
+];
+var listCouseraText = [
+  'Announcement',
+  'Ask Mentor',
+  'View Answer',
+  'Submit Certificates',
+  'Certificate Submission Guideline'
+];
+var listRegularText = [
+  'Regulations',
+  'Dormitory Regulations(Ha Noi)',
+  'Dormitory Regulations(CanTho)'
+];
+var listOtherText = [
+  'Student Profile',
+  'Update Profile',
+  'Semester',
+  'Room',
+  'FUNIX',
+  'Types of Certificates',
+  'Movement Mark',
+  'Wiley eBook',
+  'Feedback Teacher',
+  'Campus Dormitory'
+];
+var searchRegisHTML = ``;
+var searchInfoHTML = ``;
+var searchReportHTML = ``;
+var searchCouseraHTML = ``;
+var searchRegularHTML = ``;
+var searchOtherHTML = ``;
+for(var i=0;i<listInfoText.length;i++){
+  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoText[i]}</a></li>`
+}
+for(var i=0;i<listRegisText.length;i++){
+  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisText[i]}</a></li>`
+}
+for(var i=0;i<listReportText.length;i++){
+  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportText[i]}</a></li>`
+}
+for(var i=0;i<listCouseraText.length;i++){
+  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraText[i]}</a></li>`
+}
+for(var i=0;i<listRegularText.length;i++){
+  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularText[i]}</a></li>`
+}
+for(var i=0;i<listOtherText.length;i++){
+  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherText[i]}</a></li>`
+}
+
 
 header.setAttribute('class', `${header.getAttribute('class')} header sticky-top`);
 header.innerHTML = `
@@ -125,15 +214,12 @@ header.innerHTML = `
       </button>
       <div class='header-search-bar_dropdown'>
         <ul class='header-search-bar_list'>
-          <li class='header-search-bar_item'><a href="${listInfoLink[0]}">Information</a></li>
-          <li class='header-search-bar_item'><a href="${listRegisLink[0]}">Registration</a></li>
-          <li class='header-search-bar_item'><a href="${listReportLink[0]}">Report</a></li>
-          <li class='header-search-bar_item'><a href="${listCouseraLink[0]}">Coursera</a></li>
-          <li class='header-search-bar_item'><a href="${listRegularLink[0]}">Regulation</a></li>
-          <li class='header-search-bar_item'><a href="${listOtherLink[0]}">Other</a></li>
-          <li class='header-search-bar_item'><a href="${listFeedbackLink}">Feedback</a></li>
-          <li class='header-search-bar_item'><a href="${listKTXLink}">KTX</a></li>
-          
+          ${searchRegisHTML}
+          ${searchInfoHTML}
+          ${searchReportHTML}
+          ${searchCouseraHTML}
+          ${searchRegularHTML}
+          ${searchOtherHTML}
         </ul>
       </div>
     </form>
@@ -486,12 +572,12 @@ body.innerHTML = `
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listFeedbackLink}">Feedback Teacher</a>
+              <a href="${listOtherLink[8]}">Feedback Teacher</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listKTXLink}" target="_blank">Campus Dormitory</a>
+              <a href="${listOtherLink[9]}" target="_blank">Campus Dormitory</a>
             </button>
           </li>
         </ul>
