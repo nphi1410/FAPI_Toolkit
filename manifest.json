@@ -1,16 +1,22 @@
 {
     "manifest_version": 3,
     "name":"my_extension",
-    "description":"my first extension",
+    "description":"my  extension",
     "version":"1.0",
     "content_scripts":[
         {
             "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
-            "js":["backend/content.js"]
-        },
-        {
-            "matches": ["https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx"],
-            "js":["backend/extractData.js"]
+            "js":["backend/fe.js"]
         }
-    ]
+        
+    ],
+    "host_permissions": [
+        "https://fap.fpt.edu.vn/Student.aspx"
+    ],
+    "permissions":[
+        "cookies"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
 }

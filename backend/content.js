@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.post("/schedule", async (req, res) => {
-    const cookie = req.headers.cookie;
+    const cookie = req.headers.fapcookie;
 
     try {
         const response = await axios.get('https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx', {
@@ -22,6 +22,7 @@ app.post("/schedule", async (req, res) => {
             }
         });
 
+        console.log(response);
         const data = await extractSchedule(response.data);
         res.send(data); 
         console.log("data: ", data);// Send data as JSON response
@@ -30,6 +31,7 @@ app.post("/schedule", async (req, res) => {
         res.status(500).json({ error: 'An error occurred' }); // Send error as JSON response
     }
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

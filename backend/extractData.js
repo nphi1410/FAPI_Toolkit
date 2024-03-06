@@ -1,6 +1,7 @@
 const cheerio = require('cheerio');
 
 async function extractSchedule(html) {
+    // console.log("data: ",html);
     const $ = cheerio.load(html);
     const tdElements = $('td');
     let isWriting = false; // Flag to track whether to write into the array
