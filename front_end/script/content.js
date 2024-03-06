@@ -225,6 +225,18 @@ header.innerHTML = `
     </form>
   </div>
 
+  <div class="dropdown">
+  <button class="dropbtn">Language</button>
+  <div class="dropdown-content">
+    <a href="#" style="text-align: right">
+      <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">English
+    </a>
+    <a href="#" style="text-align: right">
+      <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">Tiếng Việt
+    </a>
+  </div>
+</div>
+
   <div class='header-account-settings'>
 
     <div class='header-settings'>
