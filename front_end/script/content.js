@@ -55,10 +55,11 @@ var listOther = other.querySelectorAll('ul li a');
 var listOtherLink = new Array(listOther.length);
 var listFeedbackLink = feedback.querySelector('ul li a').getAttribute('href');
 var listKTXLink = ktx.querySelector('a').getAttribute('href');
+var newsLink = box1.querySelector('.listBoxWrapper a').getAttribute('href');
 for(var i = 0; i < listOther.length; i++) {
   listOtherLink[i] = listOther[i].getAttribute('href');
 }
-listOtherLink.push(listFeedbackLink, listKTXLink);
+listOtherLink.push(listFeedbackLink, listKTXLink, newsLink);
 console.log(listOtherLink);
 
 
@@ -166,7 +167,8 @@ var listOtherText = [
   'Movement Mark',
   'Wiley eBook',
   'Feedback Teacher',
-  'Campus Dormitory'
+  'Campus Dormitory',
+  'News'
 ];
 var searchRegisHTML = ``;
 var searchInfoHTML = ``;
@@ -232,7 +234,13 @@ header.innerHTML = `
       <div class='header-menu header-settings-menu'>
         <h1 class='header-menu-heading'>Settings</h1>
         <ul class='header-menu-list'>
-          <li class='header-menu-item'><span>Language</span></li>
+          <li class='header-menu-item'>
+            <span>Language</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </li>
           <li class='header-menu-item'><span>Dark Mode</span></li>
           <li class='header-menu-item download'>
             <span>Download</span>
@@ -279,6 +287,35 @@ account.onclick = () => {
 // select body
 
 
+
+var procedures = [
+  'Changing major',
+  'Changing campus',
+  'Rejoin',
+  'Suspect one semester',
+  'Suspect one semester to take repeat course',
+  'Suspend subject',
+  'Register to repeat a course',
+  'Move out class', 
+  'Request a drop out',
+  'Retake to improve mark',
+  'Re – Examination',
+  'Free of attendance',
+  'Pay specialized tuition',
+  'Pay preparetation English',
+  'Register for final exam for subjects online'
+];
+var deadline = [
+  '4 weeks before the new',
+  '10 days before the new semester',
+  '1 week before the new semester',
+  '12 hours before the final exam resit',
+  '4 days after the  examination result public',
+  'before starting the new semester',
+  '5 working days before the new semester',
+  '3 working days before the new course',
+  '12 a.m - Friday of the ninth week of the semester'
+];
 
 var body = document.querySelectorAll('.row')[1];
 var contentBody = body.querySelector('.col-md-12');
