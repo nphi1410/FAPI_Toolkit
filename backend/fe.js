@@ -3,10 +3,9 @@ const url = 'http://localhost:3000/schedule';
 // Get cookies from the document header
 const cookie = document.cookie;
 
-
 // Send message to background.js with the cookie
 chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
-    
+    // console.log(response);
     const options = {
         method: 'POST',
         headers: {
