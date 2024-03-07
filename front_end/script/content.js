@@ -350,6 +350,8 @@ var deadline = [
   '12 a.m - Friday of the ninth week of the semester'
 ];
 
+
+
 var body = document.querySelectorAll('.row')[1];
 var contentBody = body.querySelector('.col-md-12');
 console.log(contentBody);
@@ -666,6 +668,23 @@ body.innerHTML = `
             </button>
           </li>
         </ul>
+      </li>
+      <li class='navbar-item'>
+        Notices
+        <div class='subnav-list full'>
+          <div class='subnav-list_table'>
+            <table style="width:100%">
+              <tr>
+                <th>Deadline</th>
+              </tr>
+              <tr>
+                <td>Type of procedure</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
