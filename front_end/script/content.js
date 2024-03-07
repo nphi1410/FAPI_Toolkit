@@ -56,10 +56,16 @@ var listOtherLink = new Array(listOther.length);
 var listFeedbackLink = feedback.querySelector('ul li a').getAttribute('href');
 var listKTXLink = ktx.querySelector('a').getAttribute('href');
 var newsLink = box1.querySelector('.listBoxWrapper a').getAttribute('href');
+var footer = document.querySelector('#ctl00_divSupport').parentNode.parentNode.nextElementSibling.querySelectorAll('a');
+var footerLink = new Array(footer.length);
+for(var i = 0; i < footer.length; i++) {
+  footerLink[i] = footer[i].getAttribute('href');
+}
+console.log(footerLink);
 for(var i = 0; i < listOther.length; i++) {
   listOtherLink[i] = listOther[i].getAttribute('href');
 }
-listOtherLink.push(listFeedbackLink, listKTXLink, newsLink);
+listOtherLink.push(listFeedbackLink, listKTXLink, newsLink, footerLink[2], footerLink[3]);
 console.log(listOtherLink);
 
 
@@ -168,7 +174,9 @@ var listOtherText = [
   'Wiley eBook',
   'Feedback Teacher',
   'Campus Dormitory',
-  'News'
+  'News',
+  'Library',
+  'Book24/7'
 ];
 var searchRegisHTML = ``;
 var searchInfoHTML = ``;
@@ -615,6 +623,21 @@ body.innerHTML = `
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
               <a href="${listOtherLink[9]}" target="_blank">Campus Dormitory</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[10]}" target="_blank">News</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[11]}" target="_blank">Library</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[12]}" target="_blank">Book24/7</a>
             </button>
           </li>
         </ul>
