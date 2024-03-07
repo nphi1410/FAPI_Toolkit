@@ -3,10 +3,11 @@
     "name":"FAPI Toolkits",
     "description":"Beauty FAP Interface for FPT University Students",
     "version":"1.0.0",
+    "default_locale": "en",
     "action": {
       "default_icon": "front_end/icon.png"
     },
-    "permissions": ["scripting", "activeTab"],
+    "permissions": ["scripting", "activeTab", "cookies"],
     "icons": {
       "16": "front_end/icon.png",
       "32": "front_end/icon.png",
@@ -27,9 +28,6 @@
     ],
     "host_permissions": [
         "https://fap.fpt.edu.vn/Student.aspx"
-    ],
-    "permissions":[
-        "cookies"
     ],
     "background": {
       "service_worker": "background.js"
