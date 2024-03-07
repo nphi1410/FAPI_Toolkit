@@ -1,3 +1,5 @@
+
+//SEARCHING FUNCTION
 let searchBar = document.querySelector('.header-search-bar_input');
 let searchList = document.querySelectorAll('.header-search-bar_item a');
 let searchDropdown = document.querySelector('.header-search-bar_dropdown');
