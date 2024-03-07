@@ -1,9 +1,5 @@
 .open {
-<<<<<<< HEAD
   display: block;
-}
-=======
-    display: block;
 }
 
 .switch {
@@ -50,4 +46,3 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
   }
->>>>>>> 8c1cbb6691ea7224ec224d85ab37296b6eb65635
