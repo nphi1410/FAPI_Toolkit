@@ -235,6 +235,27 @@ header.innerHTML = `
     </form>
   </div>
 
+  <div class="dropdown">
+  <button class="dropbtn">Language</button>
+  <div class="dropdown-content">
+    <a href="#" style="text-align: right">
+      <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">English
+    </a>
+    <a href="#" style="text-align: right">
+      <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">Tiếng Việt
+    </a>
+  </div>
+</div>
+
+<div>
+  <input type="checkbox" class="checkbox" id="checkbox">
+  <label for="checkbox" class="checkbox-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="ball"></span>
+  </label>
+</div>
+
   <div class='header-account-settings'>
 
     <div class='header-settings'>
@@ -290,6 +311,10 @@ account.onclick = () => {
   }else accountMenu.classList.add('open');
 }
 
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+})
 
 // body
 // select body
