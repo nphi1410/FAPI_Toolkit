@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name":"FAPI",
-    "description":"Beauty FAP Interface",
+    "name":"FAPI Toolkits",
+    "description":"Beauty FAP Interface for FPT University Students",
     "version":"1.0.0",
     "action": {
       "default_icon": "front_end/icon.png"
