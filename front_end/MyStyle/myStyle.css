@@ -361,6 +361,9 @@ ul {
 .navbar-item:hover .subnav-list {
   display: grid;
 }
+.navbar-item:hover .subnav-list.full {
+    display: inline-block;
+}
 
 .subnav-list {
   top: calc(100% + 2px);
@@ -388,6 +391,16 @@ ul {
   position: absolute;
   top: -2px;
 }
+/* .subnav-list.full {
+    display: block !important;
+} */
+.subnav-list table, th, td {
+    border:1px solid black;
+}
+.subnav-list_table {
+    margin: 10px;
+}
+
 .subnav-item {
   position: relative;
   display: flex;
@@ -398,6 +411,8 @@ ul {
   border-radius: 4px;
   margin: 5px;
 }
+
+
 .subnav-item_btn:hover {
   background-color: #f6c78b;
 }
@@ -443,6 +458,9 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
+
+
 /* Language Button */
 .dropbtn {
   background-color: #f58a02;
