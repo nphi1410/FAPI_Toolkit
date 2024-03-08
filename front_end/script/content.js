@@ -295,6 +295,20 @@ header.innerHTML = `
     </div>
   </div>
 `
+
+var items = document.querySelectorAll("[data-i18n]");
+var i;
+var l = items.length;
+for(i = 0; i < l; i++){
+	var translation = chrome.i18n.getMessage(items[i].getAttribute("data-i18n"));
+	if(items[i].value === "i18n"){
+		items[i].value = translation;
+	}else{
+		items[i].innerText = translation;
+	}
+}
+
+
 var setting = document.querySelector('.header-settings');
 var settingMenu = setting.querySelector('.header-settings-menu');
 setting.onclick = () => {
@@ -364,8 +378,8 @@ body.innerHTML = `
         Registration
         <ul class='subnav-list'>
           <li class='subnav-item'>
-            <button class='subnav-item_btn front percent-70'>
-              <a href="${listRegisLink[0]}" data-i18n="suspend" >Suspend to repeat course</a>
+            <button class='subnav-item_btn front percent-70' data-i18n="suspend">
+              <a href="${listRegisLink[0]}">Suspend to repeat course</a>
             </button>
             <button class='subnav-item_btn end percent-30'>
               <a href="${listRegisLink[1]}" >Cancel</a>

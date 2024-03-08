@@ -14,3 +14,9 @@ searchBar.addEventListener('keyup', e => {
         if(currentValue === "") searchDropdown.style.display = 'none';
     })
 });
+searchBar.addEventListener('focus', () => {
+    searchDropdown.style.display = 'block';
+});
+searchBar.addEventListener('blur', () => {
+    searchDropdown.style.display = 'none';
+});
