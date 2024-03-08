@@ -1,4 +1,4 @@
-const url = 'https://44.226.145.213:10000/schedule';
+const url = 'https://fapi-back-end.onrender.com/schedule';
 
 // Get cookies from the document header
 const cookie = document.cookie;
@@ -34,4 +34,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             console.error('Error:', error.message);
         });
 });
+
+
+
 
