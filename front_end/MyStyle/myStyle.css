@@ -3,11 +3,19 @@
 body {
   width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcefec;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 :root {
   --navbar-height: 46px;
@@ -26,10 +34,15 @@ ul {
   position: fixed;
   /* filter: blur(5px); */
   opacity: 0.5;
+  z-index: -1;
 }
 
 .container {
-  /* position: relative; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -40,12 +53,38 @@ ul {
   margin-right: 0 !important;
   margin-left: 0 !important;
   background-color: #fb5631;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  transition: top 0.3s;
+  box-shadow: 0 0 15px 2px #888888;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .sticky-top {
   position: relative;
   width: 100vw !important;
   left: calc(-50vw + 50%);
+  z-index: 1000;
+  top: 0;
+  transition: top 0.3s;
+  box-shadow: 0 0 15px 2px #888888;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .header-name_logo {
@@ -124,6 +163,16 @@ ul {
   border-radius: 4px;
   box-shadow: 0 0 15px 2px #888888;
   z-index: 100000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: none;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .header-search-bar_dropdown::-webkit-scrollbar {
   display: none;
@@ -312,6 +361,9 @@ ul {
 .navbar-item:hover .subnav-list {
   display: grid;
 }
+.navbar-item:hover .subnav-list.full {
+    display: inline-block;
+}
 
 .subnav-list {
   top: calc(100% + 2px);
@@ -339,6 +391,16 @@ ul {
   position: absolute;
   top: -2px;
 }
+/* .subnav-list.full {
+    display: block !important;
+} */
+.subnav-list table, th, td {
+    border:1px solid black;
+}
+.subnav-list_table {
+    margin: 10px;
+}
+
 .subnav-item {
   position: relative;
   display: flex;
@@ -349,6 +411,8 @@ ul {
   border-radius: 4px;
   margin: 5px;
 }
+
+
 .subnav-item_btn:hover {
   background-color: #f6c78b;
 }
@@ -394,6 +458,9 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
+
+
 /* Language Button */
 .dropbtn {
   background-color: #f58a02;
@@ -443,9 +510,14 @@ ul {
 
 /* Switch Light/Dark Mode */
 
-body.dark {background-color: #292c35;} /* #9b59b6 */
+body.dark {
+  background-color: #292c35;
+} /* #9b59b6 */
 
-body.dark h1, body.dark .support a {color: #fff;}
+body.dark h1,
+body.dark .support a {
+  color: #fff;
+}
 
 .checkbox {
   opacity: 0;
@@ -465,9 +537,13 @@ body.dark h1, body.dark .support a {color: #fff;}
   align-items: center;
 }
 
-.fa-moon {color: #f1c40f;}
+.fa-moon {
+  color: #f1c40f;
+}
 
-.fa-sun {color: #f39c12;}
+.fa-sun {
+  color: #f39c12;
+}
 
 .checkbox-label .ball {
   background-color: #fff;
@@ -486,9 +562,9 @@ body.dark h1, body.dark .support a {color: #fff;}
 
 /*  Support me if you like it */
 .support {
-	position: absolute;
-	right: 20px;
-	bottom: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 
 .support a {
@@ -499,6 +575,6 @@ body.dark h1, body.dark .support a {color: #fff;}
   transition: transform 0.2s ease;
 }
 
-.support a:hover{
+.support a:hover {
   transform: scale(1.1);
 }
