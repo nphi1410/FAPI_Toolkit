@@ -1,31 +1,36 @@
 {
-    "manifest_version": 3,
-    "name":"FAPI Toolkits",
-    "description":"Beauty FAP Interface for FPT University Students",
-    "version":"1.0.0",
-    "default_locale": "en",
-    "action": {
-      "default_icon": "front_end/icon.png"
+  "manifest_version": 3,
+  "name": "FAPI Toolkits",
+  "description": "Beauty FAP Interface for FPT University Students",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "action": {
+    "default_icon": "front_end/icon.png"
+  },
+  "permissions": ["scripting", "activeTab", "cookies"],
+  "icons": {
+    "16": "front_end/icon.png",
+    "32": "front_end/icon.png",
+    "48": "front_end/icon.png",
+    "128": "front_end/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
+      "js": [
+        "front_end/script/fe.js",
+        "front_end/script/content.js",
+        "front_end/script/main.js"
+      ],
+      "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
     },
-    "permissions": ["scripting", "activeTab", "cookies"],
-    "icons": {
-      "16": "front_end/icon.png",
-      "32": "front_end/icon.png",
-      "48": "front_end/icon.png",
-      "128": "front_end/icon.png"
-    },
-    "content_scripts":[
-        {
-            "matches": ["https://fap.fpt.edu.vn/Student.aspx"],
-            "js":["front_end/script/fe.js", "front_end/script/content.js", "front_end/script/main.js"],
-            "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
-        }
-        
-    ],
-    "host_permissions": [
-        "https://fap.fpt.edu.vn/Student.aspx"
-    ],
-    "background": {
-      "service_worker": "background.js"
+    {
+      "matches": ["https://fap.fpt.edu.vn/Grade/*"],
+      "js": ["front_end/script/averageScore.js"]
     }
+  ],
+  "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
