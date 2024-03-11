@@ -3,7 +3,6 @@
   "name": "FAPI Toolkits",
   "description": "Beauty FAP Interface for FPT University Students",
   "version": "1.0.0",
-  "default_locale": "en",
   "action": {
     "default_icon": "front_end/icon.png"
   },
