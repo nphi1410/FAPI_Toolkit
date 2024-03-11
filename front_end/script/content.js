@@ -302,6 +302,7 @@ header.innerHTML = `
   </div>
 `
 
+
 var items = document.querySelectorAll("[data-i18n]");
 var i;
 var l = items.length;
@@ -313,6 +314,7 @@ for(i = 0; i < l; i++){
 		items[i].innerText = translation;
 	}
 }
+
 
 
 // body
