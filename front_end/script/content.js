@@ -3,6 +3,7 @@ var box1 = document.querySelectorAll('.box')[0];
 var box2 = document.querySelectorAll('.box')[1];
 var list1 = box1.querySelectorAll('.listBoxWrapper tr');
 var list2 = box2.querySelectorAll('.listBoxWrapper tr td tr td');
+var table = document.querySelector('.table-bordered');
 var registration = list2[1];
 var infor = list2[2];
 var feedback = list2[3];
@@ -11,6 +12,7 @@ var other = list2[5];
 var regular = list2[6];
 var cousera = list2[7];
 var ktx = list2[8];
+
 
 //Registration
 var listRegis = registration.querySelectorAll('ul li a');
@@ -76,7 +78,7 @@ head.innerHTML = ` ${head.innerHTML}
 `
 
 
-
+// ADD BACKGROUND
 var container = document.querySelector('.container');
 var all = document.querySelector('body');
 console.log(container);
@@ -235,24 +237,28 @@ header.innerHTML = `
     </form>
   </div>
 
-  <div class="dropdown">
-  <button class="dropbtn">Language</button>
-  <div class="dropdown-content">
-    <a href="#" style="text-align: right">
-      <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">English
-    </a>
-    <a href="#" style="text-align: right">
-      <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">Tiếng Việt
-    </a>
+<div class="header-language">
+  <div class="header-language-btn">
+    Language
+    <div class="header-language-content">
+      <a href="#" style="text-align: right">
+        <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">
+        <span>English</span>
+      </a>
+      <a href="#" style="text-align: right">
+        <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">
+        <span>Tiếng Việt</span>
+      </a>
+    </div>
   </div>
 </div>
 
-<div>
-  <input type="checkbox" class="checkbox" id="checkbox">
-  <label for="checkbox" class="checkbox-label">
+<div class='header-darkmode'>
+  <input type="checkbox" class="header-darkmode-checkbox" id="header-darkmode-checkbox">
+  <label for="header-darkmode-checkbox" class="header-darkmode-checkbox-label">
     <i class="fas fa-moon"></i>
     <i class="fas fa-sun"></i>
-    <span class="ball"></span>
+    <span class="header-darkmode-ball"></span>
   </label>
 </div>
 
@@ -309,31 +315,8 @@ for(i = 0; i < l; i++){
 }
 
 
-var setting = document.querySelector('.header-settings');
-var settingMenu = setting.querySelector('.header-settings-menu');
-setting.onclick = () => {
-  if(settingMenu.classList.contains('open')){
-    settingMenu.classList.remove('open');
-  }else settingMenu.classList.add('open');
-}
-
-var account = document.querySelector('.header-account');
-var accountMenu = account.querySelector('.header-account-menu');
-account.onclick = () => {
-  if(accountMenu.classList.contains('open')){
-    accountMenu.classList.remove('open');
-  }else accountMenu.classList.add('open');
-}
-
-const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark")
-})
-
 // body
 // select body
-
-
 
 var procedures = [
   'Changing major',
@@ -687,16 +670,7 @@ body.innerHTML = `
         Notices
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
-            <table style="width:100%">
-              <tr>
-                <th>Deadline</th>
-              </tr>
-              <tr>
-                <td>Type of procedure</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-              </tr>
-            </table>
+            ${table.outerHTML}
           </div>
         </div>
       </li>
