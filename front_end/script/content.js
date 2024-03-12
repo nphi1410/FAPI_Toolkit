@@ -1,9 +1,8 @@
-
-var box1 = document.querySelectorAll('.box')[0];
-var box2 = document.querySelectorAll('.box')[1];
-var list1 = box1.querySelectorAll('.listBoxWrapper tr');
-var list2 = box2.querySelectorAll('.listBoxWrapper tr td tr td');
-var table = document.querySelector('.table-bordered');
+var box1 = document.querySelectorAll(".box")[0];
+var box2 = document.querySelectorAll(".box")[1];
+var list1 = box1.querySelectorAll(".listBoxWrapper tr");
+var list2 = box2.querySelectorAll(".listBoxWrapper tr td tr td");
+var table = document.querySelector(".table-bordered");
 var registration = list2[1];
 var infor = list2[2];
 var feedback = list2[3];
@@ -13,255 +12,263 @@ var regular = list2[6];
 var cousera = list2[7];
 var ktx = list2[8];
 
-
 //Registration
-var listRegis = registration.querySelectorAll('ul li a');
+var listRegis = registration.querySelectorAll("ul li a");
 var listRegisLink = new Array(listRegis.length);
-for(var i = 0; i < listRegis.length; i++) {
-  listRegisLink[i] = listRegis[i].getAttribute('href');
+for (var i = 0; i < listRegis.length; i++) {
+  listRegisLink[i] = listRegis[i].getAttribute("href");
 }
 console.log(listRegisLink);
 //Information
-var listInfo = infor.querySelectorAll('ul li a');
+var listInfo = infor.querySelectorAll("ul li a");
 var listInfoLink = new Array(listInfo.length);
-for(var i = 0; i < listInfo.length; i++) {
-  listInfoLink[i] = listInfo[i].getAttribute('href');
+for (var i = 0; i < listInfo.length; i++) {
+  listInfoLink[i] = listInfo[i].getAttribute("href");
 }
 console.log(listInfoLink);
 //Report
-var listReport = report.querySelectorAll('ul li a');
+var listReport = report.querySelectorAll("ul li a");
 var listReportLink = new Array(listReport.length);
-for(var i = 0; i < listReport.length; i++) {
-  listReportLink[i] = listReport[i].getAttribute('href');
+for (var i = 0; i < listReport.length; i++) {
+  listReportLink[i] = listReport[i].getAttribute("href");
 }
 console.log(listReportLink);
 
 //Consera
-var listCousera = cousera.querySelectorAll('ul li a');
+var listCousera = cousera.querySelectorAll("ul li a");
 var listCouseraLink = new Array(listCousera.length);
-for(var i = 0; i < listCousera.length; i++) {
-  listCouseraLink[i] = listCousera[i].getAttribute('href');
+for (var i = 0; i < listCousera.length; i++) {
+  listCouseraLink[i] = listCousera[i].getAttribute("href");
 }
 console.log(listCouseraLink);
 
 //Regulation
-var listRegular = regular.querySelectorAll('ul li a');
+var listRegular = regular.querySelectorAll("ul li a");
 var listRegularLink = new Array(listRegular.length);
-for(var i = 0; i < listRegular.length; i++) {
-  listRegularLink[i] = listRegular[i].getAttribute('href');
+for (var i = 0; i < listRegular.length; i++) {
+  listRegularLink[i] = listRegular[i].getAttribute("href");
 }
 console.log(listRegularLink);
 
 //Other
-var listOther = other.querySelectorAll('ul li a');
+var listOther = other.querySelectorAll("ul li a");
 var listOtherLink = new Array(listOther.length);
-var listFeedbackLink = feedback.querySelector('ul li a').getAttribute('href');
-var listKTXLink = ktx.querySelector('a').getAttribute('href');
-var newsLink = box1.querySelector('.listBoxWrapper a').getAttribute('href');
-var footer = document.querySelector('#ctl00_divSupport').parentNode.parentNode.nextElementSibling.querySelectorAll('a');
+var listFeedbackLink = feedback.querySelector("ul li a").getAttribute("href");
+var listKTXLink = ktx.querySelector("a").getAttribute("href");
+var newsLink = box1.querySelector(".listBoxWrapper a").getAttribute("href");
+var footer = document
+  .querySelector("#ctl00_divSupport")
+  .parentNode.parentNode.nextElementSibling.querySelectorAll("a");
 var footerLink = new Array(footer.length);
-for(var i = 0; i < footer.length; i++) {
-  footerLink[i] = footer[i].getAttribute('href');
+for (var i = 0; i < footer.length; i++) {
+  footerLink[i] = footer[i].getAttribute("href");
 }
 console.log(footerLink);
-for(var i = 0; i < listOther.length; i++) {
-  listOtherLink[i] = listOther[i].getAttribute('href');
+for (var i = 0; i < listOther.length; i++) {
+  listOtherLink[i] = listOther[i].getAttribute("href");
 }
-listOtherLink.push(listFeedbackLink, listKTXLink, newsLink, footerLink[2], footerLink[3]);
+listOtherLink.push(
+  listFeedbackLink,
+  listKTXLink,
+  newsLink,
+  footerLink[2],
+  footerLink[3]
+);
 console.log(listOtherLink);
 
-
-
-var head = document.querySelector('head');
+var head = document.querySelector("head");
 head.innerHTML = ` ${head.innerHTML}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-`
-
+`;
 
 // ADD BACKGROUND
-var container = document.querySelector('.container');
-var all = document.querySelector('body');
+var container = document.querySelector(".container");
+var all = document.querySelector("body");
 console.log(container);
 console.log(all);
-all.innerHTML = `
+all.innerHTML =
+  `
   <div class="background"></div>
-` + container.outerHTML
+` + container.outerHTML;
 
 //select header, 2 link download
-var header = document.querySelector('.row');
-var linkDown = header.querySelectorAll('.col-md-4 tr td a'); 
-var asLink = linkDown[0].getAttribute('href');
-var gpLink = linkDown[1].getAttribute('href');
-var asImg = linkDown[0].querySelector('img').getAttribute('src');
-var gpImg = linkDown[1].querySelector('img').getAttribute('src');
+var header = document.querySelector(".row");
+var linkDown = header.querySelectorAll(".col-md-4 tr td a");
+var asLink = linkDown[0].getAttribute("href");
+var gpLink = linkDown[1].getAttribute("href");
+var asImg = linkDown[0].querySelector("img").getAttribute("src");
+var gpImg = linkDown[1].querySelector("img").getAttribute("src");
 console.log(asLink);
 console.log(gpLink);
 
 //select account and logout link
-var account = document.querySelector('#ctl00_divUser a[href="?view=user"]').getAttribute('href');
-var logOut = document.querySelector('#ctl00_divUser a[href="?logout=true"]').getAttribute('href');
+var account = document
+  .querySelector('#ctl00_divUser a[href="?view=user"]')
+  .getAttribute("href");
+var logOut = document
+  .querySelector('#ctl00_divUser a[href="?logout=true"]')
+  .getAttribute("href");
 console.log(account);
 console.log(logOut);
 
 // remove breadcumb
-var infoAccount = document.querySelector('#ctl00_divUser');
-var breadcumb = document.querySelector('.breadcrumb');
-infoAccount.style.display = 'none';
-breadcumb.style.display = 'none';
+var infoAccount = document.querySelector("#ctl00_divUser");
+var breadcumb = document.querySelector(".breadcrumb");
+infoAccount.style.display = "none";
+breadcumb.style.display = "none";
 
 var listRegisText = [
-  'Suspend to repeat course',
-  'Cancel suspend to repeat course',
-  'Suspend',
-  'Cancel suspend one semester',
-  'Move out class',
-  'Register extra courses',
-  'Register to improve mark',
-  'Register to repeat a course',
-  'Cancel registration',
-  'Register Free Elective Courses',
-  'Send Application',
-  'View Application',
-  'Student Confirmation',
-  'Choose paid items',
-  'View',
-  'Change Classes',
-  'Attendance By Code',
-  'Wishlist Course',
-  'Register Wishlist',
-  'Start-up Funding Support',
-  'View',
-  'Register Over-term',
-  'Register Tutoring'
+  "Suspend to repeat course",
+  "Cancel suspend to repeat course",
+  "Suspend",
+  "Cancel suspend one semester",
+  "Move out class",
+  "Register extra courses",
+  "Register to improve mark",
+  "Register to repeat a course",
+  "Cancel registration",
+  "Register Free Elective Courses",
+  "Send Application",
+  "View Application",
+  "Student Confirmation",
+  "Choose paid items",
+  "View",
+  "Change Classes",
+  "Attendance By Code",
+  "Wishlist Course",
+  "Register Wishlist",
+  "Start-up Funding Support",
+  "View",
+  "Register Over-term",
+  "Register Tutoring",
 ];
 
 var listRegisTextVI = [
-  'Tạm hoãn 1 HK để học lại',
-  'Hủy bỏ',
-  'Tạm nghỉ 1 kỳ',
-  'Hủy bỏ',
-  'Xin chuyển lớp',
-  'ĐK môn học chậm kỳ',
-  'Đăng ký học cải thiện điểm',
-  'Đăng ký học lại',
-  'Hủy đăng ký',
-  'ĐK môn tự chọn',
-  'Gửi đơn',
-  'Xem đơn',
-  'Xác nhận sinh viên',
-  'Lựa chộn các khoản nộp',
-  'Xem',
-  'Đổi chéo lớp học',
-  'Điểm danh bằng mã',
-  'DS đăng ký môn học',
-  'Đăng ký môn học',
-  'Hỗ trợ kinh phí khởi nghiệp',
-  'Xem trạng thái',
-  'ĐK học vượt kỳ',
-  'ĐK học phụ đạo'
+  "Tạm hoãn 1 HK để học lại",
+  "Hủy bỏ",
+  "Tạm nghỉ 1 kỳ",
+  "Hủy bỏ",
+  "Xin chuyển lớp",
+  "ĐK môn học chậm kỳ",
+  "Đăng ký học cải thiện điểm",
+  "Đăng ký học lại",
+  "Hủy đăng ký",
+  "ĐK môn tự chọn",
+  "Gửi đơn",
+  "Xem đơn",
+  "Xác nhận sinh viên",
+  "Lựa chộn các khoản nộp",
+  "Xem",
+  "Đổi chéo lớp học",
+  "Điểm danh bằng mã",
+  "DS đăng ký môn học",
+  "Đăng ký môn học",
+  "Hỗ trợ kinh phí khởi nghiệp",
+  "Xem trạng thái",
+  "ĐK học vượt kỳ",
+  "ĐK học phụ đạo",
 ];
 
 var listInfoText = [
-  'University TimeTable',
-  'Tuition',
-  'Weekly Timetable',
-  'BLOC Schedules',
-  'Exam Schedule',
-  'Syllabuses',
-  'EduNext',
-  'Help',
-  'Documents'
+  "University TimeTable",
+  "Tuition",
+  "Weekly Timetable",
+  "BLOC Schedules",
+  "Exam Schedule",
+  "Syllabuses",
+  "EduNext",
+  "Help",
+  "Documents",
 ];
 
 var listInfoTextVI = [
-  'Xem DS lớp học',
-  'DS học phí ',
-  'Xem TKB theo tuần',
-  'Lịch học BLOC',
-  'Xem lịch thi',
-  'Xem đề cương môn học',
-  'EduNext',
-  'Help',
-  'Documents'
+  "Xem DS lớp học",
+  "DS học phí ",
+  "Xem TKB theo tuần",
+  "Lịch học theo BLOC",
+  "Xem lịch thi",
+  "Xem đề cương môn học",
+  "EduNext",
+  "Help",
+  "Documents",
 ];
 
 var listReportText = [
-  'Attendance Report',
-  'Mark Report',
-  'Academic Transript',
-  'Curriculum',
-  'Student Fee',
-  'Transaction History'
+  "Attendance Report",
+  "Mark Report",
+  "Academic Transript",
+  "Curriculum",
+  "Student Fee",
+  "Transaction History",
 ];
 
 var listReportTextVI = [
-  'Báo cáo điểm danh',
-  'Báo cáo điểm',
-  'Bảng điểm',
-  'Khung chương trình',
-  'Tra cứu HP đã nộp',
-  'Lịch sử nộp HP'
+  "Báo cáo điểm danh",
+  "Báo cáo điểm",
+  "Bảng điểm",
+  "Khung chương trình",
+  "Tra cứu HP đã nộp",
+  "Lịch sử nộp HP",
 ];
 
 var listCouseraText = [
-  'Announcement',
-  'Ask Mentor',
-  'View Answer',
-  'Submit Certificates',
-  'Certificate Submission Guideline'
+  "Announcement",
+  "Ask Mentor",
+  "View Answer",
+  "Submit Certificates",
+  "Certificate Submission Guideline",
 ];
 
 var listCouseraTextVI = [
-  'Thông báo',
-  'Hỏi Mentor',
-  'Xem câu trả lời',
-  'Nộp chứng chỉ',
-  'Hướng dẫn nộp chứng chỉ'
+  "Thông báo",
+  "Hỏi Mentor",
+  "Xem câu trả lời",
+  "Nộp chứng chỉ",
+  "HD nộp chứng chỉ Coursera",
 ];
 
-
 var listRegularText = [
-  'Regulations',
-  'Dormitory Regulations(Ha Noi)',
-  'Dormitory Regulations(CanTho)'
+  "Regulations",
+  "Dormitory Regulations(Ha Noi)",
+  "Dormitory Regulations(CanTho)",
 ];
 
 var listRegularTextVI = [
-  'Các quy định chung',
-  'Nội quy KTX (Hà Nội)',
-  'Nội quy KTX (Cần Thơ)'
+  "Các quy định chung",
+  "Nội quy KTX (Hà Nội)",
+  "Nội quy KTX (Cần Thơ)",
 ];
 
 var listOtherText = [
-  'Student Profile',
-  'Update Profile',
-  'Semester',
-  'Room',
-  'FUNIX',
-  'Types of Certificates',
-  'Movement Mark',
-  'Wiley eBook',
-  'Feedback Teacher',
-  'Campus Dormitory',
-  'News',
-  'Library',
-  'Book24/7'
+  "Student Profile",
+  "Update Profile",
+  "Semester",
+  "Room",
+  "FUNIX",
+  "Types of Certificates",
+  "Movement Mark",
+  "Wiley eBook",
+  "Feedback Teacher",
+  "Campus Dormitory",
+  "News",
+  "Library",
+  "Book24/7",
 ];
 
 var listOtherTextVI = [
-  'Hồ sơ sinh viên',
-  'Cập nhật hồ sơ',
-  'Học kỳ',
-  'Phòng',
-  'FUNIX',
-  'Loại chứng chỉ',
-  'Xuất báo cáo SV',
-  'Sách điện tử Wiley',
-  'Phản hồi giảng viên',
-  'KTX Khu vực',
-  'Tin tức',
-  'Thư viện',
-  'Book24/7'
+  "Hồ sơ sinh viên",
+  "Cập nhật hồ sơ",
+  "Học kỳ",
+  "Phòng",
+  "FUNIX",
+  "Loại chứng chỉ",
+  "Xuất báo cáo SV",
+  "Sách điện tử Wiley",
+  "Phản hồi giảng viên",
+  "KTX Khu vực",
+  "Tin tức",
+  "Thư viện",
+  "Book24/7",
 ];
 
 var searchRegisHTML = ``;
@@ -270,54 +277,55 @@ var searchReportHTML = ``;
 var searchCouseraHTML = ``;
 var searchRegularHTML = ``;
 var searchOtherHTML = ``;
-for(var i=0;i<listInfoText.length;i++){
-  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoText[i]}</a></li>`
+for (var i = 0; i < listInfoText.length; i++) {
+  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoText[i]}</a></li>`;
 }
 
-for(var i=0;i<listInfoTextVI.length;i++){
-  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoTextVI[i]}</a></li>`
+for (var i = 0; i < listInfoTextVI.length; i++) {
+  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoTextVI[i]}</a></li>`;
 }
-for(var i=0;i<listRegisText.length;i++){
-  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisText[i]}</a></li>`
+for (var i = 0; i < listRegisText.length; i++) {
+  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisText[i]}</a></li>`;
 }
-for(var i=0;i<listRegisTextVI.length;i++){
-  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisTextVI[i]}</a></li>`
+for (var i = 0; i < listRegisTextVI.length; i++) {
+  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisTextVI[i]}</a></li>`;
 }
-for(var i=0;i<listReportText.length;i++){
-  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportText[i]}</a></li>`
-}
-
-for(var i=0;i<listReportTextVI.length;i++){
-  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportTextVI[i]}</a></li>`
+for (var i = 0; i < listReportText.length; i++) {
+  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportText[i]}</a></li>`;
 }
 
-for(var i=0;i<listCouseraText.length;i++){
-  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraText[i]}</a></li>`
+for (var i = 0; i < listReportTextVI.length; i++) {
+  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportTextVI[i]}</a></li>`;
 }
 
-for(var i=0;i<listCouseraTextVI.length;i++){
-  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraTextVI[i]}</a></li>`
+for (var i = 0; i < listCouseraText.length; i++) {
+  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraText[i]}</a></li>`;
 }
 
-for(var i=0;i<listRegularText.length;i++){
-  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularText[i]}</a></li>`
+for (var i = 0; i < listCouseraTextVI.length; i++) {
+  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraTextVI[i]}</a></li>`;
 }
 
-for(var i=0;i<listRegularTextVI.length;i++){
-  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularTextVI[i]}</a></li>`
+for (var i = 0; i < listRegularText.length; i++) {
+  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularText[i]}</a></li>`;
 }
 
-for(var i=0;i<listOtherText.length;i++){
-  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherText[i]}</a></li>`
+for (var i = 0; i < listRegularTextVI.length; i++) {
+  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularTextVI[i]}</a></li>`;
 }
 
-for(var i=0;i<listOtherTextVI.length;i++){
-  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherTextVI[i]}</a></li>`
+for (var i = 0; i < listOtherText.length; i++) {
+  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherText[i]}</a></li>`;
 }
 
+for (var i = 0; i < listOtherTextVI.length; i++) {
+  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherTextVI[i]}</a></li>`;
+}
 
-
-header.setAttribute('class', `${header.getAttribute('class')} header sticky-top`);
+header.setAttribute(
+  "class",
+  `${header.getAttribute("class")} header sticky-top`
+);
 header.innerHTML = `
   <div class='header-name_logo'>
     <div class='header-logo'>
@@ -411,44 +419,42 @@ header.innerHTML = `
       </div>
     </div>
   </div>
-`
+`;
 
 // body
 // select body
 
 var procedures = [
-  'Changing major',
-  'Changing campus',
-  'Rejoin',
-  'Suspect one semester',
-  'Suspect one semester to take repeat course',
-  'Suspend subject',
-  'Register to repeat a course',
-  'Move out class', 
-  'Request a drop out',
-  'Retake to improve mark',
-  'Re – Examination',
-  'Free of attendance',
-  'Pay specialized tuition',
-  'Pay preparetation English',
-  'Register for final exam for subjects online'
+  "Changing major",
+  "Changing campus",
+  "Rejoin",
+  "Suspect one semester",
+  "Suspect one semester to take repeat course",
+  "Suspend subject",
+  "Register to repeat a course",
+  "Move out class",
+  "Request a drop out",
+  "Retake to improve mark",
+  "Re – Examination",
+  "Free of attendance",
+  "Pay specialized tuition",
+  "Pay preparetation English",
+  "Register for final exam for subjects online",
 ];
 var deadline = [
-  '4 weeks before the new',
-  '10 days before the new semester',
-  '1 week before the new semester',
-  '12 hours before the final exam resit',
-  '4 days after the  examination result public',
-  'before starting the new semester',
-  '5 working days before the new semester',
-  '3 working days before the new course',
-  '12 a.m - Friday of the ninth week of the semester'
+  "4 weeks before the new",
+  "10 days before the new semester",
+  "1 week before the new semester",
+  "12 hours before the final exam resit",
+  "4 days after the  examination result public",
+  "before starting the new semester",
+  "5 working days before the new semester",
+  "3 working days before the new course",
+  "12 a.m - Friday of the ninth week of the semester",
 ];
 
-
-
-var body = document.querySelectorAll('.row')[1];
-var contentBody = body.querySelector('.col-md-12');
+var body = document.querySelectorAll(".row")[1];
+var contentBody = body.querySelector(".col-md-12");
 console.log(contentBody);
 console.log(body);
 
@@ -459,7 +465,7 @@ body.innerHTML = `
         Registration
         <ul class='subnav-list'>
           <li class='subnav-item'>
-            <button class='subnav-item_btn front percent-70' data-i18n="suspend">
+            <button class='subnav-item_btn front percent-70'>
               <a href="${listRegisLink[0]}">Suspend to repeat course</a>
             </button>
             <button class='subnav-item_btn end percent-30'>
@@ -774,4 +780,329 @@ body.innerHTML = `
       </li>
     </ul>
   </div>
-` + contentBody.outerHTML
+`;
+
+body.innerHTML =
+  `
+  <div class='navbar'>
+    <ul class='navbar-list'>
+      <li class='navbar-item'>
+        Thủ tục
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-70'>
+              <a href="${listRegisLink[0]}">Xin tạm hoãn tiến độ một học kỳ để học lại</a>
+            </button>
+            <button class='subnav-item_btn end percent-30'>
+              <a href="${listRegisLink[1]}" >Hủy bỏ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-70'>
+              <a href="${listRegisLink[2]}">Xin tạm nghỉ một học kỳ</a>
+            </button>
+            <button class='subnav-item_btn end percent-30'>
+              <a href="${listRegisLink[3]}">Hủy bỏ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[4]}">Xin chuyển lớp</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[5]}">Đăng ký học đi chậm kỳ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[6]}">Đăng ký học cải thiện điểm</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[7]}">Đăng ký học lại</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[8]}">Hủy đăng ký học</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[9]}">Đăng ký môn tự chọn</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-50'>
+              <a href="${listRegisLink[10]}">Gửi đơn</a>
+            </button>
+            <button class='subnav-item_btn end percent-50'>
+              <a href="${listRegisLink[11]}">Xem đơn</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[12]}">Xin xác nhận sinh viên</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-70'>
+              <a href="${listRegisLink[13]}">Lựa chọn các khoản nộp</a>
+            </button>
+            <button class='subnav-item_btn end percent-30'>
+              <a href="${listRegisLink[14]}">Xem lịch sử nộp</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[15]}">Yêu cầu đổi chéo lớp với sinh viên</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[16]}">Điểm danh bằng mã được cấp</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-50'>
+              <a href="${listRegisLink[17]}">Danh sách môn chờ xếp lớp</a>
+            </button>
+            <button class='subnav-item_btn end percent-50'>
+              <a href="${listRegisLink[18]}">Đăng ký Wishlist</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-70'>
+              <a href="${listRegisLink[19]}">Đề nghị hỗ trợ kinh phí khởi nghiệp</a>
+            </button>
+            <button class='subnav-item_btn end percent-30'>
+              <a href="${listRegisLink[20]}">Đơn khởi nghiệp</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[21]}">Đăng ký học vượt kỳ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[22]}">Đăng ký học phụ đạo</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+        Thông tin
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[0]}">Xem danh sách lớp và giảng viên</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[1]}">Biểu học phí</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[2]}">Thời khóa biểu theo tuần</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[3]}">Lịch học các môn theo phương pháp BLOC trong kỳ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[4]}">Xem lịch thi</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[5]}">Xem đề cương môn học</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[6]}">Hướng dẫn sử dụng EduNext</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[7]}">Hỗ trợ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[8]}">Tài liệu hướng dẫn: Định hướng cho sinh viên</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+        Báo cáo
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[0]}">Báo cáo điểm danh</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[1]}">Báo cáo điểm các môn trong kỳ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[2]}">Báo cáo điểm chuyên ngành</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[3]}">Khung chương trình</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[4]}">Tra cứu học phi đã nộp</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[5]}">Xem lịch sử nộp học phí</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+        Coursera
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[0]}">Thông Báo</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[1]}">Tạo câu hỏi cho giảng viên</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[2]}">Xem phản hồi của giảng viên</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[3]}">Nộp chứng chỉ Coursera</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[4]}">Hướng dẫn nộp chứng chỉ Coursera</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+        Quy định
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegularLink[0]}">Tổng hợp các nội quy, quy định của trường</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[1]}">Nội quy ký túc xá (Dành cho cơ sở Hà Nội)</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[2]}">Nội quy ký túc xá (Dành cho cơ sở Cần Thơ)</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+        Khác
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-50'>
+              <a href="${listOtherLink[0]}">Hồ sơ sinh viên</a>
+            </button>
+            <button class='subnav-item_btn end percent-50'>
+              <a href="${listOtherLink[1]}">Cập nhật hồ sơ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-50'>
+              <a href="${listOtherLink[2]}">Lịch bắt đầu/kết thúc của một kỳ</a>
+            </button>
+            <button class='subnav-item_btn end percent-50'>
+              <a href="${listOtherLink[3]}">Danh sách phòng học</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[4]}">FUNiX</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[5]}">Các loại chứng chỉ</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[6]}">Xuất báo cáo sinh viên cuối khóa</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[7]}">Hướng dẫn truy cập Sách điện tử Wiley trên nền tảng VitalSource</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[8]}">Danh sách phản hồi giảng viên</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[9]}" target="_blank">Trang web ký túc xá của trường</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[10]}" target="_blank">Tin tức</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[11]}" target="_blank">Trang web thư viện của trường</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[12]}" target="_blank">Trang web Book24/7</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+        Thông báo
+        <div class='subnav-list full'>
+          <div class='subnav-list_table'>
+            ${table.outerHTML}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+` + contentBody.outerHTML;
