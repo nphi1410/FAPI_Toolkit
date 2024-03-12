@@ -28,8 +28,13 @@ body {
 ul {
   padding: 0;
   margin: 0;
+  border: none !important;
   list-style: none;
 }
+li, a, button, div{
+  border: none !important;
+}
+
 body.darkmode-theme {
   background-color: #292c35;
   --menu-color: #714c4c;
