@@ -177,7 +177,7 @@ var listInfoTextVI = [
   'Xem DS lớp học',
   'DS học phí ',
   'Xem TKB theo tuần',
-  'Lịch học BLOCK',
+  'Lịch học BLOC',
   'Xem lịch thi',
   'Xem đề cương môn học',
   'EduNext',
