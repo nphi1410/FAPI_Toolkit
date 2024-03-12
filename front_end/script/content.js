@@ -134,6 +134,33 @@ var listRegisText = [
   'Register Over-term',
   'Register Tutoring'
 ];
+
+var listRegisTextVI = [
+  'Tạm hoãn 1 HK để học lại',
+  'Hủy bỏ',
+  'Tạm nghỉ 1 kỳ',
+  'Hủy bỏ',
+  'Xin chuyển lớp',
+  'ĐK môn học chậm kỳ',
+  'Đăng ký học cải thiện điểm',
+  'Đăng ký học lại',
+  'Hủy đăng ký',
+  'ĐK môn tự chọn',
+  'Gửi đơn',
+  'Xem đơn',
+  'Xác nhận sinh viên',
+  'Lựa chộn các khoản nộp',
+  'Xem',
+  'Đổi chéo lớp học',
+  'Điểm danh bằng mã',
+  'DS đăng ký môn học',
+  'Đăng ký môn học',
+  'Hỗ trợ kinh phí khởi nghiệp',
+  'Xem trạng thái',
+  'ĐK học vượt kỳ',
+  'ĐK học phụ đạo'
+];
+
 var listInfoText = [
   'University TimeTable',
   'Tuition',
@@ -145,6 +172,19 @@ var listInfoText = [
   'Help',
   'Documents'
 ];
+
+var listInfoTextVI = [
+  'Xem DS lớp học',
+  'DS học phí ',
+  'Xem TKB theo tuần',
+  'Lịch học BLOCK',
+  'Xem lịch thi',
+  'Xem đề cương môn học',
+  'EduNext',
+  'Help',
+  'Documents'
+];
+
 var listReportText = [
   'Attendance Report',
   'Mark Report',
@@ -153,6 +193,16 @@ var listReportText = [
   'Student Fee',
   'Transaction History'
 ];
+
+var listReportTextVI = [
+  'Báo cáo điểm danh',
+  'Báo cáo điểm',
+  'Bảng điểm',
+  'Khung chương trình',
+  'Tra cứu HP đã nộp',
+  'Lịch sử nộp HP'
+];
+
 var listCouseraText = [
   'Announcement',
   'Ask Mentor',
@@ -160,11 +210,28 @@ var listCouseraText = [
   'Submit Certificates',
   'Certificate Submission Guideline'
 ];
+
+var listCouseraTextVI = [
+  'Thông báo',
+  'Hỏi Mentor',
+  'Xem câu trả lời',
+  'Nộp chứng chỉ',
+  'Hướng dẫn nộp chứng chỉ'
+];
+
+
 var listRegularText = [
   'Regulations',
   'Dormitory Regulations(Ha Noi)',
   'Dormitory Regulations(CanTho)'
 ];
+
+var listRegularTextVI = [
+  'Các quy định chung',
+  'Nội quy KTX (Hà Nội)',
+  'Nội quy KTX (Cần Thơ)'
+];
+
 var listOtherText = [
   'Student Profile',
   'Update Profile',
@@ -180,6 +247,23 @@ var listOtherText = [
   'Library',
   'Book24/7'
 ];
+
+var listOtherTextVI = [
+  'Hồ sơ sinh viên',
+  'Cập nhật hồ sơ',
+  'Học kỳ',
+  'Phòng',
+  'FUNIX',
+  'Loại chứng chỉ',
+  'Xuất báo cáo SV',
+  'Sách điện tử Wiley',
+  'Phản hồi giảng viên',
+  'KTX Khu vực',
+  'Tin tức',
+  'Thư viện',
+  'Book24/7'
+];
+
 var searchRegisHTML = ``;
 var searchInfoHTML = ``;
 var searchReportHTML = ``;
@@ -189,21 +273,48 @@ var searchOtherHTML = ``;
 for(var i=0;i<listInfoText.length;i++){
   searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoText[i]}</a></li>`
 }
+
+for(var i=0;i<listInfoTextVI.length;i++){
+  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoTextVI[i]}</a></li>`
+}
 for(var i=0;i<listRegisText.length;i++){
   searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisText[i]}</a></li>`
+}
+for(var i=0;i<listRegisTextVI.length;i++){
+  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisTextVI[i]}</a></li>`
 }
 for(var i=0;i<listReportText.length;i++){
   searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportText[i]}</a></li>`
 }
+
+for(var i=0;i<listReportTextVI.length;i++){
+  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportTextVI[i]}</a></li>`
+}
+
 for(var i=0;i<listCouseraText.length;i++){
   searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraText[i]}</a></li>`
 }
+
+for(var i=0;i<listCouseraTextVI.length;i++){
+  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraTextVI[i]}</a></li>`
+}
+
 for(var i=0;i<listRegularText.length;i++){
   searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularText[i]}</a></li>`
 }
+
+for(var i=0;i<listRegularTextVI.length;i++){
+  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularTextVI[i]}</a></li>`
+}
+
 for(var i=0;i<listOtherText.length;i++){
   searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherText[i]}</a></li>`
 }
+
+for(var i=0;i<listOtherTextVI.length;i++){
+  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherTextVI[i]}</a></li>`
+}
+
 
 
 header.setAttribute('class', `${header.getAttribute('class')} header sticky-top`);
@@ -301,21 +412,6 @@ header.innerHTML = `
     </div>
   </div>
 `
-
-
-var items = document.querySelectorAll("[data-i18n]");
-var i;
-var l = items.length;
-for(i = 0; i < l; i++){
-	var translation = chrome.i18n.getMessage(items[i].getAttribute("data-i18n"));
-	if(items[i].value === "i18n"){
-		items[i].value = translation;
-	}else{
-		items[i].innerText = translation;
-	}
-}
-
-
 
 // body
 // select body
