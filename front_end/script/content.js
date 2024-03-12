@@ -142,7 +142,7 @@ var listRegisText = [
   "Register Over-term",
   "Register Tutoring",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listRegisTextVI = [
   "Tạm hoãn 1 HK để học lại",
   "Hủy bỏ",
@@ -180,7 +180,7 @@ var listInfoText = [
   "Help",
   "Documents",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listInfoTextVI = [
   "Xem DS lớp học",
   "DS học phí ",
@@ -201,7 +201,7 @@ var listReportText = [
   "Student Fee",
   "Transaction History",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listReportTextVI = [
   "Báo cáo điểm danh",
   "Báo cáo điểm",
@@ -218,7 +218,7 @@ var listCouseraText = [
   "Submit Certificates",
   "Certificate Submission Guideline",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listCouseraTextVI = [
   "Thông báo",
   "Hỏi Mentor",
@@ -232,7 +232,7 @@ var listRegularText = [
   "Dormitory Regulations(Ha Noi)",
   "Dormitory Regulations(CanTho)",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listRegularTextVI = [
   "Các quy định chung",
   "Nội quy KTX (Hà Nội)",
@@ -254,7 +254,7 @@ var listOtherText = [
   "Library",
   "Book24/7",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listOtherTextVI = [
   "Hồ sơ sinh viên",
   "Cập nhật hồ sơ",
@@ -458,6 +458,7 @@ var contentBody = body.querySelector(".col-md-12");
 console.log(contentBody);
 console.log(body);
 
+// English
 body.innerHTML = `
   <div class='navbar'>
     <ul class='navbar-list'>
@@ -781,7 +782,7 @@ body.innerHTML = `
     </ul>
   </div>
 `;
-
+// Vietnamese (NOT FINISHED)
 body.innerHTML =
   `
   <div class='navbar'>
