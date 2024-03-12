@@ -539,7 +539,7 @@ td {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-}
+ }
 
 .header-language-btn:hover {
   background-color: #f6c78b;
@@ -560,6 +560,7 @@ td {
   border-top: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  animation: showAnimation 0.3s ease-in-out forwards;
 }
 
 .header-language-content a {
