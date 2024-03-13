@@ -142,7 +142,7 @@ var listRegisText = [
   "Register Over-term",
   "Register Tutoring",
 ];
-// Vietnamese (NOT FINISHED)
+// Vietnamese (FINISHED)
 var listRegisTextVI = [
   "Xin tạm hoãn tiến độ một học kỳ để học lại",
   "Hủy bỏ",
@@ -180,7 +180,7 @@ var listInfoText = [
   "Help",
   "Documents",
 ];
-// Vietnamese (NOT FINISHED)
+// Vietnamese (FINISHED)
 var listInfoTextVI = [
   "Xem danh sách lớp và giảng viên",
   "Biểu học phí",
@@ -201,7 +201,7 @@ var listReportText = [
   "Student Fee",
   "Transaction History",
 ];
-// Vietnamese (NOT FINISHED)
+// Vietnamese (FINISHED)
 var listReportTextVI = [
   "Báo cáo điểm danh",
   "Báo cáo điểm các môn trong kỳ",
@@ -218,7 +218,7 @@ var listCouseraText = [
   "Submit Certificates",
   "Certificate Submission Guideline",
 ];
-// Vietnamese (NOT FINISHED)
+// Vietnamese (FINISHED)
 var listCouseraTextVI = [
   "Thông báo",
   "Tạo câu hỏi cho giảng viên",
@@ -232,7 +232,7 @@ var listRegularText = [
   "Dormitory Regulations(Ha Noi)",
   "Dormitory Regulations(CanTho)",
 ];
-// Vietnamese (NOT FINISHED)
+// Vietnamese (FINISHED)
 var listRegularTextVI = [
   "Tổng hợp các nội quy, quy định của trường",
   "Nội quy ký túc xá (Dành cho cơ sở Hà Nội)",
@@ -254,7 +254,7 @@ var listOtherText = [
   "Library",
   "Book24/7",
 ];
-// Vietnamese (NOT FINISHED)
+// Vietnamese (FINISHED)
 var listOtherTextVI = [
   "Hồ sơ sinh viên",
   "Cập nhật hồ sơ",
