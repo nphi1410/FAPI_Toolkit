@@ -142,7 +142,7 @@ var listRegisText = [
   "Register Over-term",
   "Register Tutoring",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listRegisTextVI = [
   "Xin tạm hoãn tiến độ một học kỳ để học lại",
   "Hủy bỏ",
@@ -180,7 +180,7 @@ var listInfoText = [
   "Help",
   "Documents",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listInfoTextVI = [
   "Xem danh sách lớp và giảng viên",
   "Biểu học phí",
@@ -201,7 +201,7 @@ var listReportText = [
   "Student Fee",
   "Transaction History",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listReportTextVI = [
   "Báo cáo điểm danh",
   "Báo cáo điểm các môn trong kỳ",
@@ -218,7 +218,7 @@ var listCouseraText = [
   "Submit Certificates",
   "Certificate Submission Guideline",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listCouseraTextVI = [
   "Thông báo",
   "Tạo câu hỏi cho giảng viên",
@@ -232,7 +232,7 @@ var listRegularText = [
   "Dormitory Regulations(Ha Noi)",
   "Dormitory Regulations(CanTho)",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listRegularTextVI = [
   "Tổng hợp các nội quy, quy định của trường",
   "Nội quy ký túc xá (Dành cho cơ sở Hà Nội)",
@@ -254,7 +254,7 @@ var listOtherText = [
   "Library",
   "Book24/7",
 ];
-
+// Vietnamese (NOT FINISHED)
 var listOtherTextVI = [
   "Hồ sơ sinh viên",
   "Cập nhật hồ sơ",
@@ -383,31 +383,6 @@ header.innerHTML = `
 
   <div class='header-account-settings'>
 
-    <div class='header-settings'>
-      <i class="fa-solid fa-gear"></i>
-      <div class='header-menu header-settings-menu'>
-        <h1 class='header-menu-heading'>Settings</h1>
-        <ul class='header-menu-list'>
-          <li class='header-menu-item'>
-            <span>Language</span>
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-          </li>
-          <li class='header-menu-item'><span>Dark Mode</span></li>
-          <li class='header-menu-item download'>
-            <span>Download</span>
-            <div class='header-settings-item-dropdown'>
-              <a href="${asLink}" target="_blank"><img src="${asImg}" alt="as" border="0"></a>
-              <a href="${gpLink}" target="_blank"><img src="${gpImg}" alt="as" border="0"></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-
     <div class='header-account'>
       <div class='header-account-bg'></div>
       <div class='header-menu header-account-menu'>
@@ -420,6 +395,19 @@ header.innerHTML = `
     </div>
   </div>
 `;
+
+var items = document.querySelectorAll("[data-i18n]");
+var i;
+var l = items.length;
+for(i = 0; i < l; i++){
+	var translation = chrome.i18n.getMessage(items[i].getAttribute("data-i18n"));
+	if(items[i].value === "i18n"){
+		items[i].value = translation;
+	}else{
+		items[i].innerText = translation;
+	}
+}
+
 
 // body
 // select body
@@ -458,6 +446,7 @@ var contentBody = body.querySelector(".col-md-12");
 console.log(contentBody);
 console.log(body);
 
+// English
 body.innerHTML = `
   <div class='navbar'>
     <ul class='navbar-list'>
@@ -781,7 +770,7 @@ body.innerHTML = `
     </ul>
   </div>
 `;
-
+// Vietnamese (NOT FINISHED)
 body.innerHTML =
   `
   <div class='navbar'>
