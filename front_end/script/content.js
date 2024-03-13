@@ -144,29 +144,29 @@ var listRegisText = [
 ];
 
 var listRegisTextVI = [
-  "Tạm hoãn 1 HK để học lại",
+  "Xin tạm hoãn tiến độ một học kỳ để học lại",
   "Hủy bỏ",
-  "Tạm nghỉ 1 kỳ",
+  "Xin tạm nghỉ một học kỳ",
   "Hủy bỏ",
   "Xin chuyển lớp",
-  "ĐK môn học chậm kỳ",
+  "Đăng ký học đi chậm kỳ",
   "Đăng ký học cải thiện điểm",
   "Đăng ký học lại",
-  "Hủy đăng ký",
-  "ĐK môn tự chọn",
+  "Hủy đăng ký học",
+  "Đăng ký môn tự chọn",
   "Gửi đơn",
   "Xem đơn",
-  "Xác nhận sinh viên",
+  "Xin xác nhận sinh viên",
   "Lựa chộn các khoản nộp",
-  "Xem",
-  "Đổi chéo lớp học",
-  "Điểm danh bằng mã",
-  "DS đăng ký môn học",
-  "Đăng ký môn học",
-  "Hỗ trợ kinh phí khởi nghiệp",
-  "Xem trạng thái",
-  "ĐK học vượt kỳ",
-  "ĐK học phụ đạo",
+  "Xem lịch sử nộp",
+  "Yêu cầu đổi chéo lớp với sinh viên",
+  "Điểm danh bằng mã được cấp",
+  "Danh sách môn chờ xếp lớp",
+  "Đăng ký Wishlist",
+  "Đề ngị hỗ trợ kinh phí khởi nghiệp",
+  "Đơn khởi nghiệp",
+  "Đăng ký học vượt kỳ",
+  "Đăng ký học phụ đạo",
 ];
 
 var listInfoText = [
@@ -182,15 +182,15 @@ var listInfoText = [
 ];
 
 var listInfoTextVI = [
-  "Xem DS lớp học",
-  "DS học phí ",
-  "Xem TKB theo tuần",
-  "Lịch học theo BLOC",
+  "Xem danh sách lớp và giảng viên",
+  "Biểu học phí",
+  "Thời khóa biểu theo tuần",
+  "Lịch học các môn theo phương pháp BLOC trong kỳ",
   "Xem lịch thi",
   "Xem đề cương môn học",
-  "EduNext",
-  "Help",
-  "Documents",
+  "Hướng dẫ sử dụng EduNext",
+  "Hỗ trợ",
+  "Tài liệu hướng dẫn: Định hướng cho sinh viên",
 ];
 
 var listReportText = [
@@ -204,11 +204,11 @@ var listReportText = [
 
 var listReportTextVI = [
   "Báo cáo điểm danh",
-  "Báo cáo điểm",
-  "Bảng điểm",
+  "Báo cáo điểm các môn trong kỳ",
+  "Báo cáo điểm chuyên ngành",
   "Khung chương trình",
-  "Tra cứu HP đã nộp",
-  "Lịch sử nộp HP",
+  "Tra cứu học phí đã nộp",
+  "Xem lịch sử nộp học phí",
 ];
 
 var listCouseraText = [
@@ -221,10 +221,10 @@ var listCouseraText = [
 
 var listCouseraTextVI = [
   "Thông báo",
-  "Hỏi Mentor",
-  "Xem câu trả lời",
-  "Nộp chứng chỉ",
-  "HD nộp chứng chỉ Coursera",
+  "Tạo câu hỏi cho giảng viên",
+  "Xem phản hồi của giảng viên",
+  "Nộp chứng chỉ Coursera",
+  "Hướng dẫn nộp chứng chỉ Coursera",
 ];
 
 var listRegularText = [
@@ -234,9 +234,9 @@ var listRegularText = [
 ];
 
 var listRegularTextVI = [
-  "Các quy định chung",
-  "Nội quy KTX (Hà Nội)",
-  "Nội quy KTX (Cần Thơ)",
+  "Tổng hợp các nội quy, quy định của trường",
+  "Nội quy ký túc xá (Dành cho cơ sở Hà Nội)",
+  "Nội quy ký túc xá (Dành cho cơ sở Cần Thơ)",
 ];
 
 var listOtherText = [
@@ -244,7 +244,7 @@ var listOtherText = [
   "Update Profile",
   "Semester",
   "Room",
-  "FUNIX",
+  "FUNiX",
   "Types of Certificates",
   "Movement Mark",
   "Wiley eBook",
@@ -258,17 +258,17 @@ var listOtherText = [
 var listOtherTextVI = [
   "Hồ sơ sinh viên",
   "Cập nhật hồ sơ",
-  "Học kỳ",
-  "Phòng",
-  "FUNIX",
-  "Loại chứng chỉ",
-  "Xuất báo cáo SV",
-  "Sách điện tử Wiley",
-  "Phản hồi giảng viên",
-  "KTX Khu vực",
+  "Lịch bắt đầu/kết thúc của một kỳ",
+  "Danh sách phòng học",
+  "FUNiX",
+  "Các loại chứng chỉ",
+  "Xuất báo cáo sinh viên cuối kỳ",
+  "Hướng dẫn truy cập sách điện tử Wiley trên nền tảng VitaiSource",
+  "Danh sách phản hồi giảng viên",
+  "Trang web ký túc xá của trường", 
   "Tin tức",
-  "Thư viện",
-  "Book24/7",
+  "Trang web thư viện của trường",
+  "Trang web Book24/7",
 ];
 
 var searchRegisHTML = ``;
@@ -725,7 +725,7 @@ body.innerHTML = `
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listOtherLink[4]}">FUNix</a>
+              <a href="${listOtherLink[4]}">FUNiX</a>
             </button>
           </li>
           <li class='subnav-item'>
