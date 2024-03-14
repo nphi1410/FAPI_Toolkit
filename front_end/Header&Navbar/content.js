@@ -13,17 +13,10 @@ all.innerHTML =
 ` + container.outerHTML;
 
 
-//select account and logout link
-var account = document.querySelector('#ctl00_divUser a[href="?view=user"]').getAttribute("href");
-var logOut = document.querySelector('#ctl00_divUser a[href="?logout=true"]').getAttribute("href");
-console.log(account);
-console.log(logOut);
 
 // remove breadcumb
 var infoAccount = document.querySelector("#ctl00_divUser");
 var breadcumb = document.querySelector(".breadcrumb");
-console.log(infoAccount)
-console.log(breadcumb)
 infoAccount.style.display = "none";
 breadcumb.style.display = "none";
 
@@ -35,6 +28,9 @@ var contentBody = body.querySelector(".col-md-12");
 console.log(contentBody);
 console.log(body);
 
+//select account and logout link
+var account = document.querySelector('#ctl00_divUser a[href="?view=user"]').getAttribute("href");
+var logOut = document.querySelector('#ctl00_divUser a[href="?logout=true"]').getAttribute("href");
 
 body.innerHTML = `
   <div class='navbar'>
