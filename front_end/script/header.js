@@ -1,7 +1,54 @@
-console.log("hello")
-var header = document.querySelector(".row");
-console.log(header);
 
+var searchRegisHTML = ``;
+var searchInfoHTML = ``;
+var searchReportHTML = ``;
+var searchCouseraHTML = ``;
+var searchRegularHTML = ``;
+var searchOtherHTML = ``;
+for (var i = 0; i < listInfoText.length; i++) {
+  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoText[i]}</a></li>`;
+}
+
+for (var i = 0; i < listInfoTextVI.length; i++) {
+  searchInfoHTML += `<li class='header-search-bar_item'><a href="${listInfoLink[i]}">${listInfoTextVI[i]}</a></li>`;
+}
+for (var i = 0; i < listRegisText.length; i++) {
+  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisText[i]}</a></li>`;
+}
+for (var i = 0; i < listRegisTextVI.length; i++) {
+  searchRegisHTML += `<li class='header-search-bar_item'><a href="${listRegisLink[i]}">${listRegisTextVI[i]}</a></li>`;
+}
+for (var i = 0; i < listReportText.length; i++) {
+  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportText[i]}</a></li>`;
+}
+
+for (var i = 0; i < listReportTextVI.length; i++) {
+  searchReportHTML += `<li class='header-search-bar_item'><a href="${listReportLink[i]}">${listReportTextVI[i]}</a></li>`;
+}
+
+for (var i = 0; i < listCouseraText.length; i++) {
+  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraText[i]}</a></li>`;
+}
+
+for (var i = 0; i < listCouseraTextVI.length; i++) {
+  searchCouseraHTML += `<li class='header-search-bar_item'><a href="${listCouseraLink[i]}">${listCouseraTextVI[i]}</a></li>`;
+}
+
+for (var i = 0; i < listRegularText.length; i++) {
+  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularText[i]}</a></li>`;
+}
+
+for (var i = 0; i < listRegularTextVI.length; i++) {
+  searchRegularHTML += `<li class='header-search-bar_item'><a href="${listRegularLink[i]}">${listRegularTextVI[i]}</a></li>`;
+}
+
+for (var i = 0; i < listOtherText.length; i++) {
+  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherText[i]}</a></li>`;
+}
+
+for (var i = 0; i < listOtherTextVI.length; i++) {
+  searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherTextVI[i]}</a></li>`;
+}
 
 
 var head = document.querySelector("head");
@@ -9,6 +56,7 @@ head.innerHTML = ` ${head.innerHTML}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 `;
 
+var header = document.querySelector(".row");
 header.setAttribute(
     "class",
     `${header.getAttribute("class")} header sticky-top`
@@ -17,7 +65,9 @@ header.setAttribute(
 header.innerHTML = `
   <div class='header-name_logo'>
     <div class='header-logo'>
-      <img src="https://i.ibb.co/dLMy0d8/logo.png" alt="logo" border="0">
+      <a href="https://fap.fpt.edu.vn/Student.aspx">
+        <img src="https://i.ibb.co/dLMy0d8/logo.png" alt="logo" border="0">
+      </a>
       <div class='header-logo_separator'></div>
     </div>
     <div class='header-name'>FPT University Academic Portal</div>
@@ -33,7 +83,12 @@ header.innerHTML = `
       </button>
       <div class='header-search-bar_dropdown'>
         <ul class='header-search-bar_list'>
-          
+            ${searchRegisHTML}
+            ${searchInfoHTML}
+            ${searchReportHTML}
+            ${searchCouseraHTML}
+            ${searchRegularHTML}
+            ${searchOtherHTML}
         </ul>
       </div>
     </form>

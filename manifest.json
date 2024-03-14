@@ -18,10 +18,9 @@
       "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
       "js": [
         "front_end/script/fe.js",
-        "front_end/script/link.js",
-        "front_end/script/content.js"
+        "front_end/script/home.js"
       ],
-      "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
+      "css": []
     },
     {
       "matches": ["https://fap.fpt.edu.vn/Grade/*"],
@@ -30,10 +29,12 @@
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
       "js": [
+        "front_end/script/link.js",
+        "front_end/script/content.js",
         "front_end/script/header.js", 
         "front_end/script/main.js"
       ],
-      "css": ["front_end/MyStyle/header.css"]
+      "css": ["front_end/MyStyle/header.css", "front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
     }
   ],
   "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
