@@ -14,7 +14,7 @@ for (var i = 0; i < tdTags.length; i++) {
   var currentInnerText = tdTags[i].innerText.trim();
   var previousInnerText = (i > 0) ? tdTags[i - 1].innerText.trim() : "";
 
-  if (currentInnerText.includes("%") && prevInnerText !== "Total") {
+  if (currentInnerText.includes("%") && previousInnerText !== "Total") {
     var percent = parseFloat(currentInnerText); // Parse the percent value
     var mark = parseFloat(tdTags[i + 1].innerText.trim()); // Parse the mark value
 
