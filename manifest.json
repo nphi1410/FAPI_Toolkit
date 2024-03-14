@@ -16,11 +16,15 @@
   "content_scripts": [
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
+      "exclude_matches": [
+        "https://fap.fpt.edu.vn/Default.aspx"
+      ],
       "js": [
         "front_end/Header&Navbar/link.js",
-        "front_end/Header&Navbar/content.js",
         "front_end/Header&Navbar/header.js", 
-        "front_end/Header&Navbar/functions.js"
+        "front_end/Header&Navbar/content.js",
+        "front_end/Header&Navbar/darkmode.js",
+        "front_end/Header&Navbar/search.js"
       ],
       "css": ["front_end/MyStyle/header.css", "front_end/MyStyle/myStyle.css"]
     },

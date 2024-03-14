@@ -1,5 +1,3 @@
-
-
 //SEARCHING FUNCTION
 let searchBar = document.querySelector('.header-search-bar_input');
 let searchList = document.querySelectorAll('.header-search-bar_item a');
@@ -17,11 +15,3 @@ searchBar.addEventListener('keyup', e => {
         if(currentValue === "") searchDropdown.style.display = 'none';
     })
 });
-
-
-// DARKMODE FUNCTION
-const checkbox = document.getElementById("header-darkmode-checkbox")
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("darkmode-theme")
-})
-

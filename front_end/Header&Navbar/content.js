@@ -1,12 +1,13 @@
-console.log("hello");
+console.log("content");
 
 var table = document.querySelector(".table-bordered");
 
 // ADD BACKGROUND
 var container = document.querySelector(".container");
 var all = document.querySelector("body");
-console.log(container);
-console.log(all);
+document.querySelector("body").onload = () => {
+  console.log("loading")
+}
 all.innerHTML =
   `
   <div class="background"></div>
