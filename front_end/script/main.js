@@ -1,6 +1,4 @@
-// BODY SHOWING
-var fullBody = document.querySelector('.container .row .col-md-12');
-fullBody.style.display = 'none';
+
 
 //SEARCHING FUNCTION
 let searchBar = document.querySelector('.header-search-bar_input');

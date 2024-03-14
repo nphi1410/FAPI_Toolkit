@@ -12,74 +12,6 @@ var regular = list2[6];
 var cousera = list2[7];
 var ktx = list2[8];
 
-//Registration
-var listRegis = registration.querySelectorAll("ul li a");
-var listRegisLink = new Array(listRegis.length);
-for (var i = 0; i < listRegis.length; i++) {
-  listRegisLink[i] = listRegis[i].getAttribute("href");
-}
-console.log(listRegisLink);
-//Information
-var listInfo = infor.querySelectorAll("ul li a");
-var listInfoLink = new Array(listInfo.length);
-for (var i = 0; i < listInfo.length; i++) {
-  listInfoLink[i] = listInfo[i].getAttribute("href");
-}
-console.log(listInfoLink);
-//Report
-var listReport = report.querySelectorAll("ul li a");
-var listReportLink = new Array(listReport.length);
-for (var i = 0; i < listReport.length; i++) {
-  listReportLink[i] = listReport[i].getAttribute("href");
-}
-console.log(listReportLink);
-
-//Consera
-var listCousera = cousera.querySelectorAll("ul li a");
-var listCouseraLink = new Array(listCousera.length);
-for (var i = 0; i < listCousera.length; i++) {
-  listCouseraLink[i] = listCousera[i].getAttribute("href");
-}
-console.log(listCouseraLink);
-
-//Regulation
-var listRegular = regular.querySelectorAll("ul li a");
-var listRegularLink = new Array(listRegular.length);
-for (var i = 0; i < listRegular.length; i++) {
-  listRegularLink[i] = listRegular[i].getAttribute("href");
-}
-console.log(listRegularLink);
-
-//Other
-var listOther = other.querySelectorAll("ul li a");
-var listOtherLink = new Array(listOther.length);
-var listFeedbackLink = feedback.querySelector("ul li a").getAttribute("href");
-var listKTXLink = ktx.querySelector("a").getAttribute("href");
-var newsLink = box1.querySelector(".listBoxWrapper a").getAttribute("href");
-var footer = document
-  .querySelector("#ctl00_divSupport")
-  .parentNode.parentNode.nextElementSibling.querySelectorAll("a");
-var footerLink = new Array(footer.length);
-for (var i = 0; i < footer.length; i++) {
-  footerLink[i] = footer[i].getAttribute("href");
-}
-console.log(footerLink);
-for (var i = 0; i < listOther.length; i++) {
-  listOtherLink[i] = listOther[i].getAttribute("href");
-}
-listOtherLink.push(
-  listFeedbackLink,
-  listKTXLink,
-  newsLink,
-  footerLink[2],
-  footerLink[3]
-);
-console.log(listOtherLink);
-
-var head = document.querySelector("head");
-head.innerHTML = ` ${head.innerHTML}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-`;
 
 // ADD BACKGROUND
 var container = document.querySelector(".container");
@@ -322,80 +254,7 @@ for (var i = 0; i < listOtherTextVI.length; i++) {
   searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherTextVI[i]}</a></li>`;
 }
 
-header.setAttribute(
-  "class",
-  `${header.getAttribute("class")} header sticky-top`
-);
 
-header.innerHTML = `
-  <div class='header-name_logo'>
-    <div class='header-logo'>
-      <img src="https://i.ibb.co/dLMy0d8/logo.png" alt="logo" border="0">
-      <div class='header-logo_separator'></div>
-    </div>
-    <div class='header-name'>FPT University Academic Portal</div>
-  </div>
-
-  <div class='header-search'>
-    <form role='search' class='header-searchbar'>
-      <div class='header-search-bar_main'>
-        <input class='header-search-bar_input' placeholder='Search'>
-      </div>
-      <button class='header-search-btn'>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-      <div class='header-search-bar_dropdown'>
-        <ul class='header-search-bar_list'>
-          ${searchRegisHTML}
-          ${searchInfoHTML}
-          ${searchReportHTML}
-          ${searchCouseraHTML}
-          ${searchRegularHTML}
-          ${searchOtherHTML}
-        </ul>
-      </div>
-    </form>
-  </div>
-
-<div class="header-language">
-  <div class="header-language-btn">
-    Language
-    <div class="header-language-content">
-      <a href="#" style="text-align: right">
-        <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">
-        <span>English</span>
-      </a>
-      <a href="#" style="text-align: right">
-        <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">
-        <span>Tiếng Việt</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class='header-darkmode'>
-  <input type="checkbox" class="header-darkmode-checkbox" id="header-darkmode-checkbox">
-  <label for="header-darkmode-checkbox" class="header-darkmode-checkbox-label">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-    <span class="header-darkmode-ball"></span>
-  </label>
-</div>
-
-  <div class='header-account-settings'>
-
-    <div class='header-account'>
-      <div class='header-account-bg'></div>
-      <div class='header-menu header-account-menu'>
-        <h1 class='header-menu-heading'>Account</h1>
-        <ul class='header-menu-list'>
-          <li class='header-menu-item'><a href="${account}">Account</a></li>
-          <li class='header-menu-item'><a href="${logOut}">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-`;
 
 // body
 // select body
@@ -433,6 +292,9 @@ var body = document.querySelectorAll(".row")[1];
 var contentBody = body.querySelector(".col-md-12");
 console.log(contentBody);
 console.log(body);
+//Remove Body
+var fullBody = document.querySelector('.container .row .col-md-12');
+fullBody.style.display = 'none';
 
 body.innerHTML = `
   <div class='navbar'>
