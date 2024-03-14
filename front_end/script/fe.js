@@ -35,16 +35,8 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
 
-        const scripts = doc.querySelectorAll('script');
-        scripts.forEach(script => {
-            if (script.textContent.includes('__doPostBack')){
-                const newScript = document.createElement('script');
-                newScript.textContent = script.textContent; // Copy the script content
-                document.body.appendChild(newScript);
-                console.log(newScript);
-            }
-        });
 
+        
         const rows = document.querySelectorAll('.row');
         var dataRow = rows[1];
         const scheduleDiv = document.createElement('div');
@@ -56,15 +48,10 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         var mainTable = document.createElement('table');
         scheduleDiv.appendChild(mainTable);
 
+        var yearTh = Tbls[2].querySelectorAll('th');
+        yearTh[0].innerHTML = '';
 
-
-        var selects  = doc.querySelectorAll('select');
-        selects[0].setAttribute('onchange', `__doPostBack(\'ctl00$mainContent$drpYear\',\'\')`);
-        selects[1].setAttribute('onchange', `__doPostBack(\'ctl00$mainContent$drpSelectWeek\',\'\')`);
-        
-
-        
-        // Copy HTML content from Tbls[2] table to mainTable
+         // Copy HTML content from Tbls[2] table to mainTable
         mainTable.innerHTML = Tbls[2].innerHTML;
     })
     .catch(error => {
