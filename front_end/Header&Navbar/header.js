@@ -123,8 +123,8 @@ header.innerHTML = `
       <div class='header-account-bg'></div>
       <div class='header-menu header-account-menu'>
         <div class='header-menu-heading'>
-          <div class='header-menu-heading-name'>Đường Minh Sơn</div>
-          <div class='header-menu-heading-mail'>sondmhe186291</div>
+          <div class='header-menu-heading-name'>${localStorage.getItem("fullName")}</div>
+          <div class='header-menu-heading-mail'>${localStorage.getItem("mss")}</div>
         </div>
         <ul class='header-menu-list'>
           <li class='header-menu-item'><a href="?view=user">${accountText[0]}</a></li>

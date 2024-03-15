@@ -1,5 +1,3 @@
-var NoticeTable = localStorage.getItem("tableNotice");
-
 
 // ADD BACKGROUND
 var container = document.querySelector(".container");
@@ -355,7 +353,7 @@ body.innerHTML =
         ${itemNavText[6]}
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
-            ${NoticeTable}
+            ${localStorage.getItem('tableNotice')}
           </div>
         </div>
       </li>

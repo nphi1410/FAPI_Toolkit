@@ -17,8 +17,7 @@
     {
       "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
       "js": [
-        "front_end/Schedular/fe.js",
-        "front_end/Schedular/home.js"
+        "front_end/Schedular/fe.js"
       ]
     },
 
@@ -28,6 +27,7 @@
         "https://fap.fpt.edu.vn/Default.aspx"
       ],
       "js": [
+        "front_end/Header&Navbar/selector.js",
         "front_end/Header&Navbar/link.js",
         "front_end/LanguageSwitch/LanguageSwitch.js",
         "front_end/Header&Navbar/header.js", 
