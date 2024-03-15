@@ -27,19 +27,20 @@ body {
 
 body.darkmode-theme {
   background-color: #292c35;
-  --menu-color: #714c4c;
-  --background-color: #192734;
+  --menu-color: #374151;
+  --background-color: #1f2937;
   --text-color: white;
-  --header-color: #0f172a;
-  --navbar-color: #323236;
+  --header-color: #374151;
+  --navbar-color: #1f2937;
   --button-color: #22303C;
-  --hover-color: #818181;
+  --hover-color: #4b5563;
   --input-color: #3e3e42;
   transition: background-color 0.2s linear;
 }
 :root {
   --navbar-height: 46px;
   --header-height: 80px;
+  --box-shadow: 2px 2px 15px #888888, -2px 2px 15px #888888;
   --menu-color: #fcefec;
   --border-color: #d3d3d3;
   --background-color: white;
@@ -133,8 +134,9 @@ body.darkmode-theme {
 
 .header-logo_separator {
   height: 50px;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--text-color);
   margin-right: 30px;
+  transition: background-color 0.2s linear;
 }
 
 .header-search {
@@ -145,6 +147,7 @@ body.darkmode-theme {
   height: 40px;
   position: relative;
   border-radius: 4px;
+  border: 1px solid var(--border-color);
   background-color: #fff;
   box-sizing: border-box;
   padding: 0;
@@ -203,14 +206,13 @@ body.darkmode-theme {
   background-color: var(--background-color);
   overflow-y: scroll;
   border-radius: 4px;
-  box-shadow: 0 0 15px 2px #888888;
+  box-shadow: var(--box-shadow);
   z-index: 100000;
   padding: 0;
   margin: 0;
   list-style: none;
   display: none;
-  border: 1px solid var(--border-color);
-  border-top: none;
+  border: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   scrollbar-width: none;
@@ -263,23 +265,35 @@ body.darkmode-theme {
   width: 150px;
   height: auto;
   position: absolute;
-  background-color: var(--background-color);
+  background-color: var(--menu-color);
   top: 40px;
   right: 0;
   font-size: 15px;
   z-index: 100;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
+  border: none;
+  box-shadow: var(--box-shadow);
   animation: showAnimation 0.3s ease-in-out forwards;
   transition: background-color 0.2s linear;
 }
 
 
 .header-menu-heading {
-  font-size: 22px;
   margin: 0;
   color: var(--text-color);
+  margin: 10px 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #4ec0a4;
 }
+.header-menu-heading-name {
+  font-size: 16px;
+
+}
+.header-menu-heading-mail {
+  font-size: 14px;
+  color: rgb(156 163 175)
+}
+
 
 .header-menu-list {
   display: flex;
@@ -287,7 +301,6 @@ body.darkmode-theme {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: var(--menu-color);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   transition: background-color 0.2s linear;
@@ -352,7 +365,7 @@ body.darkmode-theme {
   top: -25px;
   border-width: 15px 18px;
   border-style: solid;
-  border-color: transparent transparent var(--background-color) transparent;
+  border-color: transparent;
   cursor: pointer;
 }
 
@@ -417,7 +430,7 @@ body.darkmode-theme {
   left: 0;
   right: 0;
   border-radius: 4px;
-  box-shadow: 0 0 15px 2px #888888;
+  box-shadow: var(--box-shadow);
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   justify-items: center;
@@ -569,7 +582,7 @@ body.darkmode-theme {
   left: 0;
   background-color: var(--button-color);
   min-width: 120px;
-  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   z-index: 1;
   border-radius: 4px;
   border: none;

@@ -124,7 +124,10 @@ header.innerHTML = `
     <div class='header-account'>
       <div class='header-account-bg'></div>
       <div class='header-menu header-account-menu'>
-        <h1 class='header-menu-heading'>Account</h1>
+        <div class='header-menu-heading'>
+          <div class='header-menu-heading-name'>Đường Minh Sơn</div>
+          <div class='header-menu-heading-mail'>sondmhe186291</div>
+        </div>
         <ul class='header-menu-list'>
           <li class='header-menu-item'><a href="?view=user">Account</a></li>
           <li class='header-menu-item'><a href="?logout=true">Logout</a></li>
