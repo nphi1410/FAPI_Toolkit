@@ -83,12 +83,11 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         }
         
         th {
-        color:#D5DDE5;;
-        background:#1b1e24;
-        border-bottom:4px solid #9ea7af;
-        border-right: 1px solid #343a45;
+        color: rgb(55 65 81 / var(--tw-text-opacity));
+        background:#ffffff;
+        border: 1px solid lightgray;
         font-size:15px;
-        font-weight: 100;
+        font-weight: bold;
         padding:10px;
         text-align:center;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -113,10 +112,10 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
         }
         
-        tr:hover td {
+        td:hover {
         transition: 300ms;  
-        background:#4E5066;
-        color:#FFFFFF;
+        background-color: #E1E8E7;
+        
         border-top: 1px solid #22262e;
         }
         
@@ -128,21 +127,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         border-bottom:none;
         }
         
-        tr:nth-child(odd) td {
-        background:#EBEBEB;
-        }
-        
-        tr:nth-child(odd):hover td {
-        background:#4E5066;
-        }
 
-        tr:last-child td:first-child {
-        border-bottom-left-radius:3px;
-        }
-        
-        tr:last-child td:last-child {
-        border-bottom-right-radius:3px;
-        }
         
         td {
         background:#FFFFFF;
@@ -152,7 +137,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         font-weight:300;
         font-size:15px;
         text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-        border-right: 1px solid #C1C3D1;
+        border: 1px solid lightgray;
         }
 
 
