@@ -75,7 +75,7 @@ var listOtherLink = [
   "http://library.books24x7.com",
 ];
 
-var listRegisText = [
+var listRegisTextEN = [
   "Suspend to repeat course",
   "Cancel",
   "Suspend",
@@ -127,7 +127,7 @@ var listRegisTextVI = [
   "Đăng ký học phụ đạo",
 ];
 
-var listInfoText = [
+var listInfoTextEN = [
   "University TimeTable",
   "Tuition",
   "Weekly Timetable",
@@ -151,7 +151,7 @@ var listInfoTextVI = [
   "Tài liệu hướng dẫn: Định hướng cho sinh viên",
 ];
 
-var listReportText = [
+var listReportTextEN = [
   "Attendance Report",
   "Mark Report",
   "Academic Transript",
@@ -169,7 +169,7 @@ var listReportTextVI = [
   "Xem lịch sử nộp học phí",
 ];
 
-var listCouseraText = [
+var listCouseraTextEN = [
   "Announcement",
   "Ask Mentor",
   "View Answer",
@@ -185,19 +185,19 @@ var listCouseraTextVI = [
   "Hướng dẫn nộp chứng chỉ Coursera",
 ];
 
-var listRegularText = [
+var listRegularTextEN = [
   "Regulations",
   "Dormitory Regulations(Ha Noi)",
   "Dormitory Regulations(Can Tho)",
 ];
 
 var listRegularTextVI = [
-  "Tổng hợp các nội quy/quy định của nhà trường",
+  "Tổng hợp các nội quy / quy định của nhà trường",
   "Nội quy ký túc xá (Dành cho cơ sở Hà Nội)",
   "Nội quy ký túc xá (Dành cho cơ sở Cần Thơ)",
 ];
 
-var listOtherText = [
+var listOtherTextEN = [
   "Student Profile",
   "Update Profile",
   "Semester",
@@ -228,8 +228,15 @@ var listOtherTextVI = [
   "Trang web thư viện của trường",
   "Trang web Book24/7",
 ];
+var listRegisText = listRegisTextEN;
+var listInfoText = listInfoTextEN;
+var listReportText = listReportTextEN;
+var listCouseraText = listCouseraTextEN;
+var listRegularText = listRegularTextEN;
+var listOtherText = listOtherTextEN;
 
-var itemNavText = [
+//NAVBAR ITEM
+var itemNavTextEN = [
   "Registration",
   "Information",
   "Reports",
@@ -248,11 +255,22 @@ var itemNavTextVI = [
   "Khác",
   "Thông Báo",
 ];
+var itemNavText = itemNavTextEN;
 
-var listRegisTextEN = listRegisText;
-var listInfoTextEN = listInfoText;
-var listReportTextEN = listReportText;
-var listCouseraTextEN = listCouseraText;
-var listRegularTextEN = listRegularText;
-var listOtherTextEN = listOtherText;
-var itemNavTextEN = itemNavText;
+//ACCOUNT
+var accountTextEN = [
+  'Account',
+  'LogOut',
+]
+var accountTextVI = [
+  'Tải Khoản',
+  'Đăng xuất',
+]
+var accountText = accountTextEN;
+
+//LANGUAGE BUTTON
+var languageBtnTextEN = "Language"
+var languageBtnTextVI = "Ngôn ngữ"
+var languageBtnText = languageBtnTextEN;
+
+

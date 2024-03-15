@@ -94,7 +94,7 @@ header.innerHTML = `
 
 <div class="header-language">
   <div class="header-language-btn">
-    Language
+    ${languageBtnText}
     <div class="header-language-content">
       <a href="#" data-lang="english" style="text-align: right">
         <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">
@@ -127,8 +127,8 @@ header.innerHTML = `
           <div class='header-menu-heading-mail'>sondmhe186291</div>
         </div>
         <ul class='header-menu-list'>
-          <li class='header-menu-item'><a href="?view=user">Account</a></li>
-          <li class='header-menu-item'><a href="?logout=true">Logout</a></li>
+          <li class='header-menu-item'><a href="?view=user">${accountText[0]}</a></li>
+          <li class='header-menu-item'><a href="?logout=true">${accountText[1]}</a></li>
         </ul>
       </div>
     </div>

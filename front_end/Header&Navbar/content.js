@@ -1,7 +1,4 @@
-console.log("content");
-
 var NoticeTable = localStorage.getItem("tableNotice");
-
 
 
 // ADD BACKGROUND
@@ -24,79 +21,22 @@ breadcumb.style.display = "none";
 // body
 var body = document.querySelectorAll(".row")[1];
 var contentBody = body.querySelector(".col-md-12");
-console.log(contentBody);
-console.log(body);
-
-//select account and logout link
-var account = document
-  .querySelector('#ctl00_divUser a[href="?view=user"]')
-  .getAttribute("href");
-var logOut = document
-  .querySelector('#ctl00_divUser a[href="?logout=true"]')
-  .getAttribute("href");
 
 
-  if(localStorage.getItem("isSetLanguageStorage") === null) {
-    localStorage.setItem("regisText", listRegisText);
-    localStorage.setItem("infoText", listInfoText);
-    localStorage.setItem("reportText", listReportText);
-    localStorage.setItem("couseraText", listCouseraText);
-    localStorage.setItem("regularText", listRegularText);
-    localStorage.setItem("otherText", listOtherText);
-    localStorage.setItem("itemNavText", itemNavText); 
-    localStorage.setItem("isSetLanguageStorage", true);
-  }
-
-  listRegisText = localStorage.getItem("regisText").split(",");
-  listInfoText = localStorage.getItem("infoText").split(",");
-  listReportText = localStorage.getItem("reportText").split(",");
-  listCouseraText = localStorage.getItem("couseraText").split(",");
-  listRegularText = localStorage.getItem("regularText").split(",");
-  listOtherText = localStorage.getItem("otherText").split(",");
-  itemNavText = localStorage.getItem("itemNavText").split(",");
-  console.log(listRegisText);
-
-reloadLanguage = () => {
-  if (localStorage.getItem("lang") === "vi") {
-    listRegisText = listRegisTextVI;
-    listInfoText = listInfoTextVI;
-    listReportText = listReportTextVI;
-    listCouseraText = listCouseraTextVI;
-    listRegularText = listRegularTextVI;
-    listOtherText = listOtherTextVI;
-    itemNavText = itemNavTextVI;
-  } else {
-    listRegisText = listRegisTextEN;
-    listInfoText = listInfoTextEN;
-    listReportText = listReportTextEN;
-    listCouseraText = listCouseraTextEN;
-    listRegularText = listRegularTextEN;
-    listOtherText = listOtherTextEN;
-    itemNavText = itemNavTextEN;
-  }
-  localStorage.setItem("regisText", listRegisText);
-  localStorage.setItem("infoText", listInfoText);
-  localStorage.setItem("reportText", listReportText);
-  localStorage.setItem("couseraText", listCouseraText);
-  localStorage.setItem("regularText", listRegularText);
-  localStorage.setItem("otherText", listOtherText);
-  localStorage.setItem("itemNavText", itemNavText);
-};
-
-
-
+//CHANGE LANGUAGE
 const enBtn = document.querySelector('a[data-lang="english"]');
 const viBtn = document.querySelector('a[data-lang="vietnamese"]');
 enBtn.addEventListener("click", () => {
   localStorage.setItem("lang", "en");
-  reloadLanguage();
+  languageChange();
   location.reload();
 });
 viBtn.addEventListener("click", () => {
   localStorage.setItem("lang", "vi");
-  reloadLanguage();
+  languageChange();
   location.reload();
 });
+
 
 body.innerHTML =
   `
@@ -211,7 +151,7 @@ body.innerHTML =
         </ul>
       </li>
       <li class='navbar-item'>
-      ${itemNavText[1]}
+        ${itemNavText[1]}
         <ul class='subnav-list'>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
@@ -261,7 +201,7 @@ body.innerHTML =
         </ul>
       </li>
       <li class='navbar-item'>
-      ${itemNavText[2]}
+        ${itemNavText[2]}
         <ul class='subnav-list'>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
@@ -296,7 +236,7 @@ body.innerHTML =
         </ul>
       </li>
       <li class='navbar-item'>
-      ${itemNavText[3]}
+        ${itemNavText[3]}
         <ul class='subnav-list'>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
@@ -326,7 +266,7 @@ body.innerHTML =
         </ul>
       </li>
       <li class='navbar-item'>
-      ${itemNavText[4]}
+        ${itemNavText[4]}
         <ul class='subnav-list'>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
@@ -346,7 +286,7 @@ body.innerHTML =
         </ul>
       </li>
       <li class='navbar-item'>
-      ${itemNavText[5]}
+        ${itemNavText[5]}
         <ul class='subnav-list'>
           <li class='subnav-item'>
             <button class='subnav-item_btn front percent-50'>
@@ -412,7 +352,7 @@ body.innerHTML =
         </ul>
       </li>
       <li class='navbar-item'>
-      ${itemNavText[6]}
+        ${itemNavText[6]}
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
             ${NoticeTable}
