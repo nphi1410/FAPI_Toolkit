@@ -1,4 +1,4 @@
-body.darkmode-theme {
+/* body.darkmode-theme {
     background-color: #292c35;
     --menu-color: #714c4c;
     --background-color: #192734;
@@ -9,8 +9,8 @@ body.darkmode-theme {
     --hover-color: #818181;
     --input-color: #3e3e42;
     transition: background-color 0.2s linear;
-  }
-  :root {
+  } */
+  /* :root {
     --navbar-height: 46px;
     --header-height: 80px;
     --menu-color: #fcefec;
@@ -22,7 +22,7 @@ body.darkmode-theme {
     --button-color: #f58a02;
     --hover-color: #f6c78b;
     --input-color: #fff;
-  }
+  } */
   
 
 .container {

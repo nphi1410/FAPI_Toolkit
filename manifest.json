@@ -35,12 +35,17 @@
         "front_end/Header&Navbar/darkmode.js",
         "front_end/Header&Navbar/search.js"
       ],
-      "css": ["front_end/MyStyle/header.css", "front_end/MyStyle/myStyle.css"]
+      "css": ["front_end/MyStyle/myStyle.css"]
     },
 
     {
       "matches": ["https://fap.fpt.edu.vn/Grade/*"],
       "js": ["front_end/AvarageScore/averageScore.js"]
+    },
+
+    {
+      "matches": ["https://fap.fpt.edu.vn/Feedback/*"],
+      "js": ["front_end/FeedbackTeacher/feedback-teach.js"]
     }
     
   ],

@@ -28,7 +28,7 @@ body {
 body.darkmode-theme {
   background-color: #292c35;
   --menu-color: #374151;
-  --background-color: #1f2937;
+  --bg-color: #1f2937;
   --text-color: white;
   --header-color: #374151;
   --navbar-color: #1f2937;
@@ -43,7 +43,7 @@ body.darkmode-theme {
   --box-shadow: 2px 2px 15px #888888, -2px 2px 15px #888888;
   --menu-color: #fcefec;
   --border-color: #d3d3d3;
-  --background-color: white;
+  --bg-color: white;
   --text-color: black;
   --header-color: #fb5631;
   --navbar-color: #fea837;
@@ -203,7 +203,7 @@ body.darkmode-theme {
   height: auto;
   max-height: 200px;
   top: calc(100% + 2px);
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   overflow-y: scroll;
   border-radius: 4px;
   box-shadow: var(--box-shadow);
@@ -332,7 +332,7 @@ body.darkmode-theme {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   cursor: pointer;
   margin-right: 10px;
   transition: background-color 0.2s linear;
@@ -424,7 +424,7 @@ body.darkmode-theme {
   width: 100%;
   height: auto;
   max-height: 600px;
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   list-style-type: none;
   position: absolute;
   left: 0;
@@ -453,7 +453,7 @@ body.darkmode-theme {
   margin: 10px;
 }
 .table.table-bordered tr {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
 }
 .table.table-bordered tr span {
   color: var(--text-color) !important;
