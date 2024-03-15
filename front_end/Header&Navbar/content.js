@@ -316,12 +316,12 @@ body.innerHTML =
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[1]}">${listRegularText[1]}</a>
+              <a href="${listRegularLink[1]}">${listRegularText[1]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[2]}">${listRegularText[2]}</a>
+              <a href="${listRegularLink[2]}">${listRegularText[2]}</a>
             </button>
           </li>
         </ul>
