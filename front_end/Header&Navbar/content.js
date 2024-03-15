@@ -6,22 +6,18 @@ var table = document.querySelector(".table-bordered");
 var container = document.querySelector(".container");
 var all = document.querySelector("body");
 document.querySelector("body").onload = () => {
-  console.log("loading")
-}
+  console.log("loading");
+};
 all.innerHTML =
   `
   <div class="background"></div>
 ` + container.outerHTML;
-
-
 
 // remove breadcumb
 var infoAccount = document.querySelector("#ctl00_divUser");
 var breadcumb = document.querySelector(".breadcrumb");
 infoAccount.style.display = "none";
 breadcumb.style.display = "none";
-
-
 
 // body
 var body = document.querySelectorAll(".row")[1];
@@ -30,330 +26,379 @@ console.log(contentBody);
 console.log(body);
 
 //select account and logout link
-var account = document.querySelector('#ctl00_divUser a[href="?view=user"]').getAttribute("href");
-var logOut = document.querySelector('#ctl00_divUser a[href="?logout=true"]').getAttribute("href");
+var account = document
+  .querySelector('#ctl00_divUser a[href="?view=user"]')
+  .getAttribute("href");
+var logOut = document
+  .querySelector('#ctl00_divUser a[href="?logout=true"]')
+  .getAttribute("href");
 
-body.innerHTML = `
+reloadLanguage = () => {
+  if (localStorage.getItem("lang") === "vi") {
+    listRegisText = listRegisTextVI;
+    listInfoText = listInfoTextVI;
+    listReportText = listReportTextVI;
+    listCouseraText = listCouseraTextVI;
+    listRegularText = listRegularTextVI;
+    listOtherText = listOtherTextVI;
+    itemNavText = itemNavTextVI;
+  } else {
+    listRegisText = listRegisTextEN;
+    listInfoText = listInfoTextEN;
+    listReportText = listReportTextEN;
+    listCouseraText = listCouseraTextEN;
+    listRegularText = listRegularTextEN;
+    listOtherText = listOtherTextEN;
+    itemNavText = itemNavTextEN;
+  }
+  localStorage.setItem("regisText", listRegisText);
+  localStorage.setItem("infoText", listInfoText);
+  localStorage.setItem("reportText", listReportText);
+  localStorage.setItem("couseraText", listCouseraText);
+  localStorage.setItem("regularText", listRegularText);
+  localStorage.setItem("otherText", listOtherText);
+  localStorage.setItem("itemNavText", itemNavText);
+};
+listRegisText = localStorage.getItem("regisText").split(",");
+listInfoText = localStorage.getItem("infoText").split(",");
+listReportText = localStorage.getItem("reportText").split(",");
+listCouseraText = localStorage.getItem("couseraText").split(",");
+listRegularText = localStorage.getItem("regularText").split(",");
+listOtherText = localStorage.getItem("otherText").split(",");
+itemNavText = localStorage.getItem("itemNavText").split(",");
+const enBtn = document.querySelector('a[data-lang="english"]');
+const viBtn = document.querySelector('a[data-lang="vietnamese"]');
+enBtn.addEventListener("click", () => {
+  localStorage.setItem("lang", "en");
+  reloadLanguage();
+  location.reload();
+});
+viBtn.addEventListener("click", () => {
+  localStorage.setItem("lang", "vi");
+  reloadLanguage();
+  location.reload();
+});
+
+body.innerHTML =
+  `
   <div class='navbar'>
     <ul class='navbar-list'>
       <li class='navbar-item'>
-        Registration
+        ${itemNavText[0]}
         <ul class='subnav-list'>
           <li class='subnav-item'>
             <button class='subnav-item_btn front percent-70'>
-              <a href="${listRegisLink[0]}">Suspend to repeat course</a>
+              <a href="${listRegisLink[0]}">${listRegisText[0]}</a>
             </button>
             <button class='subnav-item_btn end percent-30'>
-              <a href="${listRegisLink[1]}" >Cancel</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn front percent-70'>
-              <a href="${listRegisLink[2]}">Suspend</a>
-            </button>
-            <button class='subnav-item_btn end percent-30'>
-              <a href="${listRegisLink[3]}">Cancel</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[4]}">Move out class</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[5]}">Register extra courses</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[6]}">Register to improve mark</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[7]}">Register to repeat a course</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[8]}">Cancel registration</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[9]}">Register Free Elective Courses</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn front percent-50'>
-              <a href="${listRegisLink[10]}">Send Application</a>
-            </button>
-            <button class='subnav-item_btn end percent-50'>
-              <a href="${listRegisLink[11]}">View Application</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegisLink[12]}">Student Confirmation</a>
+              <a href="${listRegisLink[1]}">${listRegisText[1]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn front percent-70'>
-              <a href="${listRegisLink[13]}">Choose paid items</a>
+              <a href="${listRegisLink[2]}">${listRegisText[2]}</a>
             </button>
             <button class='subnav-item_btn end percent-30'>
-              <a href="${listRegisLink[14]}">View</a>
+              <a href="${listRegisLink[3]}">${listRegisText[3]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listRegisLink[15]}">Change Classes</a>
+              <a href="${listRegisLink[4]}">${listRegisText[4]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listRegisLink[16]}">Attendance By Code</a>
+              <a href="${listRegisLink[5]}">${listRegisText[5]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[6]}">${listRegisText[6]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[7]}">${listRegisText[7]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[8]}">${listRegisText[8]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[9]}">${listRegisText[9]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn front percent-50'>
-              <a href="${listRegisLink[17]}">Wishlist Course</a>
+              <a href="${listRegisLink[10]}">${listRegisText[10]}</a>
             </button>
             <button class='subnav-item_btn end percent-50'>
-              <a href="${listRegisLink[18]}">Register Wishlist</a>
+              <a href="${listRegisLink[11]}">${listRegisText[11]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegisLink[12]}">${listRegisText[12]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn front percent-70'>
-              <a href="${listRegisLink[19]}">Start-up Funding Support</a>
+              <a href="${listRegisLink[13]}">${listRegisText[13]}</a>
             </button>
             <button class='subnav-item_btn end percent-30'>
-              <a href="${listRegisLink[20]}">View</a>
+              <a href="${listRegisLink[14]}">${listRegisText[14]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listRegisLink[21]}">Register Over-term</a>
+              <a href="${listRegisLink[15]}">${listRegisText[15]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listRegisLink[22]}">Register Tutoring</a>
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class='navbar-item'>
-        Information
-        <ul class='subnav-list'>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[0]}">University Timetable</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[1]}">Tuition</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[2]}">Weekly Timetable</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[3]}">BLOC Schedules</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[4]}">Exam Schedule</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[5]}">Syllabuses</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[6]}">EduNext</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[7]}">Help</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listInfoLink[8]}">Documents</a>
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class='navbar-item'>
-        Reports
-        <ul class='subnav-list'>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listReportLink[0]}">Attendance Report</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listReportLink[1]}">Mark Report</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listReportLink[2]}">Academic Transript</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listReportLink[3]}">Curriculum</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listReportLink[4]}">Student Fee</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listReportLink[5]}">Transaction History</a>
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class='navbar-item'>
-        Coursera
-        <ul class='subnav-list'>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[0]}">Announcement</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[1]}">Ask Mentor</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[2]}">View Answer</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[3]}">Submit Certificates</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[4]}">Certificate Submission Guideline</a>
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class='navbar-item'>
-        Regulations
-        <ul class='subnav-list'>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listRegularLink[0]}">Regulations...</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[1]}">Dormitory Regulations(Ha Noi)</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listCouseraLink[2]}">Dormitory Regulations(Can Tho)</a>
-            </button>
-          </li>
-        </ul>
-      </li>
-      <li class='navbar-item'>
-        Others
-        <ul class='subnav-list'>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn front percent-50'>
-              <a href="${listOtherLink[0]}">Student Profile</a>
-            </button>
-            <button class='subnav-item_btn end percent-50'>
-              <a href="${listOtherLink[1]}">Update Profile</a>
+              <a href="${listRegisLink[16]}">${listRegisText[16]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn front percent-50'>
-              <a href="${listOtherLink[2]}">Semester</a>
+              <a href="${listRegisLink[17]}">${listRegisText[17]}</a>
             </button>
             <button class='subnav-item_btn end percent-50'>
-              <a href="${listOtherLink[3]}">Room</a>
+              <a href="${listRegisLink[18]}">${listRegisText[18]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-70'>
+              <a href="${listRegisLink[19]}">${listRegisText[19]}</a>
+            </button>
+            <button class='subnav-item_btn end percent-30'>
+              <a href="${listRegisLink[20]}">${listRegisText[20]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listOtherLink[4]}">FUNiX</a>
+              <a href="${listRegisLink[21]}">${listRegisText[21]}</a>
             </button>
           </li>
           <li class='subnav-item'>
             <button class='subnav-item_btn'>
-              <a href="${listOtherLink[5]}">Types of Certificates</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[6]}">Movement Mark</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[7]}">Wiley eBook</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[8]}">Feedback Teacher</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[9]}" target="_blank">Campus Dormitory</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[10]}" target="_blank">News</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[11]}" target="_blank">Library</a>
-            </button>
-          </li>
-          <li class='subnav-item'>
-            <button class='subnav-item_btn'>
-              <a href="${listOtherLink[12]}" target="_blank">Book24/7</a>
+              <a href="${listRegisLink[22]}">${listRegisText[22]}</a>
             </button>
           </li>
         </ul>
       </li>
       <li class='navbar-item'>
-        Notices
+      ${itemNavText[1]}
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[0]}">${listInfoText[0]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[1]}">${listInfoText[1]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[2]}">${listInfoText[2]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[3]}">${listInfoText[3]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[4]}">${listInfoText[4]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[5]}">${listInfoText[5]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[6]}">${listInfoText[6]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[7]}">${listInfoText[7]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listInfoLink[8]}">${listInfoText[8]}</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+      ${itemNavText[2]}
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[0]}">${listReportText[0]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[1]}">${listReportText[1]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[2]}">${listReportText[2]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[3]}">${listReportText[3]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[4]}">${listReportText[4]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listReportLink[5]}">${listReportText[5]}</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+      ${itemNavText[3]}
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[0]}">${listCouseraText[0]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[1]}">${listCouseraText[1]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[2]}">${listCouseraText[2]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[3]}">${listCouseraText[3]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[4]}">${listCouseraText[4]}</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+      ${itemNavText[4]}
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listRegularLink[0]}">${listRegularText[0]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[1]}">${listRegularText[1]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listCouseraLink[2]}">${listRegularText[2]}</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+      ${itemNavText[5]}
+        <ul class='subnav-list'>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-50'>
+              <a href="${listOtherLink[0]}">${listOtherText[0]}</a>
+            </button>
+            <button class='subnav-item_btn end percent-50'>
+              <a href="${listOtherLink[1]}">${listOtherText[1]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn front percent-50'>
+              <a href="${listOtherLink[2]}">${listOtherText[2]}</a>
+            </button>
+            <button class='subnav-item_btn end percent-50'>
+              <a href="${listOtherLink[3]}">${listOtherText[3]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[4]}">${listOtherText[4]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[5]}">${listOtherText[5]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[6]}">${listOtherText[6]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[7]}">${listOtherText[7]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[8]}">${listOtherText[8]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[9]}" target="_blank">${listOtherText[9]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[10]}" target="_blank">${listOtherText[10]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[11]}" target="_blank">${listOtherText[11]}</a>
+            </button>
+          </li>
+          <li class='subnav-item'>
+            <button class='subnav-item_btn'>
+              <a href="${listOtherLink[12]}" target="_blank">${listOtherText[12]}</a>
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li class='navbar-item'>
+      ${itemNavText[6]}
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
-            
           </div>
         </div>
       </li>
     </ul>
   </div>
-`
-+contentBody.outerHTML;
+` + contentBody.outerHTML;

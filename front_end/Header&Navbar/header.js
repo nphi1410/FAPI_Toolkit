@@ -1,4 +1,3 @@
-
 var searchRegisHTML = ``;
 var searchInfoHTML = ``;
 var searchReportHTML = ``;
@@ -50,7 +49,6 @@ for (var i = 0; i < listOtherTextVI.length; i++) {
   searchOtherHTML += `<li class='header-search-bar_item'><a href="${listOtherLink[i]}">${listOtherTextVI[i]}</a></li>`;
 }
 
-
 var head = document.querySelector("head");
 head.innerHTML = ` ${head.innerHTML}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -58,9 +56,9 @@ head.innerHTML = ` ${head.innerHTML}
 
 var header = document.querySelector(".row");
 header.setAttribute(
-    "class",
-    `${header.getAttribute("class")} header sticky-top`
-  );
+  "class",
+  `${header.getAttribute("class")} header sticky-top`
+);
 
 header.innerHTML = `
   <div class='header-name_logo'>
@@ -98,11 +96,11 @@ header.innerHTML = `
   <div class="header-language-btn">
     Language
     <div class="header-language-content">
-      <a href="#" style="text-align: right">
+      <a href="#" data-lang="english" style="text-align: right">
         <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg" alt="English" title="English">
         <span>English</span>
       </a>
-      <a href="#" style="text-align: right">
+      <a href="#" data-lang="vietnamese" style="text-align: right">
         <img src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">
         <span>Tiếng Việt</span>
       </a>
@@ -136,5 +134,3 @@ header.innerHTML = `
     </div>
   </div>
 `;
-
-
