@@ -1,6 +1,8 @@
 console.log("content");
 
-var table = document.querySelector(".table-bordered");
+var table = localStorage.getItem("tableNotice");
+console.log(table);
+
 
 // ADD BACKGROUND
 var container = document.querySelector(".container");
@@ -349,7 +351,7 @@ body.innerHTML = `
         Notices
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
-            
+            ${table}
           </div>
         </div>
       </li>

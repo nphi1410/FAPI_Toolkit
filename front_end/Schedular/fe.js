@@ -82,7 +82,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         animation: float 5s infinite;
         }
         
-        th {
+        .table-title th {
         color: rgb(55 65 81 / var(--tw-text-opacity));
         background:#ffffff;
         border: 1px solid lightgray;
@@ -98,12 +98,12 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         border-top-left-radius:3px;
         }
         
-        th:last-child {
+        .table-title th:last-child {
         border-top-right-radius:3px;
         border-right:none;
         }
         
-        tr {
+        .table-title tr {
         border-top: 1px solid #C1C3D1;
         border-bottom-: 1px solid #C1C3D1;
         color:#666B85;
@@ -112,24 +112,24 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
         }
         
-        td:hover {
+        .table-title td:hover {
         transition: 300ms;  
         background-color: #E1E8E7;
         
         border-top: 1px solid #22262e;
         }
         
-        tr:first-child {
+        .table-title tr:first-child {
         border-top:none;
         }
 
-        tr:last-child {
+        .table-title tr:last-child {
         border-bottom:none;
         }
         
 
         
-        td {
+        .table-title td {
         background:#FFFFFF;
         padding:3px;
         text-align:center;
