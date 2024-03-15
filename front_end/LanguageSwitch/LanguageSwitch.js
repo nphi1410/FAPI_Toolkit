@@ -11,7 +11,7 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     localStorage.setItem("langBtnText", languageBtnText);
     localStorage.setItem("isSetLanguageStorage", true);
   }
-
+  
   listRegisText = localStorage.getItem("regisText").split(",");
   listInfoText = localStorage.getItem("infoText").split(",");
   listReportText = localStorage.getItem("reportText").split(",");
