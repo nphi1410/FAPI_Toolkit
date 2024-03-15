@@ -15,18 +15,33 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://fap.fpt.edu.vn/Student.aspx", "https://fap.fpt.edu.vn/Student.aspx?"],
-      "js": [
-        "front_end/script/fe.js",
-        "front_end/script/content.js",
-        "front_end/script/main.js"
+      "matches": ["https://fap.fpt.edu.vn/*"],
+      "exclude_matches": [
+        "https://fap.fpt.edu.vn/Default.aspx"
       ],
-      "css": ["front_end/MyStyle/myStyle.css", "front_end/MyStyle/main.css"]
+      "js": [
+        "front_end/Header&Navbar/link.js",
+        "front_end/Header&Navbar/header.js", 
+        "front_end/Header&Navbar/content.js",
+        "front_end/Header&Navbar/darkmode.js",
+        "front_end/Header&Navbar/search.js"
+      ],
+      "css": ["front_end/MyStyle/header.css", "front_end/MyStyle/myStyle.css"]
     },
+
+    {
+      "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
+      "js": [
+        "front_end/Schedular/fe.js",
+        "front_end/Schedular/home.js"
+      ]
+    },
+
     {
       "matches": ["https://fap.fpt.edu.vn/Grade/*"],
-      "js": ["front_end/script/averageScore.js"]
+      "js": ["front_end/AvarageScore/averageScore.js"]
     }
+    
   ],
   "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
   "background": {
