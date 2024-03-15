@@ -1,7 +1,7 @@
 console.log("content");
 
-var table = localStorage.getItem("tableNotice");
-console.log(table);
+var NoticeTable = localStorage.getItem("tableNotice");
+
 
 
 // ADD BACKGROUND
@@ -35,6 +35,27 @@ var logOut = document
   .querySelector('#ctl00_divUser a[href="?logout=true"]')
   .getAttribute("href");
 
+
+  if(localStorage.getItem("isSetLanguageStorage") === null) {
+    localStorage.setItem("regisText", listRegisText);
+    localStorage.setItem("infoText", listInfoText);
+    localStorage.setItem("reportText", listReportText);
+    localStorage.setItem("couseraText", listCouseraText);
+    localStorage.setItem("regularText", listRegularText);
+    localStorage.setItem("otherText", listOtherText);
+    localStorage.setItem("itemNavText", itemNavText); 
+    localStorage.setItem("isSetLanguageStorage", true);
+  }
+
+  listRegisText = localStorage.getItem("regisText").split(",");
+  listInfoText = localStorage.getItem("infoText").split(",");
+  listReportText = localStorage.getItem("reportText").split(",");
+  listCouseraText = localStorage.getItem("couseraText").split(",");
+  listRegularText = localStorage.getItem("regularText").split(",");
+  listOtherText = localStorage.getItem("otherText").split(",");
+  itemNavText = localStorage.getItem("itemNavText").split(",");
+  console.log(listRegisText);
+
 reloadLanguage = () => {
   if (localStorage.getItem("lang") === "vi") {
     listRegisText = listRegisTextVI;
@@ -61,13 +82,9 @@ reloadLanguage = () => {
   localStorage.setItem("otherText", listOtherText);
   localStorage.setItem("itemNavText", itemNavText);
 };
-listRegisText = localStorage.getItem("regisText").split(",");
-listInfoText = localStorage.getItem("infoText").split(",");
-listReportText = localStorage.getItem("reportText").split(",");
-listCouseraText = localStorage.getItem("couseraText").split(",");
-listRegularText = localStorage.getItem("regularText").split(",");
-listOtherText = localStorage.getItem("otherText").split(",");
-itemNavText = localStorage.getItem("itemNavText").split(",");
+
+
+
 const enBtn = document.querySelector('a[data-lang="english"]');
 const viBtn = document.querySelector('a[data-lang="vietnamese"]');
 enBtn.addEventListener("click", () => {
@@ -396,10 +413,9 @@ body.innerHTML =
       </li>
       <li class='navbar-item'>
       ${itemNavText[6]}
-      ${itemNavText[6]}
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
-            
+            ${NoticeTable}
           </div>
         </div>
       </li>
