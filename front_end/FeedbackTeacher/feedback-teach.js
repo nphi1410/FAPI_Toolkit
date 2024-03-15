@@ -13,5 +13,3 @@ var submit = document.querySelector(
 );
 console.log(submit);
 submit.click();
-
-//ádasdasdasd
