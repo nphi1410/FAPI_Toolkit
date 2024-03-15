@@ -72,7 +72,7 @@ header.innerHTML = `
   </div>
 
   <div class='header-search'>
-    <form role='search' class='header-searchbar'>
+    <form role='search' class='header-searchbar' name="searchbar">
       <div class='header-search-bar_main'>
         <input class='header-search-bar_input' placeholder='Search'>
       </div>
