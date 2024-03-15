@@ -396,9 +396,10 @@ body.innerHTML =
       </li>
       <li class='navbar-item'>
       ${itemNavText[6]}
+      ${itemNavText[6]}
         <div class='subnav-list full'>
           <div class='subnav-list_table'>
-            ${table}
+            
           </div>
         </div>
       </li>
