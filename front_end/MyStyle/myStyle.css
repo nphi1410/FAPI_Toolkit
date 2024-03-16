@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 @keyframes showAnimation {
@@ -738,10 +740,6 @@ body.darkmode-theme {
   background-color: white;
   transition: background-color 0.2s linear;
 } 
-.row .col-md-12.darkmode table select, input {
-  /* color: black !important; */
-  background-color: #1f2937;
-}
 .row .col-md-12 table span {
   background-color: transparent !important;
 }
@@ -751,19 +749,31 @@ body.darkmode-theme {
   color: white;
   transition: color 0.2s linear;
 } 
-.row .col-md-12.darkmode table tr {
-  background-color: #374151;
+.row .col-md-12.darkmode table tr, 
+.row .col-md-12.darkmode table p{
+  background-color: #374151 !important;
   transition: background-color 0.2s linear;
 } 
 .row .col-md-12.darkmode table th {
+  border: 1px solid white;
   background-color: #1f2937;
   transition: background-color 0.2s linear;
 } 
+/* .row .col-md-12.darkmode table tr:last-child td {
+  border: none;
+} */
+/* .row .col-md-12 table td {
+  padding: 0 10px;
+}  */
+/* .row .col-md-12.darkmode table table td {
+  border: 1px solid white;
+  padding: 0 10px;
+} */
 .row .col-md-12.darkmode table span  {
   color: white !important;
   transition: color 0.2s linear;
 }
-.row .col-md-12.darkmode table font[color="Green"] {
+.row .col-md-12.darkmode table font[color="Green"], font[color="SeaGreen"] {
   color: #33cb30;
   transition: color 0.2s linear;
 } 
@@ -771,3 +781,9 @@ body.darkmode-theme {
   color: #33cb30;
   transition: color 0.2s linear;
 } 
+.row .col-md-12.darkmode table select,
+.row .col-md-12.darkmode table input,
+.row .col-md-12.darkmode table textarea {
+  background-color: #1f2937;
+  color: white;
+}
