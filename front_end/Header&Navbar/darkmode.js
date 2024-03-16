@@ -2,8 +2,14 @@
 const checkbox = document.getElementById("header-darkmode-checkbox");
 console.log(checkbox);
 check = () => {
-    if(checkbox.checked) document.body.classList.toggle("darkmode-theme")
-    else document.body.classList.remove("darkmode-theme")
+    if(checkbox.checked){
+        document.body.classList.toggle("darkmode-theme");
+        document.querySelector('.row .col-md-12').classList.toggle('darkmode');
+    }
+    else {
+        document.body.classList.remove("darkmode-theme");
+        document.querySelector('.row .col-md-12').classList.remove('darkmode');
+    }
 }
 
 save = () => {

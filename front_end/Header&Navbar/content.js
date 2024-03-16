@@ -2,12 +2,9 @@
 // ADD BACKGROUND
 var container = document.querySelector(".container");
 var all = document.querySelector("body");
-document.querySelector("body").onload = () => {
-  console.log("loading");
-};
-all.innerHTML =
+container.outerHTML =
   `
-  <div class="background"></div>
+  <div class="background"><div class='background-front'></div></div>
 ` + container.outerHTML;
 
 // remove breadcumb
@@ -19,6 +16,11 @@ breadcumb.style.display = "none";
 // body
 var body = document.querySelectorAll(".row")[1];
 var contentBody = body.querySelector(".col-md-12");
+console.log(body)
+console.log(contentBody)
+
+var row = document.querySelectorAll(".row")[0]
+// row.outerHTML = row.outerHTML +`<div>hello</div>`
 
 
 //CHANGE LANGUAGE
@@ -36,7 +38,7 @@ viBtn.addEventListener("click", () => {
 });
 
 
-body.innerHTML =
+contentBody.outerHTML =  
   `
   <div class='navbar'>
     <ul class='navbar-list'>

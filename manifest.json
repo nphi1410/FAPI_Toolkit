@@ -39,6 +39,17 @@
     },
 
     {
+      "matches": ["https://fap.fpt.edu.vn/*"],
+      "exclude_matches": [
+        "https://fap.fpt.edu.vn/Default.aspx"
+      ],
+      "js": [
+        "front_end/ChangeTable/changeTable.js"
+      ],
+      "css": ["front_end/MyStyle/myStyle.css"]
+    },
+
+    {
       "matches": ["https://fap.fpt.edu.vn/Grade/*"],
       "js": ["front_end/AvarageScore/averageScore.js"]
     },

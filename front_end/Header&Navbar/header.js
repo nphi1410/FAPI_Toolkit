@@ -68,7 +68,7 @@ header.innerHTML = `
       </a>
       <div class='header-logo_separator'></div>
     </div>
-    <div class='header-name'>FPT University Academic Portal</div>
+    <a href="https://fap.fpt.edu.vn/Student.aspx" class='header-name'<div>FPT University Academic Portal</div></a>
   </div>
 
   <div class='header-search'>
@@ -120,7 +120,9 @@ header.innerHTML = `
   <div class='header-account-settings'>
 
     <div class='header-account'>
-      <div class='header-account-bg'></div>
+      <div class='header-account-bg'>
+        <img src="https://i.ibb.co/QNH0tHF/avatar1.png" alt="avatar1" border="0">
+      </div>
       <div class='header-menu header-account-menu'>
         <div class='header-menu-heading'>
           <div class='header-menu-heading-name'>${localStorage.getItem("fullName")}</div>
