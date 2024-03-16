@@ -4,19 +4,19 @@
 
 // var sum += aTags[i].innerText;
 
-var divGrade = document.getElementById("ctl00_mainContent_divGrade");
-var tdTags = divGrade.getElementsByTagName("td");
-var grades = [];
+const divGrade = document.getElementById("ctl00_mainContent_divGrade");
+const tdTags = divGrade.getElementsByTagName("td");
+let grades = [];
 
-var avg = 0;
+let avg = 0;
 
-for (var i = 0; i < tdTags.length; i++) {
-  var currentInnerText = tdTags[i].innerText.trim();
-  var previousInnerText = (i > 0) ? tdTags[i - 1].innerText.trim() : "";
+for (let i = 0; i < tdTags.length; i++) {
+  const currentInnerText = tdTags[i].innerText.trim();
+  const previousInnerText = (i > 0) ? tdTags[i - 1].innerText.trim() : "";
 
   if (currentInnerText.includes("%") && previousInnerText !== "Total") {
-    var percent = parseFloat(currentInnerText); // Parse the percent value
-    var mark = parseFloat(tdTags[i + 1].innerText.trim()); // Parse the mark value
+    const percent = parseFloat(currentInnerText); // Parse the percent value
+    const mark = parseFloat(tdTags[i + 1].innerText.trim()); // Parse the mark value
 
     if (!isNaN(mark) && mark !== null) {
       grades.push({
@@ -30,11 +30,10 @@ for (var i = 0; i < tdTags.length; i++) {
   }
 }
 
-var nextTd = null;
 
 // Loop through the td tags
-for (var i = 0; i < tdTags.length; i++) {
-  var currentInnerText = tdTags[i].innerText.trim();
+for (let i = 0; i < tdTags.length; i++) {
+  const currentInnerText = tdTags[i].innerText.trim();
 
   // Check if current td tag contains "AVERAGE"
   if (currentInnerText === "AVERAGE" && i + 1 < tdTags.length) {
