@@ -1,10 +1,24 @@
-var link = document.createElement('link');
-    link.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css';
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
+// var link = document.createElement('link');
+// link.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/base.min.css';
+// link.type = 'text/css';
+// link.rel = 'stylesheet';
 
-    // Append the link element to the head of the document
-    document.head.appendChild(link);
+
+// Append the link element to the head of the document
+// document.body.appendChild(link);
+
+// add script cdn tailwind
+// var script = document.createElement('script');
+// script.src = 'https://cdn.tailwindcss.com/3.4.1/tailwind.min.js';
+// document.body.appendChild(script);
+
+// remove all bootstrap link css
+var allLink = document.querySelectorAll("link");
+for (var i = 0; i < allLink.length; i++) {
+  if (allLink[i].href.includes("bootstrap")) {
+    allLink[i].remove();
+  }
+}
 
 // ADD BACKGROUND
 var container = document.querySelector(".container");

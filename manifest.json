@@ -28,13 +28,14 @@
         "https://fap.fpt.edu.vn/"
       ],
       "js": [
+        "front_end/Header&Navbar/tailwind_3.4.1.js",
         "front_end/Header&Navbar/selector.js",
         "front_end/Header&Navbar/link.js",
         "front_end/LanguageSwitch/LanguageSwitch.js",
         "front_end/Header&Navbar/header.js", 
         "front_end/Header&Navbar/content.js",
         "front_end/Header&Navbar/darkmode.js",
-        "front_end/Header&Navbar/search.js"
+        "front_end/Header&Navbar/Search.js"
       ],
       "css": ["front_end/MyStyle/myStyle.css"]
     },
