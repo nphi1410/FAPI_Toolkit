@@ -24,7 +24,8 @@
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
       "exclude_matches": [
-        "https://fap.fpt.edu.vn/Default.aspx"
+        "https://fap.fpt.edu.vn/Default.aspx",
+        "https://fap.fpt.edu.vn/"
       ],
       "js": [
         "front_end/Header&Navbar/selector.js",
