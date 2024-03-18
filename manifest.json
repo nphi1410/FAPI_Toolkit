@@ -34,6 +34,7 @@
         "front_end/LanguageSwitch/LanguageSwitch.js",
         "front_end/Header&Navbar/header.js", 
         "front_end/Header&Navbar/content.js",
+        "front_end/Header&Navbar/navbar.js",
         "front_end/Header&Navbar/darkmode.js",
         "front_end/Header&Navbar/Search.js"
       ],
