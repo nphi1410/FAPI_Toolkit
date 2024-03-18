@@ -47,11 +47,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
         style.innerHTML = `
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
-        .container {
-            width: 90%;
-        }
-
+        
         div.table-title {
         display: block;
         margin: auto;
@@ -60,8 +56,8 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         background-color: none;
         border: 0;
 
-        height: 500px;
-        overflow-y: scroll;
+        // height: 500px;
+        // overflow-y: scroll;
         }
 
         
@@ -235,9 +231,16 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
             // Set random background color for p element
             var randomColor = colors[Math.floor(Math.random() * colors.length)];
-            p.style.backgroundColor = `rgba(${parseInt(randomColor.substring(1, 3), 16)}, ${parseInt(randomColor.substring(3, 5), 16)}, ${parseInt(randomColor.substring(5, 7), 16)}, 0.1)`;
+            p.style.backgroundColor = `rgba(${parseInt(randomColor.substring(1, 3), 16)}, ${parseInt(randomColor.substring(3, 5), 16)}, ${parseInt(randomColor.substring(5, 7), 16)}, 0.2)`;
             
-            // Append pDiv to the corresponding td element
+            var aTags = p.querySelectorAll('a');
+            for (var i = 1; i< aTags.length; i++) {
+                if(aTags[i].getAttribute('href')){
+                    aTags[i].innerHTML = '';
+                }
+                
+            }
+
             var td = p.closest('td'); 
             
             pDiv.appendChild(p);// Find the closest td ancestor
