@@ -47,7 +47,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
         style.innerHTML = `
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-        
+
         div.table-title {
         display: block;
         margin: auto;
@@ -259,6 +259,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             var slotCell = slotRow.querySelector('td');
             var formattedTime = ('0' + time.getHours()).slice(-2) + ':' + ('0' + time.getMinutes()).slice(-2);
             slotCell.innerHTML = formattedTime;
+            slotCell.style.verticalAlign = 'top';
         });
 
         //filter slot
