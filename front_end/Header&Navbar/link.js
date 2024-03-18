@@ -25,11 +25,11 @@ var listRegisLink = [
 ];
 
 var listInfoLink = [
+  "https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx",
+  "https://fap.fpt.edu.vn/Exam/ScheduleExams.aspx",
   "https://fap.fpt.edu.vn/Course/Courses.aspx",
   "https://fap.fpt.edu.vn/FrontOffice/SubjectFees.aspx",
-  "https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx",
   "https://fap.fpt.edu.vn/Schedule/FunixSchedule.aspx",
-  "https://fap.fpt.edu.vn/Exam/ScheduleExams.aspx",
   "https://fap.fpt.edu.vn/http://flm.fpt.edu.vn",
   "https://fap.fpt.edu.vn/https://fap.fpt.edu.vn/temp/Regulations/Huong_dan_KTXH_tren_EduNext_Sp23_Sinh_Vien.pdf",
   "https://fap.fpt.edu.vn/Report/Help.aspx",
@@ -128,11 +128,11 @@ var listRegisTextVI = [
 ];
 
 var listInfoTextEN = [
+  "Weekly Timetable",
+  "Exam Schedule",
   "University TimeTable",
   "Tuition",
-  "Weekly Timetable",
   "BLOC Schedules",
-  "Exam Schedule",
   "Syllabuses",
   "EduNext",
   "Help",
@@ -140,11 +140,11 @@ var listInfoTextEN = [
 ];
 
 var listInfoTextVI = [
+  "Thời khóa biểu theo tuần",
+  "Xem lịch thi",
   "Xem danh sách lớp và giảng viên",
   "Biểu học phí",
-  "Thời khóa biểu theo tuần",
   "Lịch học các môn theo phương pháp BLOC trong kỳ",
-  "Xem lịch thi",
   "Xem đề cương môn học",
   "Hướng dẫ sử dụng EduNext",
   "Hỗ trợ",
