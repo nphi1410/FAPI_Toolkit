@@ -9,6 +9,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     localStorage.setItem("itemNavText", itemNavText); 
     localStorage.setItem("accountText", accountText);
     localStorage.setItem("langBtnText", languageBtnText);
+    localStorage.setItem("langText", languageText);
+    localStorage.setItem("languageImg", languageImg);
     localStorage.setItem("isSetLanguageStorage", true);
   }
   
@@ -21,6 +23,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
   itemNavText = localStorage.getItem("itemNavText").split(",");
   accountText = localStorage.getItem("accountText").split(",");
   languageBtnText = localStorage.getItem("langBtnText");
+  languageText = localStorage.getItem("langText");
+  languageImg = localStorage.getItem("languageImg");
 
   languageChange = () => {
   if (localStorage.getItem("lang") === "vi") {
@@ -33,6 +37,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     itemNavText = itemNavTextVI;
     accountText = accountTextVI;
     languageBtnText = languageBtnTextVI;
+    languageText = languageTextVI;
+    languageImg = languageImgVI;
   } else {
     listRegisText = listRegisTextEN;
     listInfoText = listInfoTextEN;
@@ -43,6 +49,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     itemNavText = itemNavTextEN;
     accountText = accountTextEN;
     languageBtnText = languageBtnTextEN;
+    languageText = languageTextEN;
+    languageImg = languageImgEN;
   }
   localStorage.setItem("regisText", listRegisText);
   localStorage.setItem("infoText", listInfoText);
@@ -53,4 +61,6 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
   localStorage.setItem("itemNavText", itemNavText);
   localStorage.setItem("accountText", accountText);
   localStorage.setItem("langBtnText", languageBtnText);
+  localStorage.setItem("langText", languageText);
+  localStorage.setItem("languageImg", languageImg);
 };

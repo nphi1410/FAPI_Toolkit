@@ -24,6 +24,22 @@ buttonLangue.addEventListener('click', function(){
     languageMenu.classList.toggle('hidden');
 })
 
+const enDropdown = document.querySelector('#english-dropdown');
+const viDropdown = document.querySelector('#vietnamese-dropdown');
+console.log(enDropdown, viDropdown);
+enDropdown.parentElement.addEventListener('click', function(){
+    localStorage.setItem('lang', 'en');
+    languageChange();
+    location.reload();
+})
+viDropdown.parentElement.addEventListener('click', function(){
+    localStorage.setItem('lang', 'vi');
+    languageChange();
+    location.reload();
+})
+
+
+
 //ACCOUNT
 var buttonAccount = document.querySelector('#user-menu-button');
 var accountMenu = document.querySelector('#user-dropdown');
@@ -31,11 +47,5 @@ buttonAccount.addEventListener('click', function(){
     accountMenu.classList.toggle('hidden');
 })
 
-//DARKMODE
-var darkmodeToggle = document.querySelector('#darkmode-toggle');
-var darkmodeCheckbox = document.querySelector('#darkmode-checkbox');
-darkmodeToggle.addEventListener('click', function(){
-    darkmodeCheckbox.checked = !darkmodeCheckbox.checked;
-})
 
 

@@ -115,13 +115,13 @@ var listRegisTextVI = [
   "Gửi đơn",
   "Xem đơn",
   "Xin xác nhận sinh viên",
-  "Lựa chộn các khoản nộp",
+  "Lựa chọn các khoản nộp",
   "Xem lịch sử nộp",
   "Yêu cầu đổi chéo lớp với sinh viên",
   "Điểm danh bằng mã được cấp",
   "Danh sách môn chờ xếp lớp",
   "Đăng ký Wishlist",
-  "Đề ngị hỗ trợ kinh phí khởi nghiệp",
+  "Đề nghị hỗ trợ kinh phí khởi nghiệp",
   "Đơn khởi nghiệp",
   "Đăng ký học vượt kỳ",
   "Đăng ký học phụ đạo",
@@ -263,7 +263,7 @@ var accountTextEN = [
   'LogOut',
 ]
 var accountTextVI = [
-  'Tải Khoản',
+  'Tài Khoản',
   'Đăng xuất',
 ]
 var accountText = accountTextEN;
@@ -272,5 +272,13 @@ var accountText = accountTextEN;
 var languageBtnTextEN = "Language"
 var languageBtnTextVI = "Ngôn ngữ"
 var languageBtnText = languageBtnTextEN;
+
+var languageTextEN = "English (US)";
+var languageTextVI = "Vietnamese (VI)";
+var languageText = languageTextEN;
+
+var languageImgEN = "https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-anh.jpg";
+var languageImgVI = "https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg";
+var languageImg = languageImgEN;
 
 
