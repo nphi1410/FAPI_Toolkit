@@ -18,19 +18,28 @@
         
 
         /*** Table Styles **/
+
         body.darkmode-theme .table-title td, 
         body.darkmode-theme .table-title th {
             --bg-color: #1f2937;
-            --text-color: white;
-            --background-color: rgb(0, 0, 0);
+            --text-color: rgb(204, 195, 195);
+            /* --pbg-color: rgb(33, 32, 46); */
+            /* --bx-shdw-color: -5px -5px 10px rgb(204, 195, 195); */
+            --brightnes: 200%;
+            /* --contras: 200%; */
+
             --th-color: #1f2937;
             transition: color 0.2s linear 0s;
         } 
-
         :root {
-            --bg-color: white;
+            --bg-color: rgb(204, 195, 195);
             --text-color: black;
-            --background-color: rgb(172, 172, 172);
+
+            /* --pbg-color: rgb(221, 226, 231); */
+            /* --bx-shdw-color: -5px -5px 10px #1f2937; */
+            --brightnes: 100%;
+            /* --contras: 100%; */
+
             --th-color: #6b90da;
             transition: background-color 0.2s linear 0s;
         }
@@ -54,7 +63,7 @@
 
         .table-title th{
             color: rgb(55 65 81 / var(--tw-text-opacity));
-            background:#ffffff;
+            background:var(--bg-color);
             font-size:15px;
             font-weight: bold;
             text-transform: none !important;
@@ -64,6 +73,7 @@
             vertical-align:middle;
         }
         .stRow th{
+            border-right:1px solid var(--bg-color);
             padding: 20px 30px;
             width:100px;
         }
@@ -86,7 +96,7 @@
         
         
         .table-title td {
-            background:#FFFFFF;
+            background:var(--bg-color);
             padding:2px;
             text-align:center;
             vertical-align:middle;
@@ -105,19 +115,26 @@
         }
 
         .tblBody tr{
-            height:68px;
+
+            height:40px;
+
         }
         .pContent {
             border-radius: 5px;
-            height: 70px; 
             overflow: visible; 
             position: relative; 
         }
         
         .pContent p {
-            padding: 20px 5px;
+
+            /* background-color: var(--pbg-color); */
+            /* box-shadow: var(--bx-shdw-color); */
+            filter: brightness(var(--brightnes));
+            height: 80px; 
+            padding: 0px 5px;
+
             border-radius: 5px;
             position: absolute; 
-            left: 0; 
-            width: 100%; 
+            left: 3%; 
+            width: 95%; 
         }
