@@ -112,7 +112,7 @@
         }
 
         .tblBody tr{
-            height:60px;
+            height:40px;
         }
         .pContent {
             border-radius: 5px;
@@ -124,8 +124,8 @@
             /* background-color: var(--pbg-color); */
             /* box-shadow: var(--bx-shdw-color); */
             filter: brightness(var(--brightnes));
-            height: 140px; 
-            padding: 20px 5px;
+            height: 80px; 
+            padding: 0px 5px;
             border-radius: 5px;
             position: absolute; 
             left: 3%; 

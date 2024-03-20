@@ -130,7 +130,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                 }
                 
             }
-
+            // p.textContent = p.textContent.trim();
             var td = p.closest('td'); 
             
             pDiv.appendChild(p);// Find the closest td ancestor
@@ -165,7 +165,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     var startTime = timeSpan.substring(startIdx, endIdx).trim();
                     var endTime = timeSpan.substring(endIdx + 1, timeSpan.indexOf(')')).trim();
                     
-                    var rate = 6/7;
+                    var rate = 4/7;
                     var startHours = parseInt(startTime.split(':')[0]);
                     var startMinutes = parseInt(startTime.split(':')[1]);
                     var startSlot = startHours * 60 + startMinutes;
