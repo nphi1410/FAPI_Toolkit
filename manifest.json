@@ -4,14 +4,14 @@
   "description": "Beauty FAP Interface for FPT University Students",
   "version": "1.0.0",
   "action": {
-    "default_icon": "front_end/icon.png"
+    "default_icon": "front_end/icon2.png"
   },
   "permissions": ["scripting", "activeTab", "cookies"],
   "icons": {
-    "16": "front_end/icon.png",
-    "32": "front_end/icon.png",
-    "48": "front_end/icon.png",
-    "128": "front_end/icon.png"
+    "16": "front_end/icon2.png",
+    "32": "front_end/icon2.png",
+    "48": "front_end/icon2.png",
+    "128": "front_end/icon2.png"
   },
   "content_scripts": [
     {
@@ -35,7 +35,6 @@
         "front_end/Header&Navbar/selector.js",
         "front_end/Header&Navbar/link.js",
         "front_end/LanguageSwitch/LanguageSwitch.js",
-        "front_end/Header&Navbar/header.js", 
         "front_end/Header&Navbar/content.js",
         "front_end/Header&Navbar/navbar.js",
         "front_end/Header&Navbar/darkmode.js",
