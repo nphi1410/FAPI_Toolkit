@@ -1,16 +1,16 @@
 var listRegisLink = [
+  "https://fap.fpt.edu.vn/FrontOffice/RegisterCourse.aspx?code=R3", //5
+  "https://fap.fpt.edu.vn/FrontOffice/RegisterCourse.aspx?code=R4", //6
+  "https://fap.fpt.edu.vn/FrontOffice/RegisterCourse.aspx?code=R5", //7
+  "https://fap.fpt.edu.vn/App/SendAcad.aspx", //10
+  "https://fap.fpt.edu.vn/App/AcadAppView.aspx", //11
   "https://fap.fpt.edu.vn/FrontOffice/AddApplication.aspx?code=R1", //0
   "https://fap.fpt.edu.vn/FrontOffice/RemoveApplication.aspx?code=R1", //1
   "https://fap.fpt.edu.vn/FrontOffice/AddApplication.aspx?code=R2", //2
   "https://fap.fpt.edu.vn/FrontOffice/RemoveApplication.aspx?code=R2", //3
   "https://fap.fpt.edu.vn/FrontOffice/Courses.aspx", //4
-  "https://fap.fpt.edu.vn/FrontOffice/RegisterCourse.aspx?code=R3", //5
-  "https://fap.fpt.edu.vn/FrontOffice/RegisterCourse.aspx?code=R4", //6
-  "https://fap.fpt.edu.vn/FrontOffice/RegisterCourse.aspx?code=R5", //7
   "https://fap.fpt.edu.vn/FrontOffice/RegisteredCourses.aspx", //8
   "https://fap.fpt.edu.vn/FrontOffice/RegisterElective.aspx", //9
-  "https://fap.fpt.edu.vn/App/SendAcad.aspx", //10
-  "https://fap.fpt.edu.vn/App/AcadAppView.aspx", //11
   "https://fap.fpt.edu.vn/App/AddApp.aspx", //12
   "https://fap.fpt.edu.vn/FrontOffice/Shopping.aspx", //13
   "https://fap.fpt.edu.vn/Report/DngRequests.aspx", //14
@@ -76,18 +76,18 @@ var listOtherLink = [
 ];
 
 var listRegisTextEN = [
+  "Register extra courses",
+  "Register to improve mark",
+  "Register to repeat a course",
+  "Send Application",
+  "View Application",
   "Suspend to repeat course",
   "Cancel",
   "Suspend",
   "Cancel",
   "Move out class",
-  "Register extra courses",
-  "Register to improve mark",
-  "Register to repeat a course",
   "Cancel registration",
   "Register Free Elective Courses",
-  "Send Application",
-  "View Application",
   "Student Confirmation",
   "Choose paid items",
   "View",
@@ -102,18 +102,18 @@ var listRegisTextEN = [
 ];
 // Vietnamese (FINISHED)
 var listRegisTextVI = [
-  "Xin tạm hoãn tiến độ một học kỳ để học lại",
-  "Hủy bỏ",
-  "Xin tạm nghỉ một học kỳ",
-  "Hủy bỏ",
-  "Xin chuyển lớp",
   "Đăng ký học đi chậm kỳ",
   "Đăng ký học cải thiện điểm",
   "Đăng ký học lại",
-  "Hủy đăng ký học",
-  "Đăng ký môn tự chọn",
   "Gửi đơn",
   "Xem đơn",
+  "Xin tạm hoãn tiến độ một học kỳ để học lại",
+  "Hủy bỏ xin tạm hoãn tiến độ một học kỳ để học lại",
+  "Xin tạm nghỉ một học kỳ",
+  "Hủy bỏ xin tạm nghỉ một học kỳ",
+  "Xin chuyển lớp",
+  "Hủy đăng ký học",
+  "Đăng ký môn tự chọn",
   "Xin xác nhận sinh viên",
   "Lựa chọn các khoản nộp",
   "Xem lịch sử nộp",
