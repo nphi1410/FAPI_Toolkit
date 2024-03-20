@@ -97,7 +97,7 @@ contentBody.outerHTML = `
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-4">
     <a href="https://fap.fpt.edu.vn/Student.aspx" class="flex items-center space-x-3 rtl:space-x-reverse hover:no-underline">
-        <img src="https://i.ibb.co/dLMy0d8/logo.png" class="h-8" alt="FAP Logo" />
+        <img src="https://i.ibb.co/dLMy0d8/logo.png" class="h-14" alt="FAP Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FPT University Academic Portal</span>
     </a>
     
@@ -233,7 +233,21 @@ contentBody.outerHTML = `
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar" class="z-10 absolute hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
-                          
+                          <li>
+                            <a href="${listRegisLink[0]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listRegisText[0]}</a>
+                          </li>
+                          <li>
+                            <a href="${listRegisLink[1]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listRegisText[1]}</a>
+                          </li>
+                          <li>
+                            <a href="${listRegisLink[2]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listRegisText[2]}</a>
+                          </li>
+                          <li>
+                            <a href="${listRegisLink[3]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listRegisText[3]}</a>
+                          </li>
+                          <li>
+                            <a href="${listRegisLink[4]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listRegisText[4]}</a>
+                          </li>
                         </ul>
                     </div>
                 </li>
@@ -306,7 +320,15 @@ contentBody.outerHTML = `
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar" class="z-10 absolute hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
-                          
+                          <li>
+                            <a href="${listCouseraLink[3]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listCouseraText[3]}</a>
+                          </li>
+                          <li>
+                            <a href="${listOtherLink[11]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listOtherText[11]}</a>
+                          </li>
+                          <li>
+                            <a href="${listOtherLink[12]}" class="block px-4 hover:no-underline py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${listOtherText[12]}</a>
+                          </li>
                         </ul>
                     </div>
                 </li>
