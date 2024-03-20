@@ -129,8 +129,10 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             
 
             // Set random background color for p element
+
         var randomColor = colors[Math.floor(Math.random() * colors.length)];
         p.style.backgroundColor = `rgba(${parseInt(randomColor.substring(1, 3), 16)}, ${parseInt(randomColor.substring(3, 5), 16)}, ${parseInt(randomColor.substring(5, 7), 16)}, 60%)`;
+
             
             var aTags = p.querySelectorAll('a');
             for (var i = 1; i< aTags.length; i++) {
@@ -175,7 +177,9 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     var startTime = timeSpan.substring(startIdx, endIdx).trim();
                     var endTime = timeSpan.substring(endIdx + 1, timeSpan.indexOf(')')).trim();
                     
+
                     var rate = 4/7;
+
                     var startHours = parseInt(startTime.split(':')[0]);
                     var startMinutes = parseInt(startTime.split(':')[1]);
                     var startSlot = startHours * 60 + startMinutes;

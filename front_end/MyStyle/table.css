@@ -27,16 +27,19 @@
             /* --bx-shdw-color: -5px -5px 10px rgb(204, 195, 195); */
             --brightnes: 200%;
             /* --contras: 200%; */
+
             --th-color: #1f2937;
             transition: color 0.2s linear 0s;
         } 
         :root {
             --bg-color: rgb(204, 195, 195);
             --text-color: black;
+
             /* --pbg-color: rgb(221, 226, 231); */
             /* --bx-shdw-color: -5px -5px 10px #1f2937; */
             --brightnes: 100%;
             /* --contras: 100%; */
+
             --th-color: #6b90da;
             transition: background-color 0.2s linear 0s;
         }
@@ -112,7 +115,9 @@
         }
 
         .tblBody tr{
+
             height:40px;
+
         }
         .pContent {
             border-radius: 5px;
@@ -121,11 +126,13 @@
         }
         
         .pContent p {
+
             /* background-color: var(--pbg-color); */
             /* box-shadow: var(--bx-shdw-color); */
             filter: brightness(var(--brightnes));
             height: 80px; 
             padding: 0px 5px;
+
             border-radius: 5px;
             position: absolute; 
             left: 3%; 
