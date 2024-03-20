@@ -139,7 +139,7 @@ contentBody.outerHTML = `
   </div>
 
   <div class="flex relative items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+      <button type="button" id="language-btn" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
         <img class="w-5 h-5 rounded-full me-3" src=${languageImg} alt="Vietnamese" title="Tiếng Việt">
         ${languageText}
       </button>
@@ -780,3 +780,11 @@ contentBody.outerHTML = `
 var contentToPadding = document.querySelectorAll('form[name="aspnetForm"]>table>tbody>tr>td');
 contentToPadding[0].classList.add("px-7");
 contentToPadding[1].classList.add("px-7");
+
+var hTag = document.querySelectorAll("h2, h3, caption");
+console.log(hTag);
+if(hTag.length > 0){
+  hTag.forEach(element => {
+    element.classList.add("text-white", "text-lg", "font-semibold");
+  });
+}
