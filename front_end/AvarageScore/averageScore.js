@@ -43,6 +43,4 @@ for (let i = 0; i < tdTags.length; i++) {
   }
 }
 
-console.log("grades: ", grades);
-console.log("average score: ", avg.toFixed(1));
 

@@ -37,7 +37,6 @@ document.addEventListener('click', function(event) {
 
 const enDropdown = document.querySelector('#english-dropdown');
 const viDropdown = document.querySelector('#vietnamese-dropdown');
-console.log(enDropdown, viDropdown);
 enDropdown.parentElement.addEventListener('click', function(){
     localStorage.setItem('lang', 'en');
     languageChange();
