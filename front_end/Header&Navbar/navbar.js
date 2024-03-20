@@ -35,14 +35,6 @@ document.addEventListener('click', function(event) {
 });
 
 
-
-// //LANGUAGE
-// var buttonLangue = document.querySelector('button[data-dropdown-toggle="language-dropdown-menu"]');
-// var languageMenu = document.querySelector('#language-dropdown-menu');
-// buttonLangue.addEventListener('click', function(){
-//     languageMenu.classList.toggle('hidden');
-// })
-
 const enDropdown = document.querySelector('#english-dropdown');
 const viDropdown = document.querySelector('#vietnamese-dropdown');
 console.log(enDropdown, viDropdown);
