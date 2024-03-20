@@ -179,7 +179,7 @@ contentBody.outerHTML = `
       <i class="fas fa-sun"></i>
     </div>
     <input id="darkmode-checkbox" type="checkbox" value="" class="sr-only peer" checked>
-    <div class="relative w-16 h-8 bg-gray-200 rounded-full peer dark:bg-yellow-300 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:z-20 after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+    <div class="relative w-16 h-8 bg-gray-200 rounded-full peer dark:bg-yellow-300 peer-checked:after:translate-x-8 rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:z-20 after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
   </label>
   
 
@@ -779,9 +779,9 @@ var contentToPadding = document.querySelectorAll('form[name="aspnetForm"]>table>
 contentToPadding[0].classList.add("px-7");
 contentToPadding[1].classList.add("px-7");
 
-var hTag = document.querySelectorAll("h2, h3, caption");
-if(hTag.length > 0){
-  hTag.forEach(element => {
-    element.classList.add("text-white", "text-lg", "font-semibold");
-  });
-}
+// var hTag = document.querySelectorAll("h2, h3, caption");
+// if(hTag.length > 0){
+//   hTag.forEach(element => {
+//     element.classList.add("text-white", "text-lg", "font-semibold");
+//   });
+// }
