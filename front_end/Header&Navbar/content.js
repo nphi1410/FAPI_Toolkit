@@ -174,9 +174,9 @@ contentBody.outerHTML = `
   
 
   <label id="darkmode-toggle" for="darkmode-checkbox" class="relative inline-flex items-center cursor-pointer">
-    <div class="absolute z-10 flex items-center justify-between w-full px-1 text-lg">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
+    <div class="absolute z-10 flex items-center justify-between w-full px-2 text-lg">
+      <i class="fas fa-moon text-yellow-300"></i>
+      <i class="fas fa-sun text-red-800"></i>
     </div>
     <input id="darkmode-checkbox" type="checkbox" value="" class="sr-only peer" checked>
     <div class="relative w-16 h-8 bg-gray-200 rounded-full peer dark:bg-yellow-300 peer-checked:after:translate-x-8 rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:z-20 after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
@@ -772,8 +772,8 @@ contentBody.outerHTML = `
 
 
 var contentToPadding = document.querySelectorAll('form[name="aspnetForm"]>table>tbody>tr>td');
-contentToPadding[0].classList.add("px-7");
-contentToPadding[1].classList.add("px-7");
+contentToPadding[0].classList.add("px-24");
+contentToPadding[1].classList.add("px-24");
 
 // var hTag = document.querySelectorAll("h2, h3, caption");
 // if(hTag.length > 0){
