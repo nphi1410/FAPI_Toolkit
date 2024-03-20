@@ -113,15 +113,26 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             }
         });
         // content  cells
-        // var colors = ['#ff2200', '#7bff00', '#00fffb', '#66ff00', '#ff7700', '#6eff00', '#ffd900', '#0066ff', '#ffa200', '#2bff00', '#ff0d00', '#00eeff'];
+        var colors = ['#ff2200', '#7bff00', '#00fffb', '#66ff00', '#ff7700', '#6eff00', '#ffd900', '#0066ff', '#ffa200', '#2bff00', '#ff0d00', '#00eeff'];
+        
         var pTags = tblBody.querySelectorAll('p');
         pTags.forEach(p => {
             var pDiv = document.createElement('div');
             pDiv.classList.add('pContent');
 
+            var fontTags = p.querySelectorAll('font');
+            fontTags.forEach(fontTag => {
+                if (fontTag.textContent === 'Not yet') {
+                    fontTag.style.color = 'gray';
+                }
+            }); 
+            
+
             // Set random background color for p element
-            // var randomColor = colors[Math.floor(Math.random() * colors.length)];
-            // p.style.backgroundColor = `rgba(${parseInt(randomColor.substring(1, 3), 16)}, ${parseInt(randomColor.substring(3, 5), 16)}, ${parseInt(randomColor.substring(5, 7), 16)}, 0.7)`;
+
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        p.style.backgroundColor = `rgba(${parseInt(randomColor.substring(1, 3), 16)}, ${parseInt(randomColor.substring(3, 5), 16)}, ${parseInt(randomColor.substring(5, 7), 16)}, 60%)`;
+
             
             var aTags = p.querySelectorAll('a');
             for (var i = 1; i< aTags.length; i++) {
@@ -130,7 +141,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                 }
                 
             }
-
+            // p.textContent = p.textContent.trim();
             var td = p.closest('td'); 
             
             pDiv.appendChild(p);// Find the closest td ancestor
@@ -139,6 +150,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
         // time slot
         var slotRows = tblBody.querySelectorAll('tr');
+
         var startTime = new Date();
         startTime.setHours(7);
         startTime.setMinutes(30);
@@ -165,7 +177,9 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     var startTime = timeSpan.substring(startIdx, endIdx).trim();
                     var endTime = timeSpan.substring(endIdx + 1, timeSpan.indexOf(')')).trim();
                     
-                    var rate = 6/7;
+
+                    var rate = 4/7;
+
                     var startHours = parseInt(startTime.split(':')[0]);
                     var startMinutes = parseInt(startTime.split(':')[1]);
                     var startSlot = startHours * 60 + startMinutes;
