@@ -113,11 +113,20 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             }
         });
         // content  cells
-        // var colors = ['#ff2200', '#7bff00', '#00fffb', '#66ff00', '#ff7700', '#6eff00', '#ffd900', '#0066ff', '#ffa200', '#2bff00', '#ff0d00', '#00eeff'];
+        var colors = ['#ff2200', '#7bff00', '#00fffb', '#66ff00', '#ff7700', '#6eff00', '#ffd900', '#0066ff', '#ffa200', '#2bff00', '#ff0d00', '#00eeff'];
+        
         var pTags = tblBody.querySelectorAll('p');
         pTags.forEach(p => {
             var pDiv = document.createElement('div');
             pDiv.classList.add('pContent');
+
+            var fontTags = p.querySelectorAll('font');
+            fontTags.forEach(fontTag => {
+                if (fontTag.textContent === 'Not yet') {
+                    fontTag.style.color = 'gray';
+                }
+            }); 
+            
 
             // Set random background color for p element
 
@@ -141,6 +150,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
         // time slot
         var slotRows = tblBody.querySelectorAll('tr');
+
         var startTime = new Date();
         startTime.setHours(7);
         startTime.setMinutes(30);
