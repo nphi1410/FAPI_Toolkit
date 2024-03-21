@@ -269,6 +269,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         console.log(indx);
 
         for( var i = 0; i < indx.length; i++){
+            prjNames[indx[i].index].style.fontWeight = 'bold';
             prjNames[indx[i].index].closest('p').style.backgroundColor = bgcolor[indx[i].bg] ;
         }
         
