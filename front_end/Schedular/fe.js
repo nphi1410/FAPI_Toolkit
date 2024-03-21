@@ -81,7 +81,6 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         tblHead.appendChild(stRow);
 
         //2nd head row
-        const daysofweek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
         var ndRow = document.createElement('tr');
         ndRow.classList.add('ndRow');
         var ndRowEmptyTh = document.createElement('th');
@@ -90,15 +89,26 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
         var currentDate = new Date();
         var currentDayOfWeek = currentDate.getDay();
+        const daysofweek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
         for (var i = 1 - currentDayOfWeek; i <= 7 - currentDayOfWeek; i++) {
             var day = new Date(currentDate);
             day.setDate(currentDate.getDate() + i);
             var ndRowTh = document.createElement('th');
-            ndRowTh.innerHTML = `${daysofweek[(i + 7) % 7]} ${day.getDate()}`;
-
+            var dayOfMonthSpan = document.createElement('span');
+            dayOfMonthSpan.textContent = day.getDate(); 
+            ndRowTh.appendChild(document.createTextNode(daysofweek[(i + 7) % 7] + ' ')); 
+            ndRowTh.appendChild(dayOfMonthSpan); 
+            if (parseInt(ndRowTh.textContent.split(' ')[1]) === currentDate.getDate()) {
+                
+                dayOfMonthSpan.style.backgroundColor = 'rgb(26,115,232)'; 
+                dayOfMonthSpan.style.borderRadius = '50%'; 
+                dayOfMonthSpan.style.color = 'white'; 
+                dayOfMonthSpan.style.padding = '5px'; 
+            }
             ndRow.appendChild(ndRowTh);
         }
+
         
         tblHead.appendChild(ndRow);
         mainTable.appendChild(tblHead);
@@ -113,27 +123,15 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             }
         });
         // content  cells
-        var colors = ['#ff2200', '#7bff00', '#00fffb', '#66ff00', '#ff7700', '#6eff00', '#ffd900', '#0066ff', '#ffa200', '#2bff00', '#ff0d00', '#00eeff'];
         
+            
+
+
         var pTags = tblBody.querySelectorAll('p');
         pTags.forEach(p => {
             var pDiv = document.createElement('div');
             pDiv.classList.add('pContent');
-
-            var fontTags = p.querySelectorAll('font');
-            fontTags.forEach(fontTag => {
-                if (fontTag.textContent === 'Not yet') {
-                    fontTag.style.color = 'gray';
-                }
-            }); 
-            
-
-            // Set random background color for p element
-
-        var randomColor = colors[Math.floor(Math.random() * colors.length)];
-        p.style.backgroundColor = `rgba(${parseInt(randomColor.substring(1, 3), 16)}, ${parseInt(randomColor.substring(3, 5), 16)}, ${parseInt(randomColor.substring(5, 7), 16)}, 60%)`;
-
-            
+        
             var aTags = p.querySelectorAll('a');
             for (var i = 1; i< aTags.length; i++) {
                 if(aTags[i].getAttribute('href')){
@@ -153,7 +151,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
 
         var startTime = new Date();
         startTime.setHours(7);
-        startTime.setMinutes(30);
+        startTime.setMinutes(0);
 
         slotRows.forEach((slotRow, index) => {
             var time = new Date(startTime);
@@ -161,7 +159,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             var slotCell = slotRow.querySelector('td');
             var formattedTime = ('0' + time.getHours()).slice(-2) + ':' + ('0' + time.getMinutes()).slice(-2);
             slotCell.innerHTML = formattedTime;
-            slotCell.style.verticalAlign = 'top';
+            
         });
 
         //filter slot
@@ -188,21 +186,91 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     var endMinutes = parseInt(endTime.split(':')[1]);
                     var endSlot = endHours * 60 + endMinutes;
 
-                    var slotHeight = (endSlot - startSlot)*rate;
+                    var slotHeight = (endSlot - startSlot+35)*rate;
                     var stCell = contentCells[0].innerHTML;
                     var stHours = parseInt(stCell.split(':')[0]);
                     var stMinutes = parseInt(stCell.split(':')[1]);
                     var stSlot = stHours * 60 + stMinutes;
+                    
                     var topPosition = (startSlot - stSlot) * rate;
-        
+                    if(topPosition < 0) {
+                        topPosition +=20*rate;
+                    } else {
+                        topPosition+=60*rate;
+                    }
+
                     var pParent = durationSpan.closest('p');
                     pParent.style.height = slotHeight + 'px';
                     pParent.style.top = topPosition + 'px'; 
                 }
             }
         }
+
+
+        pTags.forEach(p=>{
+            p.innerHTML = p.innerHTML.replace(/[()]/g, '');
+            var dot = document.createElement('div');
+            dot.classList.add('dot');
+
+            var fontTags = p.querySelectorAll('font');
+            fontTags.forEach(fontTag => {
+                if (fontTag.textContent === 'Not yet') {
+                    fontTag.innerHTML = '';
+                    dot.style.backgroundColor = 'gray';
+                }
+                if (fontTag.textContent === 'attended') {
+                    fontTag.innerHTML = '';
+                    dot.style.backgroundColor = 'lawngreen';
+                }if (fontTag.textContent === 'absent') {
+                    fontTag.innerHTML = '';
+                    dot.style.backgroundColor = 'red';
+                }
+                // fontTag.appendChild(dot);
+            }); 
+            var stat = document.createElement('span');
+            stat.innerHTML = 'Status: ';
+            stat.style.display = 'inline-block';
+            p.appendChild(stat);
+            p.appendChild(dot);
+
+            var brs = p.querySelectorAll('br');
+            brs[brs.length - 2].remove();
+        });
         
-        
+        var prjNames = tblBody.querySelectorAll('a');
+        var indx = [];
+        var bgcolor = ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA'];
+        prjNames.forEach((name,index)=>{
+            if(name.innerHTML.includes('-') && !name.innerHTML.includes(':')){
+                indx.push({
+                    name: name.innerHTML,
+                    index : index,
+                    checkdup : false,
+                    bg: null
+                });
+            }
+        });
+
+        var bdindx = 0;
+        for(var i=0; i<indx.length-1; i++){
+            if(indx[i].checkdup === false){
+                for(var j=i+1; j<indx.length;j++){
+                    if(indx[i].name == indx[j].name){
+                        indx[j].checkdup = true;
+                        indx[j].bg = bdindx;
+                    }
+                }
+                indx[i].checkdup = true;
+                indx[i].bg = bdindx;
+                bdindx++;
+            }
+        }
+
+        console.log(indx);
+
+        for( var i = 0; i < indx.length; i++){
+            prjNames[indx[i].index].closest('p').style.backgroundColor = bgcolor[indx[i].bg] ;
+        }
         
         tblBody.classList.add('tblBody');
         mainTable.appendChild(tblBody);
