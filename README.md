@@ -1,4 +1,4 @@
-# FAPI Toolkits - New version of FAPI
+# FAPI Toolkits - New version of FAP 
 
 **FAPI Toolkit** is an application for FPT University students, a modified version of FAP, with a changed interface and upgraded features to make it easier for students to use.<br />
 **FAPI Toolkit** has some new features such as:
