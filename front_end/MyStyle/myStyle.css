@@ -90,7 +90,7 @@ body.darkmode-theme {
   background-size: cover;
   background-position-y: -135px; */
   width: 100%;
-  height: 100%;
+  height: 150%;
   position: fixed;
   background-color: var(--tr-color);
   z-index: -1;
