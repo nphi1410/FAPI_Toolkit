@@ -196,7 +196,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     if(topPosition < 0) {
                         topPosition +=20*rate;
                     } else {
-                        topPosition+=60*rate;
+                        topPosition+=50*rate;
                     }
 
                     var pParent = durationSpan.closest('p');
@@ -234,7 +234,9 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             p.appendChild(dot);
 
             var brs = p.querySelectorAll('br');
-            brs[brs.length - 2].remove();
+            if(brs.length>2){
+                brs[brs.length - 2].remove();
+            }
         });
         
         var prjNames = tblBody.querySelectorAll('a');
