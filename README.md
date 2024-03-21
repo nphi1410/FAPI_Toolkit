@@ -1,6 +1,15 @@
-# FAPI Toolkits
+# FAPI Toolkits - New version of FAP
 
-**FAPI Tookits** is a collection of tools for working with FAPI. It includes
+**FAPI Toolkit** is an application for FPT University students, a modified version of FAP, with a changed interface and upgraded features to make it easier for students to use.
+**FAPI Toolkit** has some new features such as:
+- Automatically login to the homepage
+- Automatically feedback lecturers
+- Change the interface to be easily recognizable
+- Put the schedule on the main screen
+- Automatically calculate necessary points
+- Change language flexibly
+...
+*and there are many other features waiting for you to discover.*
 
 - Light mode
 
