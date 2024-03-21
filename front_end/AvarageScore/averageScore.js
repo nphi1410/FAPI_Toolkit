@@ -64,7 +64,7 @@ while(recAvg < 4){
     let point = nullPoints[i]; // Get the current point
   
     if (point.mark == 0) {
-      if (point.percent >= 30) point.mark += 4;
+      if (point.percent >= 20) point.mark += 4;
       else point.mark++;
     } else {
       point.mark++;
