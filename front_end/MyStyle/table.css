@@ -1,17 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
+        *{
+            
+        transition: background-color 0.2s linear;
+        transition: color 0.2s linear;
+        }
+
         body.darkmode-theme .table-title td, 
         body.darkmode-theme .table-title th {
             --bg-color: #1f2937;
             --text-color: rgb(204, 195, 195);
             --pbg-color: #FFB7B2;
             --ptext-color: #3C4043;
-            /* --bx-shdw-color: -5px -5px 10px rgb(204, 195, 195); */
-            /* --brightnes: 200%; */
-            /* --contras: 200%; */
 
             --th-color: #1f2937;
-            transition: color 0.2s linear 0s;
+            transition: background-color 0.2s linear;
+            transition: color 0.2s linear;
+
         } 
         :root {
             --bg-color: rgb(204, 195, 195);
@@ -19,12 +24,11 @@
 
             --pbg-color: #FF9AA2;
             --ptext-color: #3C4043;
-            /* --bx-shdw-color: -5px -5px 10px #1f2937; */
-            /* --brightnes: 100%; */
-            /* --contras: 100%; */
 
             --th-color: #6b90da;
-            transition: background-color 0.2s linear 0s;
+            transition: background-color 0.2s linear;
+            transition: color 0.2s linear;
+
         }
 
 
@@ -40,6 +44,8 @@
         height: 85%;
         border: 2px solid rgba(240, 225, 225, 1);
         border-radius: 20px;
+        transition: background-color 0.2s linear;
+        transition: color 0.2s linear;
         }
 
         
@@ -63,6 +69,8 @@
         margin: auto;
         width: 100%;
         height: 80%;
+        transition: background-color 0.2s linear;
+        transition: color 0.2s linear;
         }
         
         .stRow th:first-child{
