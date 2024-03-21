@@ -94,15 +94,14 @@
             text-align:center;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
             vertical-align:middle;
-            transition: background-color 0.2s linear;
-            transition: color 0.2s linear;
+            transition: color 0.2s linear, background-color 0.2s linear;
         }
         .stRow th{
             background-color: var(--th-strow-color);
             border-right:none;
             padding: 10px 0px 5px 20px;
             width: 120px;
-            transition: background-color 0.2s linear;
+            transition: color 0.2s linear, background-color 0.2s linear;
 
         }
 
@@ -128,18 +127,17 @@
         /* Styling for table rows */
         .table-title tr {
             background-color: var(--bg-color);
-            /* color: #666B85; */
             font-size: 12px;
             font-weight: normal;
             text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
             border: none;
             transition: background-color 0.2s linear;
-
         }
 
         /* Styling for table cells */
         .table-title td {
             background: var(--bg-color); /* Assuming --bg-color is defined elsewhere */
+            color: var(--text-color);
             padding: 2px;
             text-align: center;
             vertical-align: middle;
@@ -150,8 +148,7 @@
             border-top: 1px solid rgba(211, 211, 211, 0.3);
             border-bottom: 1px solid rgba(211, 211, 211, 0.3);
             border-left: none;
-            transition: background-color 0.2s linear;
-
+            transition: color 0.2s linear, background-color 0.2s linear;
         }
 
         .tblBody tr{
@@ -182,7 +179,7 @@
             position: absolute; 
             left: 3%; 
             width: 95%; 
-            cursor: pointer;
+            /* cursor: pointer; */
         }
         .pContent p .dot{
             /* position: relative;
