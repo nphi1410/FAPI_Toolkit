@@ -1,8 +1,8 @@
 # FAPI Toolkits - New version of FAP 
 
-**FAPI Toolkit** is an application for FPT University students, a modified version of FAP, with a changed interface and upgraded features to make it easier for students to use.<br />
-**FAPI Toolkit** has some new features such as:
-- Automatically login to the homepage
+**FAPI Toolkits** is a website for FPT University students, a modified version of FAP, with a changed interface and upgraded features to make it easier for students to use.<br />
+**FAPI Toolkits** has some new features such as:
+- Automatically login to the homepage (**ONLY from k18 and below**)
 - Automatically feedback lecturers
 - Change the interface to be easily recognizable
 - Put the schedule on the main screen
@@ -11,9 +11,9 @@
 
 *and there are many other features waiting for you to discover...*
 
-![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/835dea43-592f-47b6-a3d1-fe6f279820e6)
+![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/4aa1d08a-e1f6-4240-bade-39fcf03bbe81)
 
-![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/67dc2f0b-2c1c-4e1f-b64f-25d7cdb615da)
+![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/0def8e4a-c178-4cd3-a863-dbdad96ed0a4)
 
 ## Installation
 
