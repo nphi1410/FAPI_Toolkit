@@ -134,6 +134,10 @@
             transition: background-color 0.2s linear;
         }
 
+        .table-title tr:last-child td:first-child{
+            /* border-bottom-left-radius: 20px; */
+            background: none;
+        }
         /* Styling for table cells */
         .table-title td {
             background: var(--bg-color); /* Assuming --bg-color is defined elsewhere */
