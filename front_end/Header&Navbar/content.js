@@ -156,7 +156,7 @@ contentBody.outerHTML = `
             <a id="vietnamese-dropdown" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
               <div class="inline-flex items-center">
                 <img class="h-4 w-4 rounded-full me-2" src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg" alt="Vietnamese" title="Tiếng Việt">
-                VietNamese
+                Vietnamese
               </div>
             </a>
           </li>
