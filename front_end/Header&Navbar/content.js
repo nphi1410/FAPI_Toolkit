@@ -174,9 +174,9 @@ contentBody.outerHTML = `
   
 
   <label id="darkmode-toggle" for="darkmode-checkbox" class="relative inline-flex items-center cursor-pointer">
-    <div class="absolute z-10 flex items-center justify-between w-full px-1 text-lg">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
+    <div class="absolute z-10 flex items-center justify-between w-full px-2 text-lg">
+      <i class="fas fa-moon text-yellow-300"></i>
+      <i class="fas fa-sun text-red-800"></i>
     </div>
     <input id="darkmode-checkbox" type="checkbox" value="" class="sr-only peer" checked>
     <div class="relative w-16 h-8 bg-gray-200 rounded-full peer dark:bg-yellow-300 peer-checked:after:translate-x-8 rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:z-20 after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
@@ -190,7 +190,7 @@ contentBody.outerHTML = `
         <img class="w-10 h-10 rounded-full" src="https://i.ibb.co/QNH0tHF/avatar1.png" alt="user photo">
       </button>
       <!-- Dropdown menu -->
-      <div class="absolute top-full right-0 z-50 hidden my-2z text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+      <div class="absolute top-full right-0 w-44 z-50 hidden my-2z text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
         <div class="px-4 py-3">
           <span class="block text-sm text-gray-900 dark:text-white">${localStorage.getItem("fullName")}</span>
           <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">${localStorage.getItem("mss")}</span>
@@ -224,7 +224,6 @@ contentBody.outerHTML = `
                 <li>
                   <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                     ${itemNavText[0]}
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
@@ -254,7 +253,6 @@ contentBody.outerHTML = `
                 <li>
                   <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                     ${itemNavText[1]}
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
@@ -278,7 +276,6 @@ contentBody.outerHTML = `
                 <li>
                   <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                     ${itemNavText[2]}
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
@@ -311,7 +308,6 @@ contentBody.outerHTML = `
                 <li>
                   <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                     ${itemNavText[5]}
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
@@ -776,8 +772,8 @@ contentBody.outerHTML = `
 
 
 var contentToPadding = document.querySelectorAll('form[name="aspnetForm"]>table>tbody>tr>td');
-contentToPadding[0].classList.add("px-7");
-contentToPadding[1].classList.add("px-7");
+contentToPadding[0].classList.add("px-24");
+contentToPadding[1].classList.add("px-24");
 
 // var hTag = document.querySelectorAll("h2, h3, caption");
 // if(hTag.length > 0){

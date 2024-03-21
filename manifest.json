@@ -4,9 +4,10 @@
   "description": "Beauty FAP Interface for FPT University Students",
   "version": "1.0.0",
   "action": {
-    "default_icon": "front_end/icon2.png"
+    "default_icon": "front_end/icon2.png",
+    "default_popup": "front_end/Popup/popup.html"
   },
-  "permissions": ["scripting", "activeTab", "cookies"],
+  "permissions": ["scripting", "activeTab", "cookies", "storage"],
   "icons": {
     "16": "front_end/icon2.png",
     "32": "front_end/icon2.png",
@@ -62,8 +63,29 @@
     {
       "matches": ["https://fap.fpt.edu.vn/Feedback/*"],
       "js": ["front_end/FeedbackTeacher/feedback-teach.js"]
+    },
+
+    {
+      "matches": [
+        "*://fap.fpt.edu.vn/Default.aspx/*",
+        "*://fap.fpt.edu.vn/*"
+      ],
+      "js": [
+        "/front_end/AutoLogin/autoLogin.js"
+      ],
+      "world": "MAIN"
+    },
+
+    {
+      "matches": [
+        "*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
+      ],
+      "js": [
+        "./front_end/utils/storage.js",
+        "./front_end/AutoLogin/google.js"
+      ]
     }
-    
+
   ],
   "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
   "background": {

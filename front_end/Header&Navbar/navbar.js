@@ -1,6 +1,6 @@
 //AUTO TURN ON/OFF BUTTON
 // Get all navigation items
-var navItems = document.querySelectorAll('#dropdownNavbarLink, #user-menu-button, #language-btn');
+var navItems = document.querySelectorAll('#dropdownNavbarLink, #user-menu-button, #language-btn, #search-navbar');
 
 // Add click event listener to each navigation item
 navItems.forEach(function(navItem) {
@@ -21,7 +21,7 @@ navItems.forEach(function(navItem) {
 
 // Function to hide all subNavs
 function hideAllSubNavs() {
-    var subNavs = document.querySelectorAll('#dropdownNavbar, #user-dropdown, #language-dropdown-menu');
+    var subNavs = document.querySelectorAll('#dropdownNavbar, #user-dropdown, #language-dropdown-menu, #search-dropdown-menu');
     subNavs.forEach(function(subNav) {
         subNav.classList.add('hidden');
     });
