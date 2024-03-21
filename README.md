@@ -4,11 +4,11 @@
 
 - Light mode
 
-![Light mode](https://pasteboard.co/2mPwy3vzhuj9.png)
+![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/835dea43-592f-47b6-a3d1-fe6f279820e6)
 
 - Dark mode
 
-![Dark mode](https://pasteboard.co/oBZhqGBSByeY.png)
+![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/67dc2f0b-2c1c-4e1f-b64f-25d7cdb615da)
 
 ## Installation
 
@@ -25,7 +25,7 @@ git clone https://github.com/nphi1410/FAPI_Toolkit.git
 
 ## Author
 
-![Team 2 - Ban Chuyên môn](https://pasteboard.co/KKgaVl6lMCJA.jpg)
+![Team 2 - Ban Chuyên môn](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/55b6ae32-40aa-4ea1-95ac-52ad56c106b8)
 
 - Leader: [Cấn Thanh Mai](https://www.facebook.com/mai.canthanh)
 - Member: [Khuất Dung An](https://www.facebook.com/dungan.khuat)
