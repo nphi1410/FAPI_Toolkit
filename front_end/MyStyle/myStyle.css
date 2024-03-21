@@ -65,7 +65,7 @@ body.darkmode-theme {
   --hover-color: #f6c78b;
   --input-color: #fff;
   --th-color: #6b90da;
-  --tr-color: #F2BED1;
+  --tr-color: white;
   --background-color: rgb(172, 172, 172);
   transition: color 0.2s linear;
   transition: background-color 0.2s linear;
