@@ -162,6 +162,7 @@
             position: absolute; 
             left: 3%; 
             width: 95%; 
+            cursor: pointer;
         }
         .pContent p .dot{
             /* position: relative;
