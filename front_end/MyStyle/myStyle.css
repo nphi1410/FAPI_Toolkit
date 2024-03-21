@@ -39,14 +39,20 @@ body.darkmode-theme {
   --menu-color: #374151;
   --bg-color: #1f2937;
   --text-color: white;
-  --header-color: #374151;
-  --navbar-color: #1f2937;
-  --button-color: #22303C;
-  --hover-color: #4b5563;
-  --input-color: #3e3e42;
+  --text-search-input-color: white;
+  --text-search-dropdown-color:rgb(156 163 175);
+  --header-color: rgb(17 24 39);
+  --navbar-color: rgb(55 65 81);
+  --bg-search-color: rgb(55 65 81); 
   --th-color: #1f2937;
   --tr-color: #374259;
   --background-color: rgb(0, 0, 0);
+  --hover-text-color: white;
+  --hover-bg-color: rgb(75 85 99);
+  --hover-button-color: rgb(55 65 81);
+  --text-nav-color: rgb(29 78 216);
+  --fullname-color: white;
+  --ring-color: rgb(75 85 99);
   
   transition: background-color 0.2s linear;
   transition: color 0.2s linear;
@@ -58,15 +64,22 @@ body.darkmode-theme {
   --menu-color: #fcefec;
   --border-color: #d3d3d3;
   --bg-color: white;
-  --text-color: black;
-  --header-color: #fb5631;
-  --navbar-color: #fea837;
-  --button-color: #f58a02;
-  --hover-color: #f6c78b;
-  --input-color: #fff;
+  --text-color: rgb(17 24 39);
+  --text-search-input-color: rgb(17 24 39);
+  --text-search-dropdown-color: rgb(55 65 81);
+  --header-color: rgb(249 115 22);    /* orange-500 */
+  --navbar-color: rgb(253 186 116);  /* orange-300 */
+  --bg-search-color: white; 
   --th-color: #6b90da;
   --tr-color: white;
   --background-color: rgb(172, 172, 172);
+  --hover-text-color: rgb(55 65 81);
+  --hover-bg-color: rgb(243 244 246);
+  --hover-button-color: rgb(253 186 116);
+  --text-nav-color: rgb(234 88 12);
+  --fullname-color: rgb(55 65 81);
+  --ring-color: rgb(209 213 219);
+
   transition: color 0.2s linear;
   transition: background-color 0.2s linear;
 }
@@ -99,6 +112,57 @@ body.darkmode-theme {
   max-width: 3000px !important;
 }
 
+#header {
+  background-color: var(--header-color);
+  transition: background-color 0.2s linear;
+}
+#navbar {
+  background-color: var(--navbar-color);
+  transition: background-color 0.2s linear;
+}
+#search-navbar {
+  color: var(--text-search-input-color);
+  background-color: var(--bg-search-color);
+  transition: background-color 0.2s linear;
+}
+#search-dropdown-menu,
+#language-dropdown-menu, 
+#dropdownNavbar,
+#user-dropdown {
+  background-color: var(--bg-search-color);
+  transition: background-color 0.2s linear;
+}
+#search-dropdown-menu a,
+#language-dropdown-menu a, 
+#dropdownNavbar a,
+#user-dropdown a {
+  color: var(--text-search-dropdown-color);
+}
+#search-dropdown-menu a:hover, 
+#language-dropdown-menu a:hover,
+#dropdownNavbar a:hover,
+#user-dropdown a:hover {
+  color: var(--hover-text-color);
+  background-color: var(--hover-bg-color);
+  transition: background-color 0.2s linear;
+  transition: color 0.2s linear;
+}
+#language-btn:hover {
+  background-color: var(--hover-button-color);
+}
+
+#dropdownNavbarLink:hover {
+  color: var(--text-nav-color);
+}
+
+#user-dropdown span:first-child {
+  color: var(--fullname-color);
+}
+#user-menu-button:focus {
+  --tw-ring-color: var(--ring-color);
+}
+
+
 
 .row .col-md-12 table tr {
   background-color: white;
@@ -109,10 +173,7 @@ body.darkmode-theme {
 }
 
 
-.row .col-md-12.darkmode table {
-  color: white;
-  transition: color 0.2s linear;
-} 
+ 
 .row .col-md-12 table tr, 
 .row .col-md-12 table p{
   background-color: var(--tr-color) !important;
@@ -133,10 +194,22 @@ body.darkmode-theme {
   border: 1px solid white;
   padding: 0 10px;
 } */
-body.darkmode-theme .row .col-md-12 table span  {
+
+body.darkmode-theme .row .col-md-12 table {
+  color: var(--text-color);
+  transition: color 0.2s linear;
+}
+body.darkmode-theme .row .col-md-12 table span, 
+body.darkmode-theme .row .col-md-12 table h2,
+body.darkmode-theme .row .col-md-12 table h3  {
   color: white !important;
   transition: color 0.2s linear;
 }
+.row .col-md-12 table h2,
+.row .col-md-12 table h3{
+  font-size: 1.5rem;
+}
+
 body.darkmode-theme .row .col-md-12 table font[color="Green"], font[color="SeaGreen"] {
   color: #33cb30;
   transition: color 0.2s linear;
@@ -150,4 +223,5 @@ body.darkmode-theme .row .col-md-12 table input,
 body.darkmode-theme .row .col-md-12 table textarea {
   background-color: #1f2937;
   color: white;
+  transition: background-color 0.2s linear;
 }
