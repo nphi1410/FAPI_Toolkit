@@ -50,14 +50,15 @@ for(let i = 0; i<grades.length;i++){
   }
 }
 
+
 async function processData(){
-    await new Promise(resolve => setTimeout(resolve, 4000));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     while(recAvg < 4){
       for (let i = 0; i < nullPoints.length - 1; i++) {
         let point = nullPoints[i]; // Get the current point
       
         if (point.mark == 0) {
-          if (point.percent >= 30) point.mark += 4;
+          if (point.percent >= 20) point.mark += 4;
           else point.mark++;
         } else {
           point.mark++;
