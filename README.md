@@ -18,5 +18,5 @@ git clone https://github.com/nphi1410/FAPI_Toolkit.git
  - Member: [Khuất Dung An](https://www.facebook.com/dungan.khuat)
  - Member: [Đường Minh Sơn](https://www.facebook.com/profile.php?id=100024144821219)
  - Member: [Nguyễn Phi Phi](https://www.facebook.com/phiphi.nguyen.5477)
- - Member: [Trương Quốc Trường](https://www.linkedin.com/in/bernie-truongtq/)
+ - Member: [Trương Quốc Trường](https://www.linkedin.com/in/bernie-truongtq/) a.k.a Bernie Truong
 
