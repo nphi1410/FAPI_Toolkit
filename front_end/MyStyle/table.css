@@ -34,6 +34,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: auto;
+        background-color: var(--bg-color);
         padding:0px;
         width: 85%;
         height: 85%;
@@ -64,10 +65,10 @@
         height: 80%;
         }
         
-        .table-title th:first-child{
+        .stRow th:first-child{
             border-top-left-radius: 20px;
         }
-        .table-title th:last-child{
+        .stRow th:last-child{
             border-top-right-radius: 20px;
         }
 
