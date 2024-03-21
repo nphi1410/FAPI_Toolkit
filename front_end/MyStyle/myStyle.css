@@ -54,8 +54,8 @@ body.darkmode-theme {
   --fullname-color: white;
   --ring-color: rgb(75 85 99);
   
-  transition: background-color 0.2s linear;
-  transition: color 0.2s linear;
+  /* transition: background-color 0.2s linear;
+  transition: color 0.2s linear; */
 }
 :root {
   --navbar-height: 46px;
@@ -80,8 +80,8 @@ body.darkmode-theme {
   --fullname-color: rgb(55 65 81);
   --ring-color: rgb(209 213 219);
 
-  transition: color 0.2s linear;
-  transition: background-color 0.2s linear;
+  /* transition: color 0.2s linear;
+  transition: background-color 0.2s linear; */
 }
 
 .background {
@@ -94,6 +94,7 @@ body.darkmode-theme {
   position: fixed;
   background-color: var(--tr-color);
   z-index: -1;
+  transition: background-color 0.2s linear;
 }
 /* .background-front {
   background-color: var(--bg-color);
