@@ -140,6 +140,7 @@
         /* Styling for table cells */
         .table-title td {
             background: var(--bg-color); /* Assuming --bg-color is defined elsewhere */
+            color: var(--text-color);
             padding: 2px;
             text-align: center;
             vertical-align: middle;
@@ -151,6 +152,7 @@
             border-bottom: 1px solid rgba(211, 211, 211, 0.3);
             border-left: none;
             transition: background-color 0.2s linear;
+            transition: color 0.2s linear;
 
         }
 
