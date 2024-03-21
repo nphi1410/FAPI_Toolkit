@@ -6,17 +6,18 @@
         transition: color 0.2s linear;
         }
 
-        body.darkmode-theme .table-title td, 
-        body.darkmode-theme .table-title th {
+        body.darkmode-theme {
             --bg-color: #1f2937;
             --text-color: rgb(204, 195, 195);
             --pbg-color: #FFB7B2;
             --ptext-color: #3C4043;
 
             --th-color: #1f2937;
+
+            --th-strow-color: rgb(55 65 81);
+
             transition: background-color 0.2s linear;
             transition: color 0.2s linear;
-
         } 
         :root {
             --bg-color: rgb(204, 195, 195);
@@ -26,6 +27,9 @@
             --ptext-color: #3C4043;
 
             --th-color: #6b90da;
+
+            --th-strow-color: rgba(240, 225, 225, 0.3);
+
             transition: background-color 0.2s linear;
             transition: color 0.2s linear;
 
@@ -54,11 +58,11 @@
 
         
 
-        body.darkmode-theme .table-title td,
+        /* body.darkmode-theme .table-title td,
         body.darkmode-theme .table-title th {
             background-color: var(--bg-color);
             color: var(--text-color);
-        }
+        } */
 
 
         .table-fill {
@@ -81,7 +85,7 @@
         }
 
         .table-title th{
-            color: rgb(55 65 81 / var(--tw-text-opacity));
+            color: var(--text-color);
             background:var(--bg-color);
             font-size:15px;
             font-weight: bold;
@@ -90,12 +94,16 @@
             text-align:center;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
             vertical-align:middle;
+            transition: background-color 0.2s linear;
+            transition: color 0.2s linear;
         }
         .stRow th{
-            background-color: rgba(240, 225, 225, 0.3);
+            background-color: var(--th-strow-color);
             border-right:none;
             padding: 10px 0px 5px 20px;
             width: 120px;
+            transition: background-color 0.2s linear;
+
         }
 
         .ndRow th {
@@ -120,11 +128,13 @@
         /* Styling for table rows */
         .table-title tr {
             background-color: var(--bg-color);
-            color: #666B85;
+            /* color: #666B85; */
             font-size: 12px;
             font-weight: normal;
             text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
             border: none;
+            transition: background-color 0.2s linear;
+
         }
 
         /* Styling for table cells */
@@ -140,6 +150,8 @@
             border-top: 1px solid rgba(211, 211, 211, 0.3);
             border-bottom: 1px solid rgba(211, 211, 211, 0.3);
             border-left: none;
+            transition: background-color 0.2s linear;
+
         }
 
         .tblBody tr{
