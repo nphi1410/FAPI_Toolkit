@@ -63,27 +63,6 @@
     {
       "matches": ["https://fap.fpt.edu.vn/Feedback/*"],
       "js": ["front_end/FeedbackTeacher/feedback-teach.js"]
-    },
-
-    {
-      "matches": [
-        "*://fap.fpt.edu.vn/Default.aspx/*",
-        "*://fap.fpt.edu.vn/*"
-      ],
-      "js": [
-        "/front_end/AutoLogin/autoLogin.js"
-      ],
-      "world": "MAIN"
-    },
-
-    {
-      "matches": [
-        "*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
-      ],
-      "js": [
-        "./front_end/utils/storage.js",
-        "./front_end/AutoLogin/google.js"
-      ]
     }
 
   ],
