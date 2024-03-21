@@ -14,6 +14,8 @@ git clone https://github.com/nphi1410/FAPI_Toolkit.git
 5. Feel free to enjoy!
 
 ## Author
+![Team 2 - Ban Chuyên môn](https://scontent.fhan14-3.fna.fbcdn.net/v/t1.15752-9/433444391_923793283088944_3499684963611323664_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFqLrWUWj1V4s7cHbVM74bLF-MoQLQfFlQX4yhAtB8WVAJK_cZXUzGKz9Dcdubg9tRf16rTY4KZZAKAz9PwhNQu&_nc_ohc=xq_idA8oClkAX_jW-P3&_nc_ht=scontent.fhan14-3.fna&oh=03_AdSzRI37upGdeGYDVDoYvfT22tkBidRCrUcWRma7KQ02fA&oe=66232A86)
+
  - Leader: [Cấn Thanh Mai](https://www.facebook.com/mai.canthanh)
  - Member: [Khuất Dung An](https://www.facebook.com/dungan.khuat)
  - Member: [Đường Minh Sơn](https://www.facebook.com/profile.php?id=100024144821219)
