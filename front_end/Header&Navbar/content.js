@@ -96,7 +96,7 @@ contentBody.outerHTML = `
 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-4">
     <a href="https://fap.fpt.edu.vn/Student.aspx" class="flex items-center space-x-3 rtl:space-x-reverse hover:no-underline">
         <img src="https://i.ibb.co/dLMy0d8/logo.png" class="h-14" alt="FAP Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FPT University Academic Portal</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" value="FAP Name">FPT University Academic Portal</span>
     </a>
     
     <!--Searchbar-->

@@ -67,16 +67,16 @@ body.darkmode-theme {
   --text-color: rgb(17 24 39);
   --text-search-input-color: rgb(17 24 39);
   --text-search-dropdown-color: rgb(55 65 81);
-  --header-color: rgb(249 115 22);    /* orange-500 */
-  --navbar-color: rgb(253 186 116);  /* orange-300 */
+  --header-color: white;    /* orange-500 */
+  --navbar-color: rgb(249 250 251);  /* orange-300 */
   --bg-search-color: white; 
   --th-color: #6b90da;
   --tr-color: white;
   --background-color: rgb(172, 172, 172);
   --hover-text-color: rgb(55 65 81);
   --hover-bg-color: rgb(243 244 246);
-  --hover-button-color: rgb(253 186 116);
-  --text-nav-color: rgb(234 88 12);
+  --hover-button-color: rgb(243 244 246);
+  --text-nav-color: rgb(253 186 116);
   --fullname-color: rgb(55 65 81);
   --ring-color: rgb(209 213 219);
 
@@ -117,6 +117,10 @@ body.darkmode-theme {
   background-color: var(--header-color);
   transition: background-color 0.2s linear;
 }
+#header span[value="FAP Name"]{
+  color: var(--text-color);
+  transition: color 0.2s linear;
+}
 #navbar {
   background-color: var(--navbar-color);
   transition: background-color 0.2s linear;
@@ -148,10 +152,16 @@ body.darkmode-theme {
   transition: background-color 0.2s linear;
   transition: color 0.2s linear;
 }
+#language-btn {
+  color: var(--text-color);
+}
 #language-btn:hover {
   background-color: var(--hover-button-color);
 }
-
+#dropdownNavbarLink {
+  color: var(--text-color);
+  transition: color 0.2s linear;
+}
 #dropdownNavbarLink:hover {
   color: var(--text-nav-color);
 }
