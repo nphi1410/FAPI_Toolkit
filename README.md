@@ -15,6 +15,9 @@
 
 ![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/0def8e4a-c178-4cd3-a863-dbdad96ed0a4)
 
+## Technology
+![Static Badge](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5) ![Static Badge](https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3) ![Static Badge](https://img.shields.io/badge/JAVASCRIPT-000000?style=for-the-badge&logo=javascript) ![Static Badge](https://img.shields.io/badge/TAILWINDCSS-000000?style=for-the-badge&logo=tailwindcss)
+
 ## Installation
 
 1. Clone the repository
@@ -42,3 +45,6 @@ git clone https://github.com/nphi1410/FAPI_Toolkit.git
 
 Feel free to contribute to this project. Any contributions you make are greatly appreciated.
 
+## License
+
+This project is licensed under the Apache License - see the [LICENSE](LICENSE.txt) file for details.
