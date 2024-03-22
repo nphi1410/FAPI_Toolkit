@@ -66,6 +66,7 @@
 
 
         .table-fill {
+        background: none;
         border-radius: 20px;
         border-collapse: collapse;
         border-spacing: 0;
@@ -135,8 +136,10 @@
         }
 
         .table-title tr:last-child td:first-child{
-            /* border-bottom-left-radius: 20px; */
             background: none;
+        }
+        .table-title tr:last-child{
+            border-bottom: none;
         }
         /* Styling for table cells */
         .table-title td {
