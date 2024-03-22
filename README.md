@@ -11,9 +11,9 @@
 
 *and there are many other features waiting for you to discover...*
 
-![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/4aa1d08a-e1f6-4240-bade-39fcf03bbe81)
+![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/4ffb90b0-9418-4b49-9151-183c3839048c)
 
-![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/0def8e4a-c178-4cd3-a863-dbdad96ed0a4)
+![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/5e30814e-bb7b-4a9a-b8f0-698b94e7790c)
 
 ## Technology
 ![Static Badge](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5) ![Static Badge](https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3) ![Static Badge](https://img.shields.io/badge/JAVASCRIPT-000000?style=for-the-badge&logo=javascript) ![Static Badge](https://img.shields.io/badge/TAILWINDCSS-000000?style=for-the-badge&logo=tailwindcss)
