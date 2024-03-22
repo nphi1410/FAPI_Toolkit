@@ -285,4 +285,24 @@ var placeholderEN = "Search...";
 var placeholderVI = "Tìm kiếm...";
 var placeholder = placeholderEN;
 
+var dayEN = [
+  "MON",
+  "TUE",
+  "WED",
+  "THU",
+  "FRI",
+  "SAT",
+  "SUN"
+]
+var dayVI = [
+  "T2",
+  "T3",
+  "T4",
+  "T5",
+  "T6",
+  "T7",
+  "CN"
+]
+var day = dayEN
+
 
