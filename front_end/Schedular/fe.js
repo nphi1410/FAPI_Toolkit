@@ -136,10 +136,12 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
             
                 var aTags = p.querySelectorAll('a');
                 for (var i = 1; i< aTags.length; i++) {
-                    if(aTags[i].getAttribute('href')){
-                        aTags[i].innerHTML = '';
+                    if(i===3) continue;
+                    else{
+                        if(aTags[i].getAttribute('href')){
+                            aTags[i].innerHTML = '';
+                        }
                     }
-                    
                 }
                 // p.textContent = p.textContent.trim();
                 var td = p.closest('td'); 
