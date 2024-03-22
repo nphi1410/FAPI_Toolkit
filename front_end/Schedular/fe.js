@@ -90,14 +90,15 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         var currentDate = new Date();
         var currentDayOfWeek = currentDate.getDay();
         const daysofweek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-
+        var startWeek = 0;
         for (var i = 1 - currentDayOfWeek; i <= 7 - currentDayOfWeek; i++) {
             var day = new Date(currentDate);
             day.setDate(currentDate.getDate() + i);
             var ndRowTh = document.createElement('th');
             var dayOfMonthSpan = document.createElement('span');
             dayOfMonthSpan.textContent = day.getDate(); 
-            ndRowTh.appendChild(document.createTextNode(daysofweek[(i + 7) % 7] + ' ')); 
+            ndRowTh.appendChild(document.createTextNode(daysofweek[startWeek] + ' ')); 
+            startWeek++;
             ndRowTh.appendChild(dayOfMonthSpan); 
             if (parseInt(ndRowTh.textContent.split(' ')[1]) === currentDate.getDate()) {
                 
