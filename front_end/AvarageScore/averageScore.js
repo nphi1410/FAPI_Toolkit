@@ -52,7 +52,6 @@ for(let i = 0; i<grades.length;i++){
 
 
 async function processData(){
-    await new Promise(resolve => setTimeout(resolve, 3000));
     while(recAvg < 4){
       for (let i = 0; i < nullPoints.length - 1; i++) {
         let point = nullPoints[i]; // Get the current point
@@ -101,5 +100,35 @@ async function processData(){
   }
 }
 
-processData();
+
+async function checkURLAndProcessData() {
+  const url = window.location.href;
+
+  // Check if the URL has parameters
+  const paramsIndex = url.indexOf('?');
+  if (paramsIndex !== -1) {
+      // URL has parameters
+      const queryString = url.substring(paramsIndex + 1);
+      const params = new URLSearchParams(queryString);
+
+      // Log the parameters
+      params.forEach((value, key) => {
+          console.log(`${key}: ${value}`);
+      });
+
+      // Run the processData function
+      await processData();
+
+      // Stop the checking function
+      clearInterval(intervalId);
+      return;
+  }
+}
+
+// Call checkURLAndProcessData initially
+checkURLAndProcessData();
+
+// Setup interval to check URL every second
+const intervalId = setInterval(checkURLAndProcessData, 1000);
+
 
