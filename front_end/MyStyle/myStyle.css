@@ -29,8 +29,8 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
-  transition: background-color 0.2s linear;
-  transition: color 0.2s linear;
+  /* transition: background-color 0.2s linear;
+  transition: color 0.2s linear; */
   box-sizing: border-box;
 }
 
@@ -96,13 +96,6 @@ body.darkmode-theme {
   z-index: -1;
   transition: background-color 0.2s linear;
 }
-/* .background-front {
-  background-color: var(--bg-color);
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  opacity: 0.5;
-} */
 
 .container {
   position: relative;
