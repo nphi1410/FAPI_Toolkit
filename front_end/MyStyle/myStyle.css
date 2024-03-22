@@ -149,8 +149,6 @@ body.darkmode-theme {
 #user-dropdown a:hover {
   color: var(--hover-text-color);
   background-color: var(--hover-bg-color);
-  transition: background-color 0.2s linear;
-  transition: color 0.2s linear;
 }
 #language-btn {
   color: var(--text-color);

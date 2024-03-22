@@ -15,8 +15,3 @@ if(success.textContent === ""){
 }
 // for of: tra ra cac nodelist
 
-var submit = document.querySelector(
-    '#ctl00_mainContent_btSendFeedback'
-);
-console.log(submit);
-submit.click();
