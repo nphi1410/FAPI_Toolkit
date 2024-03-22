@@ -238,7 +238,15 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         
         var prjNames = tblBody.querySelectorAll('a');
         var indx = [];
-        var bgcolor = ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA'];
+        var bgcolor = [
+            'rgba(255, 154, 162, 0.5)',
+            'rgba(255, 183, 178, 0.5)',
+            'rgba(255, 218, 193, 0.5)',
+            'rgba(226, 240, 203, 0.5)',
+            'rgba(181, 234, 215, 0.5)',
+            'rgba(199, 206, 234, 0.5)'
+        ];
+        
         prjNames.forEach((name,index)=>{
             if(name.innerHTML.includes('-') && !name.innerHTML.includes(':')){
                 indx.push({

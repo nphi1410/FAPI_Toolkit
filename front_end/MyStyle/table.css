@@ -9,8 +9,8 @@
         body.darkmode-theme {
             --bg-color: #1f2937;
             --text-color: rgb(204, 195, 195);
-            --pbg-color: #FFB7B2;
-            --ptext-color: #3C4043;
+            /* --pbg-color: #FFB7B2; */
+            --ptext-color: rgb(235, 231, 231);
 
             --th-color: #1f2937;
 
@@ -23,7 +23,7 @@
             --bg-color: rgb(204, 195, 195);
             --text-color: #3C4043;
 
-            --pbg-color: #FF9AA2;
+            /* --pbg-color: #FF9AA2;s */
             --ptext-color: #3C4043;
 
             --th-color: #6b90da;
