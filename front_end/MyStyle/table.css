@@ -116,7 +116,7 @@
         .stRow th{
             background-color: var(--th-strow-color);
             border-right:none;
-            padding: 20px 0px 20px 20px;
+            padding: 10px 0px 5px 20px;
             width: 120px;
             transition: color 0.2s linear, background-color 0.2s linear;
 
