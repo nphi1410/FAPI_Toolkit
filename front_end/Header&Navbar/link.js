@@ -281,4 +281,8 @@ var languageImgEN = "https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-
 var languageImgVI = "https://portal.ptit.edu.vn/wp-content/uploads/2016/04/quoc-ky-viet-nam.jpg";
 var languageImg = languageImgEN;
 
+var placeholderEN = "Search...";
+var placeholderVI = "Tìm kiếm...";
+var placeholder = placeholderEN;
+
 

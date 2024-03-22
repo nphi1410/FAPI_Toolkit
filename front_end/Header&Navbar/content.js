@@ -93,9 +93,9 @@ for (var i = 0; i < listOtherTextVI.length; i++) {
 
 contentBody.outerHTML = `
 <nav class="bg-white border-gray-200 dark:bg-gray-900" id="header">
-<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-2">
+<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl py-2 2xl:px-4">
     <a href="https://fap.fpt.edu.vn/Student.aspx" class="flex items-center space-x-3 rtl:space-x-reverse hover:no-underline">
-        <img src="https://i.ibb.co/dLMy0d8/logo.png" class="h-12" alt="FAP Logo" />
+        <img src="https://i.ibb.co/dLMy0d8/logo.png" class="h-12 2xl:h-14" alt="FAP Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" value="FAP Name">FPT University Academic Portal</span>
     </a>
     
@@ -114,7 +114,7 @@ contentBody.outerHTML = `
         </svg>
         <span class="sr-only">Search icon</span>
       </div>
-      <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+      <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="${placeholder}">
       <!--Search Dropdown -->
       <div class="max-h-60 hidden overflow-y-auto z-50 w-full absolute top-full text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="search-dropdown-menu">
         <ul class="py-2 font-medium" role="none">
