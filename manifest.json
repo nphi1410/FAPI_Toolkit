@@ -4,44 +4,88 @@
   "description": "Beauty FAP Interface for FPT University Students",
   "version": "1.0.0",
   "action": {
-    "default_icon": "front_end/icon.png"
+    "default_icon": "front_end/icon2.png",
+    "default_popup": "front_end/Popup/popup.html"
   },
-  "permissions": ["scripting", "activeTab", "cookies"],
+  "permissions": ["scripting", "activeTab", "cookies", "storage"],
   "icons": {
-    "16": "front_end/icon.png",
-    "32": "front_end/icon.png",
-    "48": "front_end/icon.png",
-    "128": "front_end/icon.png"
+    "16": "front_end/icon2.png",
+    "32": "front_end/icon2.png",
+    "48": "front_end/icon2.png",
+    "128": "front_end/icon2.png"
   },
   "content_scripts": [
+    {
+      "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
+      "js": [
+        "front_end/Schedular/fe.js"
+      ],
+      "css":[
+        "front_end/MyStyle/table.css"
+      ]
+    },
+
+    {
+      "matches": ["https://fap.fpt.edu.vn/*"],
+      "exclude_matches": [
+        "https://fap.fpt.edu.vn/Default.aspx",
+        "https://fap.fpt.edu.vn/"
+      ],
+      "js": [
+        "front_end/Header&Navbar/tailwind_3.4.1.js",
+        "front_end/Header&Navbar/selector.js",
+        "front_end/Header&Navbar/link.js",
+        "front_end/LanguageSwitch/LanguageSwitch.js",
+        "front_end/Header&Navbar/content.js",
+        "front_end/Header&Navbar/navbar.js",
+        "front_end/Header&Navbar/darkmode.js",
+        "front_end/Header&Navbar/Search.js"
+      ],
+      "css": ["front_end/MyStyle/myStyle.css"]
+    },
+
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
       "exclude_matches": [
         "https://fap.fpt.edu.vn/Default.aspx"
       ],
       "js": [
-        "front_end/Header&Navbar/link.js",
-        "front_end/Header&Navbar/header.js", 
-        "front_end/Header&Navbar/content.js",
-        "front_end/Header&Navbar/darkmode.js",
-        "front_end/Header&Navbar/search.js"
+        "front_end/ChangeTable/changeTable.js"
       ],
-      "css": ["front_end/MyStyle/header.css", "front_end/MyStyle/myStyle.css"]
-    },
-
-    {
-      "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
-      "js": [
-        "front_end/Schedular/fe.js",
-        "front_end/Schedular/home.js"
-      ]
+      "css": ["front_end/MyStyle/myStyle.css"]
     },
 
     {
       "matches": ["https://fap.fpt.edu.vn/Grade/*"],
       "js": ["front_end/AvarageScore/averageScore.js"]
+    },
+
+    {
+      "matches": ["https://fap.fpt.edu.vn/Feedback/*"],
+      "js": ["front_end/FeedbackTeacher/feedback-teach.js"]
+    },
+
+    {
+      "matches": [
+        "*://fap.fpt.edu.vn/Default.aspx/*",
+        "*://fap.fpt.edu.vn/*"
+      ],
+      "js": [
+        "/front_end/AutoLogin/autoLogin.js"
+      ],
+      "world": "MAIN"
+    },
+
+    {
+      "matches": [
+        "*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
+      ],
+      "js": [
+        "./front_end/utils/storage.js",
+        "./front_end/AutoLogin/google.js"
+      ]
     }
-    
+
   ],
   "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
   "background": {

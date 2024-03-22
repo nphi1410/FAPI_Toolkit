@@ -1,9 +1,14 @@
 // DARKMODE FUNCTION
-const checkbox = document.getElementById("header-darkmode-checkbox");
-console.log(checkbox);
+const checkbox = document.getElementById("darkmode-checkbox");
 check = () => {
-    if(checkbox.checked) document.body.classList.toggle("darkmode-theme")
-    else document.body.classList.remove("darkmode-theme")
+    if(checkbox.checked){
+        document.body.classList.toggle("darkmode-theme");
+        document.documentElement.classList.toggle('dark');
+    }
+    else {
+        document.body.classList.remove("darkmode-theme");
+        document.documentElement.classList.remove('dark');
+    }
 }
 
 save = () => {
@@ -20,3 +25,7 @@ checkbox.onclick = () => {
     save();
     load();
 }
+
+
+
+
