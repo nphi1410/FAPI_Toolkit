@@ -11,6 +11,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     localStorage.setItem("langBtnText", languageBtnText);
     localStorage.setItem("langText", languageText);
     localStorage.setItem("languageImg", languageImg);
+    localStorage.setItem("placeholder", placeholder);
+    localStorage.setItem("day", day);
     localStorage.setItem("isSetLanguageStorage", true);
   }
   
@@ -25,6 +27,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
   languageBtnText = localStorage.getItem("langBtnText");
   languageText = localStorage.getItem("langText");
   languageImg = localStorage.getItem("languageImg");
+  placeholder = localStorage.getItem("placeholder");
+  day = localStorage.getItem("day").split(",");
 
   languageChange = () => {
   if (localStorage.getItem("lang") === "vi") {
@@ -39,6 +43,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     languageBtnText = languageBtnTextVI;
     languageText = languageTextVI;
     languageImg = languageImgVI;
+    placeholder = placeholderVI;
+    day = dayVI;
   } else {
     listRegisText = listRegisTextEN;
     listInfoText = listInfoTextEN;
@@ -51,6 +57,8 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
     languageBtnText = languageBtnTextEN;
     languageText = languageTextEN;
     languageImg = languageImgEN;
+    placeholder = placeholderEN;
+    day = dayEN;
   }
   localStorage.setItem("regisText", listRegisText);
   localStorage.setItem("infoText", listInfoText);
@@ -63,4 +71,6 @@ if(localStorage.getItem("isSetLanguageStorage") === null) {
   localStorage.setItem("langBtnText", languageBtnText);
   localStorage.setItem("langText", languageText);
   localStorage.setItem("languageImg", languageImg);
+  localStorage.setItem("placeholder", placeholder);
+  localStorage.setItem("day", day);
 };
