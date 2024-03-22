@@ -7,7 +7,7 @@
     "default_icon": "front_end/icon2.png",
     "default_popup": "front_end/Popup/popup.html"
   },
-  "permissions": ["scripting", "activeTab", "cookies", "storage"],
+
   "icons": {
     "16": "front_end/icon2.png",
     "32": "front_end/icon2.png",
@@ -21,12 +21,8 @@
     },
     {
       "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
-      "js": [
-        "front_end/Schedular/fe.js"
-      ],
-      "css":[
-        "front_end/MyStyle/table.css"
-      ]
+      "js": ["front_end/Schedular/fe.js"],
+      "css": ["front_end/MyStyle/table.css"]
     },
 
     {
@@ -49,12 +45,8 @@
 
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
-      "exclude_matches": [
-        "https://fap.fpt.edu.vn/Default.aspx"
-      ],
-      "js": [
-        "front_end/ChangeTable/changeTable.js"
-      ],
+      "exclude_matches": ["https://fap.fpt.edu.vn/Default.aspx"],
+      "js": ["front_end/ChangeTable/changeTable.js"],
       "css": ["front_end/MyStyle/myStyle.css"]
     },
 
@@ -69,26 +61,40 @@
     },
 
     {
-      "matches": [
-        "*://fap.fpt.edu.vn/Default.aspx/*",
-        "*://fap.fpt.edu.vn/*"
-      ],
-      "js": [
-        "/front_end/AutoLogin/autoLogin.js"
-      ],
+      "matches": ["*://fap.fpt.edu.vn/Default.aspx/*", "*://fap.fpt.edu.vn/*"],
+      "js": ["/front_end/AutoLogin/autoLogin.js"],
       "world": "MAIN"
     },
 
     {
       "matches": [
-        "*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
+        "https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
+        "https://accounts.google.com/o/oauth2/v2/auth/*feid.fpt.edu.vn*"
       ],
+      "js": ["./front_end/utils/storage.js", "./front_end/AutoLogin/google.js"]
+    },
+
+    {
+      "matches": ["https://feid.fpt.edu.vn/*"],
+      "js": ["./front_end/AutoLogin/feidLogin.js"]
+    },
+
+    {
+      "matches": ["https://fap.fpt.edu.vn/"],
       "js": [
         "./front_end/utils/storage.js",
-        "./front_end/AutoLogin/google.js"
+        "./front_end/AutoLogin/autoLogin.js"
       ]
     }
-
+  ],
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "cookies",
+    "storage",
+    "contextMenus",
+    "declarativeContent",
+    "activeTab"
   ],
   "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
   "background": {
