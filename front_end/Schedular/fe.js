@@ -176,7 +176,7 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     var endTime = timeSpan.substring(endIdx + 1, timeSpan.indexOf(')')).trim();
                     
 
-                    var rate = 4/7;
+                    var rate = 4/6;
 
                     var startHours = parseInt(startTime.split(':')[0]);
                     var startMinutes = parseInt(startTime.split(':')[1]);
@@ -186,18 +186,14 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
                     var endMinutes = parseInt(endTime.split(':')[1]);
                     var endSlot = endHours * 60 + endMinutes;
 
-                    var slotHeight = (endSlot - startSlot)*rate +15;
+                    var slotHeight = (endSlot - startSlot)*rate ;
                     var stCell = contentCells[0].innerHTML;
                     var stHours = parseInt(stCell.split(':')[0]);
                     var stMinutes = parseInt(stCell.split(':')[1]);
                     var stSlot = stHours * 60 + stMinutes;
                     
-                    var topPosition = (startSlot - stSlot) * rate;
-                    if(topPosition < 0) {
-                        topPosition = topPosition - 20*rate +25;
-                    } else {
-                        topPosition = topPosition + 20*rate +25;
-                    }
+                    var topPosition = (startSlot - stSlot) * rate+20;
+                    
 
                     var pParent = durationSpan.closest('p');
                     pParent.style.height = slotHeight + 'px';
