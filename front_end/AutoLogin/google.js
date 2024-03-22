@@ -9,7 +9,6 @@ const main = async () => {
   if (emailEl) {
     emailEl.click();
   } else if (emailEl2) {
-    console.log("click ?");
     emailEl2.click();
   }
 };
