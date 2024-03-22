@@ -105,7 +105,18 @@
             transition: color 0.2s linear, background-color 0.2s linear;
 
         }
-
+        @media (min-width: 2000px) {
+            .table-title th {
+                padding: 10px;
+                font-size: 20px;
+            }
+            .stRow th {
+                padding: 15px 0px 15px 20px;
+            }
+            .pContent p {
+                font-size: 0.9rem !important;
+            }
+        }
         .ndRow th {
             border-top: none;
             border-left: 1px solid rgba(211, 211, 211, 0.3);
