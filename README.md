@@ -47,3 +47,4 @@ Feel free to contribute to this project. Any contributions you make are greatly 
 
 ## License
 
+This project is licensed under the Apache License - see the [LICENSE](LICENSE.txt) file for details.
