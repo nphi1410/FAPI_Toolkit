@@ -3,11 +3,9 @@ const checkbox = document.getElementById("darkmode-checkbox");
 check = () => {
     if(checkbox.checked){
         document.body.classList.toggle("darkmode-theme");
-        document.documentElement.classList.toggle('dark');
     }
     else {
         document.body.classList.remove("darkmode-theme");
-        document.documentElement.classList.remove('dark');
     }
 }
 
