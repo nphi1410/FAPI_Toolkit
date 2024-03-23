@@ -11,25 +11,21 @@
 
 *and there are many other features waiting for you to discover...*
 
-![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/4aa1d08a-e1f6-4240-bade-39fcf03bbe81)
+![Light mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/4ffb90b0-9418-4b49-9151-183c3839048c)
 
-![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/0def8e4a-c178-4cd3-a863-dbdad96ed0a4)
+![Dark mode](https://github.com/nphi1410/FAPI_Toolkit/assets/120640662/5e30814e-bb7b-4a9a-b8f0-698b94e7790c)
 
 ## Technology
 ![Static Badge](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5) ![Static Badge](https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3) ![Static Badge](https://img.shields.io/badge/JAVASCRIPT-000000?style=for-the-badge&logo=javascript) ![Static Badge](https://img.shields.io/badge/TAILWINDCSS-000000?style=for-the-badge&logo=tailwindcss)
 
 ## Installation
 
-1. Clone the repository
-
-```sh
-git clone https://github.com/nphi1410/FAPI_Toolkit.git
-```
-
-2. Open browser like Chrome, Edge,v...v... and go to `chrome://extensions/`
-3. Enable `Developer mode` by clicking the toggle switch next to Developer mode
-4. Click on `Load unpacked` and select the folder where you cloned the repository
-5. Feel free to enjoy!
+1. Download the latest version of the extension from [here](https://github.com/nphi1410/FAPI_Toolkit/releases/tag/v0.0.1)
+2. Unzip the downloaded file
+3. Open browser like Chrome, Edge,v...v... and go to `chrome://extensions/`
+4. Enable `Developer mode` by clicking the toggle switch next to Developer mode
+5. Click on `Load unpacked` and select the folder where you cloned the repository
+6. Feel free to enjoy!
 
 ## Author
 
