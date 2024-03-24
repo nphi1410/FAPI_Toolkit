@@ -266,12 +266,14 @@ chrome.runtime.sendMessage({ action: 'mergeCookies', cookie }, response => {
         
         prjNames.forEach((name,index)=>{
             if(name.innerHTML.includes('-') && !name.innerHTML.includes(':')){
-                indx.push({
-                    name: name.innerHTML,
-                    index : index,
-                    checkdup : false,
-                    bg: null
-                });
+                if(name.getAttribute('class') == null){
+                    indx.push({
+                        name: name.innerHTML,
+                        index : index,
+                        checkdup : false,
+                        bg: null
+                    });
+                }
             }
         });
 
