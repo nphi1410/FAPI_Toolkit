@@ -170,7 +170,7 @@
         }
         /* Styling for table cells */
         .table-title td {
-            background: var(--bg-color); /* Assuming --bg-color is defined elsewhere */
+            background: var(--bg-color); 
             color: var(--text-color);
             padding: 2px;
             text-align: center;
@@ -199,7 +199,7 @@
         .pContent p {
             font-weight: 400;
             font-size: 0.75rem;
-            background-color: var(--pbg-color);
+            /* background-color: var(--pbg-color); */
             color: var(--ptext-color);
             text-align: left;
             /* box-shadow: var(--bx-shdw-color); */
