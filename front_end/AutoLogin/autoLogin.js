@@ -20,6 +20,23 @@
 
 // main();
 
-chrome.storage.sync.get(["LOGIN_MODE"]).then((mode) => {
-  console.log(mode.LOGIN_MODE);
+// chrome.storage.sync.get(["LOGIN_MODE"]).then((mode) => {
+  // console.log(mode.LOGIN_MODE);
+// });
+
+console.log("main");
+document.addEventListener("DOMContentLoaded", async () => {
+  const email = await getFromStorage("EMAIL_ADDRESS", "");
+  console.log(email);
 });
+
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from the extension");
+    if (request.greeting === "hello")
+      sendResponse({farewell: "goodbye"});
+  }
+);

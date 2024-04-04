@@ -3,17 +3,7 @@
   "name": "FAPI Toolkits",
   "description": "Beauty FAP Interface for FPT University Students",
   "version": "1.0.0",
-  "action": {
-    "default_icon": "front_end/icon2.png",
-    "default_popup": "front_end/Popup/popup.html"
-  },
-
-  "icons": {
-    "16": "front_end/icon2.png",
-    "32": "front_end/icon2.png",
-    "48": "front_end/icon2.png",
-    "128": "front_end/icon2.png"
-  },
+  
   "content_scripts": [
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
@@ -62,7 +52,7 @@
 
     {
       "matches": ["*://fap.fpt.edu.vn/Default.aspx/*", "*://fap.fpt.edu.vn/*"],
-      "js": ["/front_end/AutoLogin/autoLogin.js"],
+      "js": ["/front_end/AutoLogin/autoLogin.js", "./front_end/utils/storage.js"],
       "world": "MAIN"
     },
 
@@ -77,16 +67,19 @@
     {
       "matches": ["https://feid.fpt.edu.vn/*"],
       "js": ["./front_end/AutoLogin/feidLogin.js"]
-    },
-
-    {
-      "matches": ["https://fap.fpt.edu.vn/"],
-      "js": [
-        "./front_end/utils/storage.js",
-        "./front_end/AutoLogin/autoLogin.js"
-      ]
     }
   ],
+  "action": {
+    "default_icon": "front_end/icon2.png",
+    "default_popup": "front_end/Popup/popup.html"
+  },
+
+  "icons": {
+    "16": "front_end/icon2.png",
+    "32": "front_end/icon2.png",
+    "48": "front_end/icon2.png",
+    "128": "front_end/icon2.png"
+  },
   "permissions": [
     "scripting",
     "activeTab",
@@ -94,7 +87,7 @@
     "storage",
     "contextMenus",
     "declarativeContent",
-    "activeTab"
+    "tabs"
   ],
   "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
   "background": {
