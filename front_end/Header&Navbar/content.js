@@ -36,8 +36,26 @@ var container = document.querySelector(".container");
 var all = document.querySelector("body");
 container.outerHTML =
   `
-  <div class="background"><div class='background-front'></div></div>
+  <div class="background"></div>
+  <div class='loader-bg'>
+    <div class='loader'>
+      <div class='loader--dot'></div>
+      <div class='loader--dot'></div>
+      <div class='loader--dot'></div>
+      <div class='loader--dot'></div>
+      <div class='loader--dot'></div>
+      <div class='loader--dot'></div>
+      <div class='loader--text'></div>
+    </div>
+  </div>
+
 ` + container.outerHTML;
+document.querySelector(".container").classList.add("close")
+  setTimeout(function() {
+    document.querySelector(".loader-bg").classList.add("close");
+    document.querySelector(".container").classList.remove("close");
+  }, 1000);
+
 
 // remove breadcumb
 var infoAccount = document.querySelector("#ctl00_divUser");
