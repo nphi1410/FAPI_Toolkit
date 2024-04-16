@@ -3,11 +3,39 @@
   "name": "FAPI Toolkits",
   "description": "Beauty FAP Interface for FPT University Students",
   "version": "1.0.0",
+  "action": {
+    "default_icon": "front_end/icon2.png",
+    "default_popup": "front_end/Popup/popup.html"
+  },
+
+  "icons": {
+    "16": "front_end/icon2.png",
+    "32": "front_end/icon2.png",
+    "48": "front_end/icon2.png",
+    "128": "front_end/icon2.png"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "cookies",
+    "storage",
+    "contextMenus",
+    "declarativeContent",
+    "tabs"
+  ],
+  "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
+  "background": {
+    "service_worker": "background.js"
+  },
   
   "content_scripts": [
     {
       "matches": ["https://fap.fpt.edu.vn/*"],
       "js": ["front_end/Header&Navbar/tailwind_3.4.1.js"]
+    },
+    {
+      "matches": ["https://fap.fpt.edu.vn/*", "https://accounts.google.com/*"],
+      "js": ["front_end/Popup/PopupSaving.js"]
     },
     {
       "matches": ["https://fap.fpt.edu.vn/Student.aspx*"],
@@ -55,42 +83,19 @@
       "js": ["/front_end/AutoLogin/autoLogin.js", "./front_end/utils/storage.js"],
       "world": "MAIN"
     },
+    
 
     {
       "matches": [
-        "https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
-        "https://accounts.google.com/o/oauth2/v2/auth/*feid.fpt.edu.vn*"
+        "https://accounts.google.com/*"
       ],
-      "js": ["./front_end/utils/storage.js", "./front_end/AutoLogin/google.js"]
+      "js": ["front_end/Header&Navbar/link.js","./front_end/utils/storage.js", "./front_end/AutoLogin/google.js"]
     },
 
     {
       "matches": ["https://feid.fpt.edu.vn/*"],
       "js": ["./front_end/AutoLogin/feidLogin.js"]
     }
-  ],
-  "action": {
-    "default_icon": "front_end/icon2.png",
-    "default_popup": "front_end/Popup/popup.html"
-  },
-
-  "icons": {
-    "16": "front_end/icon2.png",
-    "32": "front_end/icon2.png",
-    "48": "front_end/icon2.png",
-    "128": "front_end/icon2.png"
-  },
-  "permissions": [
-    "scripting",
-    "activeTab",
-    "cookies",
-    "storage",
-    "contextMenus",
-    "declarativeContent",
-    "tabs"
-  ],
-  "host_permissions": ["https://fap.fpt.edu.vn/Student.aspx"],
-  "background": {
-    "service_worker": "background.js"
-  }
+  ]
+  
 }

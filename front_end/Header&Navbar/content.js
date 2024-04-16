@@ -330,3 +330,4 @@ contentBody.outerHTML = `
 var contentToPadding = document.querySelectorAll('form[name="aspnetForm"]>table>tbody>tr>td');
 contentToPadding[0].classList.add("px-24");
 contentToPadding[1].classList.add("px-24");
+

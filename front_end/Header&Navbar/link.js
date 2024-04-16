@@ -286,4 +286,3 @@ var placeholderVI = "Tìm kiếm...";
 var placeholder = placeholderEN;
 
 
-
