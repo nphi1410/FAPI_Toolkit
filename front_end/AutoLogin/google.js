@@ -16,3 +16,4 @@ chrome.storage.sync.get(['LOGIN_MODE'], function(result) {
     });
   }
 });
+
